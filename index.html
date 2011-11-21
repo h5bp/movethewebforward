@@ -1,76 +1,124 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8" />
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="" />
 
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="basic.css" media="screen" id="basic-css" />
+	
+	<!-- Should be combined: -->
+	<link rel="stylesheet" href="css/h5bp-normalize.css" media="only all" id="reset-css" />
+	<link rel="stylesheet" href="css/style.css" media="only all" id="enhanced-css" />
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
-       Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
-       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<!-- Should be combined: -->
+	<script src="js/libs/modernizr.min.js"></script>
+	<script src="js/libs/respond.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/controller.js"></script>
+	
 </head>
 
 <body>
-  <header>
+	<header class="doc standout">
+		<h1>I’ve got my blue beanie on! <strong>Now what?</strong></h1>
+	</header>
+	<header class="col-ab">
+		<div class="lead">
+			<h1 class="hed-lead">You love web standards.</h1>
+			<div class="subhed-lead">
+				<p>You want to give back to the community.</p>
+				<p>Curious about where to start? <b>We're here to help.</b></p>
+			</div>
+		</div>
+		<div class="col-split">
+			<p>Sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc. In at odio non mauris sodales malesuada. Class aptent taciti sociosqu ad brohemian torquent San Diebro conubia nostra, per inceptos himenaeos. Aenean eget mi quis turpis The Legend of Zelda: The Brocarina of Time feugiat.</p>
+		</div>
+	</header>
+	<section id="jumplink1" class="col-ab">
+		<h1>Example H2-ish Heading</h1>
+		<p>Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
+		<blockquote>
+			<p>Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc. In at odio non mauris sodales malesuada. Class aptent taciti sociosqu ad brohemian torquent San Diebro conubia nostra.</p>
+		</blockquote>
+		<p>Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. <a href="#">Praesent non augue</a> tellus. Phasellus tortor leo, tincidunt in vehicula vel.</p>
+		<ul>
+			<li>This is a bulleted list.</li>
+			<li>There are several items. Oh, hey: here’s another link, too.</li>
+			<li>Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Some of the items in this list may break to two lines.</li>
+			<li>If they do, that’s okay.</li>
+		</ul>
+	</section>
+	<div class="col-ab">
+		<div class="col-a">
 
-  </header>
-  <div role="main">
+			<dl class="key-val">
+				<dt>
+					<p>Key/Value Pair</p>
+				</dt>
+				<dd>
+					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+				</dd>
+				
+				<dt>
+					<p>Key/Value Pair</p>
+				</dt>
+				<dd>
+					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+				</dd>
+				
+				<dt>
+					<p>Key/Value Pair</p>
+				</dt>
+				<dd>
+					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+				</dd>
+			</dl>
+			
+		</div>
+		
+		<div class="col-b">
+		
+			<dl class="q-a">
+				<dt>
+					<p><abbr title="question">Q.</abbr>
+					Is this an example question?</p>
+				</dt>
+				<dd>
+					<p><abbr title="answer">A.</abbr>
+					Yes, and here’s why: brolita imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
+				</dd>
+				<dt>
+					<p><abbr title="question">Q.</abbr>
+					Is this an example question?</p>
+				</dt>
+				<dd>
+					<p><abbr title="answer">A.</abbr>
+					Yes, and here’s why: brolita imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
+				</dd>
+			</dl>
+		
+		</div>
+	</div>
+	
+	<footer class="doc">
 
-  </div>
-  <footer>
+	</footer>
 
-  </footer>
-
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.0.min.js"><\/script>')</script>
-
-
-  <!-- scripts concatenated and minified via build script -->
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
-  <!-- end scripts -->
-
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
+	<script>
+/*
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+*/
+	</script>
 
 </body>
 </html>

@@ -1,0 +1,3 @@
+# One less meta tag, if it’s on Apache.
+BrowserMatch MSIE ie
+Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie

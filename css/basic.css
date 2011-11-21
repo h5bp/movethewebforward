@@ -1,0 +1,11 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #e0e6ed;
+}
+
+.standout {
+	background: #687482;
+	border-top: 1px solid #60666d;
+	border-bottom: 1px solid ##60666d;
+}
