@@ -4,9 +4,16 @@ You ♡ Web Standards. You maybe even feel compelled to “give back” to the c
 
 ## Contributing
 
-Do you have some ideas for ways that all developers—from the seasoned professionals to those donning their first blue beanie—can get involved, learn more, and help move web standards forward? [Chime in here](https://etherpad.mozilla.org/igotmybeanie)!
+Do you have some ideas for ways that all developers—from the seasoned professionals to those donning their first blue beanie—can get involved, learn more, and help move web standards forward? [Chime in here](https://etherpad.mozilla.org/igotmybeanie) or look at the github issues!
 
 
+## IRC channel
+
+We're in #igotmybeanie on freenode IRC. 
+
+## Staging server
+
+View the current site at [h5bp.github.com/igotmybeanie/](http://h5bp.github.com/igotmybeanie/)
 
 ## Dev Notes
 
