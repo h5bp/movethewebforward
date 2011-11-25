@@ -1,4 +1,5 @@
 body {
+	background: #f3f6f9;
 	color: #525a64;
 	font: 100%/1.5 "Adelle", georgia, serif;
 	-webkit-font-smoothing: antialiased;
@@ -36,10 +37,18 @@ a:hover {
 	color: #1f59a3;
 }
 
+.hed {
+	font-size: 2.375em;
+	letter-spacing: -.05em;
+	margin: 1em 0 0 0;
+	line-height: 1.2;
+	color: #324a69;
+}
+
 .standout {
 	background: #687482 url(img/bg_noise.png) 0 0 repeat;
 	background-origin: padding;
-	border: double #60666d;
+	border: double #494f57;
 	border-width: 3px 0;
 	
 	background: 
@@ -58,33 +67,56 @@ a:hover {
 		url(img/bg_noise.png) 0 0 repeat,
 		radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
 	
+	clear: both;
+	margin: 2.5em 0 2em 0;
+	padding: 0 2.9296875%;
 	-webkit-box-shadow: inset 0 0 10px #5d6672;
 	-moz-box-shadow: inset 0 0 10px #5d6672;
 	-ms-box-shadow: inset 0 0 10px #5d6672;
 	box-shadow: inset 0 0 10px #5d6672;
 }
 
+.standout .hed {
+	color: #e0e6ed;
+	font-size: 72px;
+	letter-spacing: 0;
+	line-height: 1;
+	margin: 0;
+	padding: .3em 0 0 0;
+	text-align: center;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+}
+.standout .subhed {
+	color: #b5c5d7;
+	font: 2em/1 "ChunkFive", georgia, serif;
+	letter-spacing: .05em;
+	margin: 0;
+	padding: .2em 0 .8em 0;
+	text-align: center;
+	text-shadow: #494f57 2px 2px;
+}
+
 .lead {
 	text-align: center;
-	border-bottom: 3px double #c4cad1;
+	border-bottom: 3px double #cbd1d8;
 	margin-bottom: .25em;
-	padding-bottom: 1em;
+	padding-bottom: 1.4em;
 }
 
 .hed-lead {
-	color: #3d526d;
+	color: #324a69;
 	font-size: 3.625em;
 	line-height: 1;
 	margin: .7em 0 .1em 0;
 	padding: 0;
-
+	text-shadow: 1px 1px 0 #fff;
 }
 .subhed-lead p {
 	color: #7f8c9c;
 	font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
 	margin: 0;
 	padding: 0 2em;
-	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+	text-shadow: 1px 1px 0 #fff;
 }
 
 dl {
@@ -162,7 +194,6 @@ nav li {
 
 @media screen and (min-width: 800px) {
 	.col-ab {
-		float: left;
 		width: 94.1%;
 	}
 	.col-a,
@@ -183,6 +214,24 @@ nav li {
 
 	.key-val dd {
 		padding: 0 0 0 34.924078091106%;
+	}
+	
+	.col-split {
+		padding-top: 1em;		
+		-webkit-column-count: 2;
+		-webkit-column-gap: 2.079002079002%;
+		-moz-column-count: 2;
+		-moz-column-gap: 2.079002079002%;
+		-ms-column-count: 2;
+		-ms-column-gap: 2.079002079002%;
+		-o-column-count: 2;
+		-o-column-gap: 2.079002079002%;
+		column-count: 2;
+		column-gap: 2.079002079002%;
+	}
+	.col-split p {
+		padding: 0 0 1em 0;
+		margin: 0;
 	}
 }
 
