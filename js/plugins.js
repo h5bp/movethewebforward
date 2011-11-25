@@ -18,3 +18,35 @@ window.log = function(){
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
+(function(global, doc, $) {
+
+  $.fn.taskThinger = function(o) {
+
+    var defaults = {
+      hashtag: undefined,
+      message: 'oh yeah!'
+    };
+
+    var options = $.extend({}, defaults, o);
+
+    this.each(function() {
+      var $elem = $(this),
+          hashtag = options.hashtag || $elem.data('hashtag'),
+          message = options.message || ''
+
+      if (!hashtag)
+        return
+
+      var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message),
+          link = $('<a>').attr('href', url)
+
+      $elem.append(link)
+
+
+
+    });
+
+  };
+
+})(window, document, jQuery);
+
