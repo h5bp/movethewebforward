@@ -18,3 +18,55 @@ window.log = function(){
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
+(function(global, doc, $) {
+
+  $.fn.hashTask = function(o) {
+
+    var defaults = {
+      hashtag: undefined,
+      message: 'oh yeah!',
+      linkSelector: 'a',
+      avatarsSelector: 'div'
+    }
+
+    var options = $.extend({}, defaults, o)
+
+    this.each(function() {
+      var $elem = $(this),
+          linkElem = $.isFunction(options.linkSelector)
+            ? options.linkSelector.call($elem)
+            : $elem.find(options.linkSelector),
+          avatarsElem = $.isFunction(options.avatarsSelector)
+            ? options.avatarsSelector.call($elem)
+            : $elem.find(options.avatarsSelector),
+          hashtag = $.isFunction(hashtag)
+            ? hashtag.call($elem)
+            : $elem.data('hashtag'),
+          message = $.isFunction(message)
+            ? message.call($elem)
+            : options.message
+
+      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message),
+          searchUrl = 'http://search.twitter.com/search.json?callback=?&q='
+
+      $elem.append(linkElem.attr('href', prefillUrl))
+
+      if (hashtag) {
+        $.getJSON(searchUrl + encodeURIComponent(hashtag), function(json) {
+          $.each(json.results, function(i) {
+            avatarsElem.append($('<img>').attr({src: this.profile_image_url, title: this.from_user}))
+          });
+
+          twttr.anywhere(function(T) {
+            T('img', avatarsElem).hovercards({
+              username: function(node) { return node.title }
+            })
+          })
+        });
+      }
+
+    });
+  };
+
+})(window, document, jQuery);
+

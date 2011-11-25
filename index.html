@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -12,7 +13,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 	<link rel="stylesheet" href="basic.css" media="screen" id="basic-css" />
-	
+
 	<!-- Should be combined: -->
 	<link rel="stylesheet" href="css/h5bp-normalize.css" media="only all" id="reset-css" />
 	<link rel="stylesheet" href="css/style.css" media="only all" id="enhanced-css" />
@@ -22,7 +23,7 @@
 	<script src="js/libs/respond.js"></script>
 	<script src="js/core.js"></script>
 	<script src="js/controller.js"></script>
-	
+
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 	<header class="doc standout">
 		<h1 class="hed">I’ve got my blue beanie on! <strong>Now what?</strong></h1>
 	</header>
-	
+
 	<header class="col-ab">
 		<div class="lead">
 			<h1 class="hed-lead">You love web standards.</h1>
@@ -64,33 +65,36 @@
 	<div class="col-ab">
 		<div class="col-a">
 
-			<dl class="key-val">
-				<dt>
-					<p>Key/Value Pair</p>
+			<dl id="tasks" class="key-val">
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
-				
-				<dt>
-					<p>Key/Value Pair</p>
+
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
-				
-				<dt>
-					<p>Key/Value Pair</p>
+
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
 			</dl>
-			
+
 		</div>
-		
+
 		<div class="col-b">
-		
+
 			<dl class="q-a">
 				<dt>
 					<p><abbr title="question">Q.</abbr>
@@ -109,10 +113,10 @@
 					Yes, and here’s why: brolita imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
 				</dd>
 			</dl>
-		
+
 		</div>
 	</div>
-	
+
 	<footer class="doc">
 
 	</footer>
@@ -125,6 +129,18 @@
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 */
 	</script>
-
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="http://platform.twitter.com/anywhere.js?id=wjANCxjyXtdRjYv8KAGIkA&amp;v=1"></script>
+	<script src="js/plugins.js"></script>
+  <script>
+    $(function() {
+      $("#tasks dt").hashTask({
+        message: 'oh yeah!',
+        linkSelector: function() { return this.find('a') },
+        avatarsSelector: function() { return this.next('dd').find('div') },
+        hashtag: function() { return this.data('hashtag') || '#igotmybeanie' }
+      });
+    });
+  </script>
 </body>
 </html>
