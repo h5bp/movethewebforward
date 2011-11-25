@@ -66,7 +66,6 @@ window.log = function(){
       }
 
     });
-
   };
 
 })(window, document, jQuery);
