@@ -27,41 +27,69 @@ window.log = function(){
       message: 'oh yeah!',
       linkSelector: 'a',
       avatarsSelector: 'div'
-    }
+    };
 
-    var options = $.extend({}, defaults, o)
+    var options = $.extend({}, defaults, o);
 
     this.each(function() {
-      var $elem = $(this),
-          linkElem = $.isFunction(options.linkSelector)
+      var $elem = $(this);
+
+      // The element that will become a twitter pre-fill link.
+      var linkElem = $.isFunction(options.linkSelector)
             ? options.linkSelector.call($elem)
-            : $elem.find(options.linkSelector),
-          avatarsElem = $.isFunction(options.avatarsSelector)
+            : $elem.find(options.linkSelector);
+
+      // The element that will have user avatars appended to it.
+      var avatarsElem = $.isFunction(options.avatarsSelector)
             ? options.avatarsSelector.call($elem)
-            : $elem.find(options.avatarsSelector),
-          hashtag = $.isFunction(hashtag)
-            ? hashtag.call($elem)
-            : $elem.data('hashtag'),
-          message = $.isFunction(message)
-            ? message.call($elem)
-            : options.message
+            : $elem.find(options.avatarsSelector);
 
-      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message),
-          searchUrl = 'http://search.twitter.com/search.json?callback=?&q='
+      // The hashtag used to pre-fill twitter and to search twitter
+      // for users.
+      var hashtag = $.isFunction(options.hashtag)
+            ? options.hashtag.call($elem)
+            : $elem.data('hashtag');
 
-      $elem.append(linkElem.attr('href', prefillUrl))
+      // A message to add to the hash tag.
+      var message = $.isFunction(options.message)
+            ? options.message.call($elem)
+            : options.message;
+
+      // A URL that will pre-fill a twitter status message.
+      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
+
+      // Twitter search URL.
+      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
+
+      linkElem.attr('href', prefillUrl);
 
       if (hashtag) {
         $.getJSON(searchUrl + encodeURIComponent(hashtag), function(json) {
+          // De-dupe.
+          var users = {};
+
           $.each(json.results, function(i) {
-            avatarsElem.append($('<img>').attr({src: this.profile_image_url, title: this.from_user}))
+            if (this.from_user in users) {
+              return;
+            }
+
+            var image = $('<img>').attr({
+              src: this.profile_image_url,
+              title: this.from_user
+            });
+
+            avatarsElem.append(image);
+
+            users[this.from_user] = true;
           });
 
           twttr.anywhere(function(T) {
             T('img', avatarsElem).hovercards({
-              username: function(node) { return node.title }
-            })
-          })
+              username: function(node) {
+                return node.title
+              }
+            });
+          });
         });
       }
 
