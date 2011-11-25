@@ -20,29 +20,50 @@ window.log = function(){
 
 (function(global, doc, $) {
 
-  $.fn.taskThinger = function(o) {
+  $.fn.hashTask = function(o) {
 
     var defaults = {
       hashtag: undefined,
-      message: 'oh yeah!'
-    };
+      message: 'oh yeah!',
+      linkSelector: 'a',
+      avatarsSelector: 'div'
+    }
 
-    var options = $.extend({}, defaults, o);
+    var options = $.extend({}, defaults, o)
 
     this.each(function() {
       var $elem = $(this),
-          hashtag = options.hashtag || $elem.data('hashtag'),
-          message = options.message || ''
+          linkElem = $.isFunction(options.linkSelector)
+            ? options.linkSelector.call($elem)
+            : $elem.find(options.linkSelector),
+          avatarsElem = $.isFunction(options.avatarsSelector)
+            ? options.avatarsSelector.call($elem)
+            : $elem.find(options.avatarsSelector),
+          hashtag = $.isFunction(hashtag)
+            ? hashtag.call($elem)
+            : $elem.data('hashtag'),
+          message = $.isFunction(message)
+            ? message.call($elem)
+            : options.message
 
-      if (!hashtag)
-        return
+      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message),
+          searchUrl = 'http://search.twitter.com/search.json?callback=?&q='
 
-      var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message),
-          link = $('<a>').attr('href', url)
+      $elem.append(linkElem.attr('href', prefillUrl))
 
-      $elem.append(link)
+      if (hashtag) {
+        $.getJSON(searchUrl + encodeURIComponent(hashtag), function(json) {
+          $.each(json.results, function(i) {
+            avatarsElem.append($('<img>').attr({src: this.profile_image_url, title: this.from_user}))
+          });
 
-
+          twttr.anywhere(function(T) {
+            T('img', avatarsElem).hovercards({
+              username: function(node) { return node.title }
+            })
+          })
+        });
+      }
 
     });
 

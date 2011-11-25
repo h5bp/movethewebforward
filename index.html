@@ -31,7 +31,7 @@
 	<header class="doc standout">
 		<h1 class="hed">I’ve got my blue beanie on! <strong>Now what?</strong></h1>
 	</header>
-	
+
 	<header class="col-ab">
 		<div class="lead">
 			<h1 class="hed-lead">You love web standards.</h1>
@@ -65,26 +65,29 @@
 	<div class="col-ab">
 		<div class="col-a">
 
-			<dl class="key-val">
-				<dt>
-					<p>Key/Value Pair</p>
+			<dl id="tasks" class="key-val">
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
 
-				<dt>
-					<p>Key/Value Pair</p>
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
 
-				<dt>
-					<p>Key/Value Pair</p>
+				<dt data-hashtag="#foo">
+					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
 					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<div></div>
 				</dd>
 			</dl>
 
@@ -126,6 +129,18 @@
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 */
 	</script>
-
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="http://platform.twitter.com/anywhere.js?id=wjANCxjyXtdRjYv8KAGIkA&amp;v=1"></script>
+	<script src="js/plugins.js"></script>
+  <script>
+    $(function() {
+      $("#tasks dt").hashTask({
+        message: 'oh yeah!',
+        linkSelector: function() { return this.find('a') },
+        avatarsSelector: function() { return this.next('dd').find('div') },
+        hashtag: function() { return this.data('hashtag') || '#igotmybeanie' }
+      });
+    });
+  </script>
 </body>
 </html>
