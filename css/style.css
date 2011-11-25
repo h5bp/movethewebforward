@@ -1,14 +1,12 @@
 body {
-	background: #f3f6f9;
+	background: #e7ebf1;
 	color: #525a64;
 	font: 100%/1.5 "Adelle", georgia, serif;
 	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
-	font-family: "ChunkFive", georgia, serif;
-	font-weight: normal;
-	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+
 }
 
 ul, ol, blockquote {
@@ -37,15 +35,34 @@ a:hover {
 	color: #1f59a3;
 }
 
+.col-ab p {
+	line-height: 1.65;
+}
 .hed {
-	font-size: 2.375em;
-	letter-spacing: -.05em;
-	margin: 1em 0 0 0;
-	line-height: 1.2;
+	border-bottom: 1px solid #cbd1d8;
 	color: #324a69;
+	clear: both;
+	float: left;
+	font: normal 1.8em/1.2 "ChunkFive", arial, helvetica, sans-serif;
+	letter-spacing: -.02em;
+	margin: 0 0 .5em 0;
+	padding: .5em 0 .1em 0;
+	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+	width: 100%;
+}
+.no-fontface .hed {
+	font-weight: bold;
 }
 
-.standout {
+.subhed {
+	color: #7f8c9c;
+	font: 1.4em/1 "ChunkFive", georgia, serif;
+	margin: 1em 0 0 0;
+	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+}
+
+.standout,
+.subsection:not(:last-child):after {
 	background: #687482 url(img/bg_noise.png) 0 0 repeat;
 	background-origin: padding;
 	border: double #494f57;
@@ -68,33 +85,83 @@ a:hover {
 		radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
 	
 	clear: both;
-	margin: 2.5em 0 2em 0;
-	padding: 0 2.9296875%;
+	margin: 3.5em 0 2em 0;
+	padding: 1em 2.9296875% 0 2.9296875%;
 	-webkit-box-shadow: inset 0 0 10px #5d6672;
 	-moz-box-shadow: inset 0 0 10px #5d6672;
 	-ms-box-shadow: inset 0 0 10px #5d6672;
 	box-shadow: inset 0 0 10px #5d6672;
 }
-
-.standout .hed {
-	color: #e0e6ed;
-	font-size: 72px;
-	letter-spacing: 0;
-	line-height: 1;
-	margin: 0;
-	padding: .3em 0 0 0;
-	text-align: center;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+.subsection:not(:last-child):after {
+	content: " ";
+	display: block;
+	min-height: .85em;
+	margin: 2.5em 0 .5em 0;
+	opacity: .85;
 }
-.standout .subhed {
+
+.standout .subhed,
+.doc-hed {
 	color: #b5c5d7;
-	font: 2em/1 "ChunkFive", georgia, serif;
+	font: 1.5em/1 "ChunkFive", georgia, serif;
 	letter-spacing: .05em;
 	margin: 0;
 	padding: .2em 0 .8em 0;
 	text-align: center;
-	text-shadow: #494f57 2px 2px;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
+
+.standout .hed {
+	border: none;
+	color: #e0e6ed;
+	float: none;
+	font-size: 2.6em;
+	letter-spacing: 0;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+}
+
+.no-fontface .standout .hed {
+	font-weight: bold;
+	padding: 0 0 .25em 0;
+}
+.no-fontface .standout .subhed {
+	letter-spacing: normal;
+}
+
+.doc-hed {
+	display: block;
+	width: 100%;
+	padding: .8em 0 0 0;
+	text-align: left;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+}
+.doc-hed b,
+.doc-hed .hed {
+	line-height: 1;
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+.doc-hed .hed {
+	margin: 0 0 .05em 0;
+	padding: 0;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px, #494f57 3px 3px;
+}
+.doc-lead {
+	margin-top: 1.5em;
+}
+
+
+
+
+
+
+
+
 
 .lead {
 	text-align: center;
@@ -105,18 +172,26 @@ a:hover {
 
 .hed-lead {
 	color: #324a69;
-	font-size: 3.625em;
-	line-height: 1;
+	font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
 	margin: .7em 0 .1em 0;
 	padding: 0;
 	text-shadow: 1px 1px 0 #fff;
 }
+.no-fontface .hed-lead {
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+
 .subhed-lead p {
 	color: #7f8c9c;
-	font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
+	font: normal 1.3em/1.2 "ChunkFive", georgia, serif;
 	margin: 0;
-	padding: 0 2em;
+	padding: 0 .5em;
 	text-shadow: 1px 1px 0 #fff;
+}
+.subhed-lead p b {
+	color: #5d6474;
 }
 
 dl {
@@ -125,30 +200,47 @@ dl {
 dl p {
 	margin: .5em 0;
 }
-
-dt {
+dt,
+.key {
 	font: normal 1.15em/1 "ChunkFive", georgia, serif;
 	width: 100%;
 }
-dd {
+dd,
+.val {
 	border-bottom: 1px dotted #bfc6cf;
-	margin: 0 0 .8em 0;
+	margin: 0 0 2em 0;
 }
-dd:last-child {
+dd:last-child,
+.val:last-child {
 	border-bottom: none;
 }
+
 
 .q-a,
 .key-val {
 	float: left;
 }
-.key-val dt {
+.key-val dt,
+.key {
 	color: #3d526d;
 	margin: 0;
 	padding: 0;
 }
-.key-val dd p {
+.key-val dd p,
+.val p {
 	margin: .4em 0 .55em 0;
+}
+
+.key-val dd {
+	position: relative;
+}
+.key-val details {
+	border-bottom: 1px dotted #bfc6cf;
+	clear: both;
+	position: absolute;
+	left: 0;
+	bottom: -1.8em;
+	width: 100%;
 }
 
 .q-a abbr {
@@ -164,6 +256,37 @@ dd:last-child {
 .q-a dd abbr {
 	padding: .2em 0 0 0;
 	font-size: 1.15em;
+}
+
+.resources {
+	overflow: auto;
+	list-style: none;
+	padding: .75em 0 0 0;
+	font-size: .9em;
+}
+.resources li {
+	padding: .2em 0;
+}
+.resources > li:before {
+	color: #3d526d;
+	content: "■";
+	float: left;
+	font-size: .85em;
+	padding: .1em .6em 0 0;
+}
+
+.resources ul {
+	list-style: none;
+	padding: .25em 0 .4em 1.2em;
+}
+
+.resources li li {
+	padding: 0;
+}
+
+.resources li p {
+	margin: 0;
+	line-height: 1.5;
 }
 
 /* Layout */
@@ -187,10 +310,16 @@ nav li {
 }
 
 .col-ab {
+	clear: both;
 	padding: 0 2.9296875%;
 }
 
+
 /* / */
+
+@media screen and (min-width: 600px) {
+
+}
 
 @media screen and (min-width: 800px) {
 	.col-ab {
@@ -207,12 +336,39 @@ nav li {
 		float: right;
 	}
 	
-	.key-val dt {
+	.col-ab p {
+		max-width: 950px;
+		line-height: 1.5;
+	}
+	
+	.hed-lead {
+		font: 3.625em/1 "ChunkFive", georgia, serif;
+	}
+	
+	.lead p {
+		max-width: 9999px;
+	}
+	
+	.hed {
+		font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif;
+	}
+	
+	.standout .subhed,
+	.doc-hed {
+		font: 2em/1 "ChunkFive", georgia, serif;
+	}
+	.subhed-lead p {
+		font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
+	}
+	
+	.key-val dt,
+	.key {
 		float: left;
 		width: 30.802603036876%;
 	}
 
-	.key-val dd {
+	.key-val dd,
+	.val {
 		padding: 0 0 0 34.924078091106%;
 	}
 	

@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 no-fontface" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 no-fontface" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 no-fontface" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-fontface" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 
@@ -12,7 +12,7 @@
 
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-	<link rel="stylesheet" href="basic.css" media="screen" id="basic-css" />
+	<link rel="stylesheet" href="css/basic.css" media="screen" id="basic-css" />
 
 	<!-- Should be combined: -->
 	<link rel="stylesheet" href="css/h5bp-normalize.css" media="only all" id="reset-css" />
@@ -28,9 +28,16 @@
 
 <body>
 	<!-- I’m thinking we just scratch this header once we transition over to one of the other domains. -->
-	<header class="doc standout">
-		<h1 class="hed">I’ve got my blue beanie on! <strong>Now what?</strong></h1>
+
+	<header class="doc-lead standout">
+		<div class="doc-hed">
+			<!--
+			<b>I’ve got my blue beanie on!</b>
+			<strong class="hed">Now what?</strong>
+			-->
+		</div>
 	</header>
+
 
 	<header class="col-ab">
 		<div class="lead">
@@ -41,27 +48,110 @@
 			</div>
 		</div>
 		<div class="col-split">
-			<p>Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc. In at odio non mauris sodales malesuada. Class aptent taciti sociosqu ad brohemian torquent San Diebro conubia nostra, per inceptos himenaeos. Aenean eget mi quis turpis The Legend of Zelda: The Brocarina of Time feugiat. Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper.</p>
+			<p>Whether you're just diving into web development, or you’ve been web-slinging since the days of tables and <code>font</code> tags, there are a number ways for you to give back. Below, we list some of the ways that anyone can contribute back to the web platform. Our goal is to make it easy for anyone to get started contributing to the platform, whether that's learning more how it works, teaching others, or writing specs. The web has grown due to people like you, and we want to make it even easier for people like you to give back.</p>
 		</div>
 	</header>
-	<section id="jumplink1" class="col-ab">
-		<h1 class="hed">Example H2-ish Heading</h1>
-		<p>Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
-		<blockquote>
-			<p>Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc. In at odio non mauris sodales malesuada. Class aptent taciti sociosqu ad brohemian torquent San Diebro conubia nostra.</p>
-		</blockquote>
-		<p>Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. <a href="#">Praesent non augue</a> tellus. Phasellus tortor leo, tincidunt in vehicula vel.</p>
-		<ul>
-			<li>This is a bulleted list.</li>
-			<li>There are several items. Oh, hey: here’s another link, too.</li>
-			<li>Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Some of the items in this list may break to two lines.</li>
-			<li>If they do, that’s okay.</li>
-		</ul>
-	</section>
-	<aside class="standout">
-		<h1 class="hed">This is a standout heading</h1>
-		<p class="subhed">Standout subheads won’t necessarily be full-width.</p>
-	</aside>
+	
+	<article class="section">
+		<div class="standout">
+			<h1 class="hed">Just getting started?</h1>
+			<p class="subhed">Class aptent taciti sociosqu ad litora torquent.</p>
+		</div>
+		
+		<section id="explore">
+			<div class="col-ab">
+			<p>Nullam sollicitudin neque sit amet tellus ornare ac rutrum arcu ullamcorper. Curabitur tempus urna ac dui Bro Chih Minh luctus. Maecenas brolor erat, tristique ut rutrum et, imperdiet in dui. Praesent non augue tellus. Phasellus tortor leo, tincidunt in vehicula vel, auctor sit amet nunc.</p>
+
+		</div>
+		</section>
+	
+		<section id="learn">
+			<div class="col-ab">
+			<h1 class="hed">Learn</h1>
+			<p>One of the most beautiful things about the web is that it's constantly changing. While these changes can be overwhelming, we're here to help!</p>
+			<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus convallis felis id est ullamcorper blandit. Curabitur gravida blandit quam, et venenatis libebro cursus vel. Integer mattis, enim in ultricies pharetra, nibh risus accumsan odio, sed commobro risus nisi ut est. Etiam eleifend pellentesque turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus convallis felis id est ullamcorper blandit. Curabitur gravida blandit quam, et venenatis libebro cursus vel. Integer mattis, enim in ultricies pharetra, nibh risus accumsan odio, sed commobro risus nisi ut est. Etiam eleifend pellentesque turpis.</p>
+	
+			<h2 class="subhed">Resources</h2>
+			<ul class="resources">
+				<li class="col-a">
+					<p>[Read blog posts about stuff]</p>
+					<ul>
+						<li><a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">Vendor prefixed css property overview</a></li>
+						<li><a href="http://nicolasgallagher.com/multiple-backgrounds-and-borders-with-css2/">Backgrounds and borders with CSS2</a></li>
+						<li><a href="http://www.blog.highub.com/css/whats-new-in-css-selectors-level-4/">What's new in CSS selectors level 4</a></li>
+						<li><a href="http://mths.be/notes">Great blog posts by Mathias Bynens</a></li>
+					</ul>
+				</li>
+			
+				<li class="col-b">
+					<p>Recent slide decks to source features from</p>
+					<ul>
+						<li><a href="http://vimeo.com/32135328">Tab Atkins - The Future of CSS (Fronteers)</a></li>
+						<li><a href="http://lea.verou.me/css3-secrets/">CSS3 Secrets</a></li>
+						<li><a href="http://nimbu.in/w3conf/">w3conf</a></li>
+						<li><a href="http://mezzoblue.com/presentations/2011/fowd/FOWD.pdf">The Future of CSS (FOWD)</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</section>
+	
+		<section id="meetups">
+			<div class="col-ab">
+			<h2 class="hed">Meetups</h2>
+	
+			<p>Attending local meetups and conferences is a great way to connect with other developers to learn, share resources, and bring new ideas and collaborations to life. Sites like <a href="#">Meetup.com</a> and <a href="Lanyrd.com">Lanyrd</a> can help you find events in your neighborhood.</p>
+			<p>Phasellus convallis felis id est ullamcorper blandit. Curabitur gravida blandit quam, et venenatis libebro cursus vel. Integer mattis, enim in ultricies pharetra, nibh risus accumsan odio, sed commobro risus nisi ut est. Etiam eleifend pellentesque turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus convallis felis id est ullamcorper blandit. Curabitur gravida blandit quam, et venenatis libebro cursus vel. Integer mattis, enim in ultricies pharetra, nibh risus accumsan odio, sed commobro risus nisi ut est. Etiam eleifend pellentesque turpis.</p>
+		</div>
+		</section>
+
+	</article>
+
+	<article class="section">
+		
+		<div class="standout">
+			<h1 class="hed">Mo’ Advanced</h1>
+			<p class="subhed">Lorem ipsum dolor sit amet?</p>
+		</div>
+
+		<section id="specs" class="subsection">
+			<div class="col-ab">
+				<h1 class="hed">Specs</h1>
+		
+				<p>Specs codify the expected behavior. They are developed by Working Groups (WG) along with active discussion on mailing lists. While we can’t always be certain that all browser vendors will adhere to the rules set forth in a spec they provide us with something that we, as developers, can standardize against.</p>
+	
+				<h2 class="subhed">Resources</h2>
+		
+				<ul class="resources col-a">
+					<li><p>Learn the <a href="http://diveintohtml5.info/past.html">history of HTML</a></p></li>
+					<li><p>Take an <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/">inside look at how the CSS WG works</a></p></li>
+					<li>
+						<p>Subscribe to these mailing lists to follow and contribute to the discussions that drive the web:</p>
+						<ul>
+							<li><a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a></li>
+							<li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a></li>
+							<li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a></li>
+						</ul>
+					</li>
+				</ul>
+		
+				<ul class="resources col-b">
+					<li><p>Read through the <a href="http://developers.whatwg.org/">HTML5 Spec for developers</a> with all implementor stuff removed, formatted beautifully for you.</p></li>
+					<li>
+						<p>See the latest commits to the HTML and CSS specs by following their respective working groups on Twitter:</p>
+						<ul>
+							<li><a href="http://twitter.com/csscommits">csscommits</a></li>
+							<li><a href="http://twitter.com/whatwg">whatwg</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+	
+	</article>
+	
+<!--
 	<div class="col-ab">
 		<div class="col-a">
 
@@ -70,11 +160,15 @@
 					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
-					<p>Note that there’s additional padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
-					<div></div>
+					<p>Note that there’s padding below the standout headline above. Curabitur tempus urna ac dui Bro Chih Minh luctus.</p>
+					<details>
+						<summary>Who’s Participating</summary>
+					</details>
 				</dd>
 
-				<dt data-hashtag="#bar">
+				
+				
+				<dt data-hashtag="#foo">
 					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
@@ -82,7 +176,7 @@
 					<div></div>
 				</dd>
 
-				<dt data-hashtag="#baz">
+				<dt data-hashtag="#foo">
 					<p><a href="#">Key/Value Pair</a></p>
 				</dt>
 				<dd>
@@ -116,6 +210,7 @@
 
 		</div>
 	</div>
+-->
 
 	<footer class="doc">
 
@@ -129,8 +224,7 @@
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 */
 	</script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+  <script src="js/libs/jquery.min.js"></script>
   <script src="http://platform.twitter.com/anywhere.js?id=wjANCxjyXtdRjYv8KAGIkA&amp;v=1"></script>
 	<script src="js/plugins.js"></script>
   <script>

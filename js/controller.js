@@ -14,18 +14,16 @@
 	// Define scripts and styles for conditional loading:
 	md.assets = {
 		js: {
-			jQuery	 : "lib/jquery.js",
-			touch 	 : "lib/touch.js"
+			fitText  : "js/libs/fittext.js"
 		},
 		css: {
 			fonts 	 : "css/fonts.css"
 		}
 	};
+
 		
 	var jsToLoad = [
-		md.assets.js.jQuery,
-		md.assets.js.touch,
-		md.assets.js.init
+		/* md.assets.js.init */
 	],
 	cssToLoad = [];
 		
@@ -34,9 +32,11 @@
 
 		// Load custom fonts above:
 		if( md.mobileBreakpoint && !md.devMode.mobileAssets ){
-			cssToLoad.push( md.assets.css.fonts );
 			
-			// Add no-fontface class, for fallback font styling:
+			jsToLoad.push( md.assets.js.fitText );
+			
+			cssToLoad.push( md.assets.css.fonts );
+			// Remove no-fontface class, for fallback font styling:
 			docElem.className = docElem.className.replace(/\bno-fontface\b/,'');
 		}
 
