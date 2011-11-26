@@ -23,7 +23,7 @@ blockquote {
 	font-style: italic;
 }
 
-a {
+a, a:visited {
 	color: #4b73a6;
 	-webkit-transition: color .15s linear;
 	-moz-transition: color .15s linear;
