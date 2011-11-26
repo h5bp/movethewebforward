@@ -1,8 +1,8 @@
 body {
-	background: #e7ebf1;
-	color: #525a64;
-	font: 100%/1.5 "Adelle", georgia, serif;
-	-webkit-font-smoothing: antialiased;
+    background: #e7ebf1;
+    color: #525a64;
+    font: 100%/1.5 "Adelle", georgia, serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -10,149 +10,157 @@ h1 {
 }
 
 ul, ol, blockquote {
-	margin: 0;
-	padding: 0 0 0 1.875%;
+    margin: 0;
+    padding: 0 0 0 1.875%;
 }
 
 ul li {
-	padding: .2em 0;
+    padding: .2em 0;
 }
 
 blockquote {
-	border-left: 3px solid #5e7087;
-	font-style: italic;
+    border-left: 3px solid #5e7087;
+    font-style: italic;
 }
 
 a, a:visited {
-	color: #4b73a6;
-	-webkit-transition: color .15s linear;
-	-moz-transition: color .15s linear;
-	-ms-transition: color .15s linear;
-	-o-transition: color .15s linear;
-	transition: color .15s linear;
+    color: #4b73a6;
+    -webkit-transition: color .15s linear;
+    -moz-transition: color .15s linear;
+    -ms-transition: color .15s linear;
+    -o-transition: color .15s linear;
+    transition: color .15s linear;
 }
+
 a:hover {
-	color: #1f59a3;
+    color: #1f59a3;
 }
 
 .col-ab p {
-	line-height: 1.65;
+    line-height: 1.65;
 }
+
 .hed {
-	border-bottom: 1px solid #cbd1d8;
-	color: #324a69;
-	clear: both;
-	float: left;
-	font: normal 1.8em/1.2 "ChunkFive", arial, helvetica, sans-serif;
-	letter-spacing: -.02em;
-	margin: 0 0 .5em 0;
-	padding: .5em 0 .1em 0;
-	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
-	width: 100%;
+    border-bottom: 1px solid #cbd1d8;
+    color: #324a69;
+    clear: both;
+    float: left;
+    font: normal 1.8em/1.2 "ChunkFive", arial, helvetica, sans-serif;
+    letter-spacing: -.02em;
+    margin: 0 0 .5em 0;
+    padding: .5em 0 .1em 0;
+    text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+    width: 100%;
 }
+
 .no-fontface .hed {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .subhed {
-	color: #7f8c9c;
-	font: 1.4em/1 "ChunkFive", georgia, serif;
-	margin: 1em 0 0 0;
-	text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+    color: #7f8c9c;
+    font: 1.4em/1 "ChunkFive", georgia, serif;
+    margin: 1em 0 0 0;
+    text-shadow: 1px 1px 0 rgba(255,255,255,.8);
 }
 
 .standout,
 .subsection:not(:last-child):after {
-	background: #687482 url(img/bg_noise.png) 0 0 repeat;
-	background-origin: padding;
-	border: double #494f57;
-	border-width: 3px 0;
-	
-	background: 
-		url(img/bg_noise.png) 0 0 repeat,
-		-moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-	background: 
-		url(img/bg_noise.png) 0 0 repeat,
-		-webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-	background: 
-		url(img/bg_noise.png) 0 0 repeat,
-		-o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-	background: 
-		url(img/bg_noise.png) 0 0 repeat,
-		-ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-	background: 
-		url(img/bg_noise.png) 0 0 repeat,
-		radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-	
-	clear: both;
-	margin: 3.5em 0 2em 0;
-	padding: 1em 2.9296875% 0 2.9296875%;
-	-webkit-box-shadow: inset 0 0 10px #5d6672;
-	-moz-box-shadow: inset 0 0 10px #5d6672;
-	-ms-box-shadow: inset 0 0 10px #5d6672;
-	box-shadow: inset 0 0 10px #5d6672;
+    background: #687482 url(img/bg_noise.png) 0 0 repeat;
+    background-origin: padding;
+    border: double #494f57;
+    border-width: 3px 0;
+    
+    background: 
+        url(img/bg_noise.png) 0 0 repeat,
+        -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    background: 
+        url(img/bg_noise.png) 0 0 repeat,
+        -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    background: 
+        url(img/bg_noise.png) 0 0 repeat,
+        -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    background: 
+        url(img/bg_noise.png) 0 0 repeat,
+        -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    background: 
+        url(img/bg_noise.png) 0 0 repeat,
+        radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    
+    clear: both;
+    margin: 3.5em 0 2em 0;
+    padding: 1em 2.9296875% 0 2.9296875%;
+    -webkit-box-shadow: inset 0 0 10px #5d6672;
+    -moz-box-shadow: inset 0 0 10px #5d6672;
+    -ms-box-shadow: inset 0 0 10px #5d6672;
+    box-shadow: inset 0 0 10px #5d6672;
 }
+
 .subsection:not(:last-child):after {
-	content: " ";
-	display: block;
-	min-height: .85em;
-	margin: 2.5em 0 .5em 0;
-	opacity: .85;
+    content: " ";
+    display: block;
+    min-height: .85em;
+    margin: 2.5em 0 .5em 0;
+    opacity: .85;
 }
 
 .standout .subhed,
 .doc-hed {
-	color: #b5c5d7;
-	font: 1.5em/1 "ChunkFive", georgia, serif;
-	letter-spacing: .05em;
-	margin: 0;
-	padding: .2em 0 .8em 0;
-	text-align: center;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+    color: #b5c5d7;
+    font: 1.5em/1 "ChunkFive", georgia, serif;
+    letter-spacing: .05em;
+    margin: 0;
+    padding: .2em 0 .8em 0;
+    text-align: center;
+    text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
 .standout .hed {
-	border: none;
-	color: #e0e6ed;
-	float: none;
-	font-size: 2.6em;
-	letter-spacing: 0;
-	line-height: 1;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+    border: none;
+    color: #e0e6ed;
+    float: none;
+    font-size: 2.6em;
+    letter-spacing: 0;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
 .no-fontface .standout .hed {
-	font-weight: bold;
-	padding: 0 0 .25em 0;
+    font-weight: bold;
+    padding: 0 0 .25em 0;
 }
+
 .no-fontface .standout .subhed {
-	letter-spacing: normal;
+    letter-spacing: normal;
 }
 
 .doc-hed {
-	display: block;
-	width: 100%;
-	padding: .8em 0 0 0;
-	text-align: left;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
+    display: block;
+    width: 100%;
+    padding: .8em 0 0 0;
+    text-align: left;
+    text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
+
 .doc-hed b,
 .doc-hed .hed {
-	line-height: 1;
-	display: block;
-	text-align: left;
-	width: 100%;
+    line-height: 1;
+    display: block;
+    text-align: left;
+    width: 100%;
 }
+
 .doc-hed .hed {
-	margin: 0 0 .05em 0;
-	padding: 0;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px, #494f57 3px 3px;
+    margin: 0 0 .05em 0;
+    padding: 0;
+    text-shadow: #494f57 1px 1px, #494f57 2px 2px, #494f57 3px 3px;
 }
+
 .doc-lead {
-	margin-top: 1.5em;
+    margin-top: 1.5em;
 }
 
 
@@ -164,129 +172,141 @@ a:hover {
 
 
 .lead {
-	text-align: center;
-	border-bottom: 3px double #cbd1d8;
-	margin-bottom: .25em;
-	padding-bottom: 1.4em;
+    text-align: center;
+    border-bottom: 3px double #cbd1d8;
+    margin-bottom: .25em;
+    padding-bottom: 1.4em;
 }
 
 .hed-lead {
-	color: #324a69;
-	font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
-	margin: .7em 0 .1em 0;
-	padding: 0;
-	text-shadow: 1px 1px 0 #fff;
-}
-.no-fontface .hed-lead {
-	font-weight: bold;
-	letter-spacing: -1px;
+    color: #324a69;
+    font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
+    margin: .7em 0 .1em 0;
+    padding: 0;
+    text-shadow: 1px 1px 0 #fff;
 }
 
+.no-fontface .hed-lead {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
 
 .subhed-lead p {
-	color: #7f8c9c;
-	font: normal 1.3em/1.2 "ChunkFive", georgia, serif;
-	margin: 0;
-	padding: 0 .5em;
-	text-shadow: 1px 1px 0 #fff;
+    color: #7f8c9c;
+    font: normal 1.3em/1.2 "ChunkFive", georgia, serif;
+    margin: 0;
+    padding: 0 .5em;
+    text-shadow: 1px 1px 0 #fff;
 }
+
 .subhed-lead p b {
-	color: #5d6474;
+    color: #5d6474;
 }
 
 dl {
-	width: 100%;
+    width: 100%;
 }
+
 dl p {
-	margin: .5em 0;
+    margin: .5em 0;
 }
+
 dt,
 .key {
-	font: normal 1.15em/1 "ChunkFive", georgia, serif;
-	width: 100%;
+    font: normal 1.15em/1 "ChunkFive", georgia, serif;
+    width: 100%;
 }
+
 dd,
 .val {
-	border-bottom: 1px dotted #bfc6cf;
-	margin: 0 0 2em 0;
+    border-bottom: 1px dotted #bfc6cf;
+    margin: 0 0 2em 0;
 }
+
 dd:last-child,
 .val:last-child {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 
 .q-a,
 .key-val {
-	float: left;
+    float: left;
 }
+
 .key-val dt,
 .key {
-	color: #3d526d;
-	margin: 0;
-	padding: 0;
+    color: #3d526d;
+    margin: 0;
+    padding: 0;
 }
+
 .key-val dd p,
 .val p {
-	margin: .4em 0 .55em 0;
+    margin: .4em 0 .55em 0;
 }
 
 .key-val dd {
-	position: relative;
+    position: relative;
 }
+
 .key-val details {
-	border-bottom: 1px dotted #bfc6cf;
-	clear: both;
-	position: absolute;
-	left: 0;
-	bottom: -1.8em;
-	width: 100%;
+    border-bottom: 1px dotted #bfc6cf;
+    clear: both;
+    position: absolute;
+    left: 0;
+    bottom: -1.8em;
+    width: 100%;
 }
 
 .q-a abbr {
-	border: none;
-	color: #7f8c9c;
-	float: left;
-	font: normal 1em/1 "ChunkFive", georgia, serif;
-	margin: 0 .4em 0 0;
+    border: none;
+    color: #7f8c9c;
+    float: left;
+    font: normal 1em/1 "ChunkFive", georgia, serif;
+    margin: 0 .4em 0 0;
 }
+
 .q-a dt {
-	font-size: 1.15em;
+    font-size: 1.15em;
 }
+
 .q-a dd abbr {
-	padding: .2em 0 0 0;
-	font-size: 1.15em;
+    padding: .2em 0 0 0;
+    font-size: 1.15em;
 }
 
 .resources {
-	overflow: auto;
-	list-style: none;
-	padding: .75em 0 0 0;
-	font-size: .9em;
+    overflow: auto;
+    list-style: none;
+    padding: .75em 0 0 0;
+    font-size: .9em;
 }
+
 .resources li {
-	padding: .2em 0;
+    padding: .2em 0;
 }
+
 .resources > li:before {
-	color: #3d526d;
-	content: "■";
-	float: left;
-	font-size: .85em;
-	padding: .1em .6em 0 0;
+    color: #3d526d;
+    content: "■";
+    float: left;
+    font-size: .85em;
+    padding: .1em .6em 0 0;
 }
 
 .resources ul {
-	list-style: none;
-	padding: .25em 0 .4em 1.2em;
+    list-style: none;
+    padding: .25em 0 .4em 1.2em;
 }
 
 .resources li li {
-	padding: 0;
+    padding: 0;
 }
 
 .resources li p {
-	margin: 0;
-	line-height: 1.5;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Layout */
@@ -295,23 +315,26 @@ dd:last-child,
 nav {
     text-align: center;
 }
+
 nav ul,
 nav ol {
     display: table;
     width: 100%;
     padding: 0;
 }
+
 nav li {
     display: table-cell;
     padding: .5em 0 .8em 0;
 }
+
 .lt-ie8 nav li {
     display: inline;
 }
 
 .col-ab {
-	clear: both;
-	padding: 0 2.9296875%;
+    clear: both;
+    padding: 0 2.9296875%;
 }
 
 
@@ -322,72 +345,76 @@ nav li {
 }
 
 @media screen and (min-width: 800px) {
-	.col-ab {
-		width: 94.1%;
-	}
-	.col-a,
-	.col-b {
-		width: 48.020833333333%;
-	}
-	.col-a {
-		float: left;
-	}
-	.col-b {
-		float: right;
-	}
-	
-	.col-ab p {
-		max-width: 950px;
-		line-height: 1.5;
-	}
-	
-	.hed-lead {
-		font: 3.625em/1 "ChunkFive", georgia, serif;
-	}
-	
-	.lead p {
-		max-width: 9999px;
-	}
-	
-	.hed {
-		font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif;
-	}
-	
-	.standout .subhed,
-	.doc-hed {
-		font: 2em/1 "ChunkFive", georgia, serif;
-	}
-	.subhed-lead p {
-		font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
-	}
-	
-	.key-val dt,
-	.key {
-		float: left;
-		width: 30.802603036876%;
-	}
+    .col-ab {
+        width: 94.1%;
+    }
 
-	.key-val dd,
-	.val {
-		padding: 0 0 0 34.924078091106%;
-	}
-	
-	.col-split {
-		padding-top: 1em;		
-		-webkit-column-count: 2;
-		-webkit-column-gap: 2.079002079002%;
-		-moz-column-count: 2;
-		-moz-column-gap: 2.079002079002%;
-		-ms-column-count: 2;
-		-ms-column-gap: 2.079002079002%;
-		-o-column-count: 2;
-		-o-column-gap: 2.079002079002%;
-		column-count: 2;
-		column-gap: 2.079002079002%;
-	}
-	.col-split p {
-		padding: 0 0 1em 0;
-		margin: 0;
-	}
+    .col-a,
+    .col-b {
+        width: 48.020833333333%;
+    }
+
+    .col-a {
+        float: left;
+    }
+
+    .col-b {
+        float: right;
+    }
+    
+    .col-ab p {
+        max-width: 950px;
+        line-height: 1.5;
+    }
+    
+    .hed-lead {
+        font: 3.625em/1 "ChunkFive", georgia, serif;
+    }
+    
+    .lead p {
+        max-width: 9999px;
+    }
+    
+    .hed {
+        font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif;
+    }
+    
+    .standout .subhed,
+    .doc-hed {
+        font: 2em/1 "ChunkFive", georgia, serif;
+    }
+
+    .subhed-lead p {
+        font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
+    }
+    
+    .key-val dt,
+    .key {
+        float: left;
+        width: 30.802603036876%;
+    }
+
+    .key-val dd,
+    .val {
+        padding: 0 0 0 34.924078091106%;
+    }
+    
+    .col-split {
+        padding-top: 1em;        
+        -webkit-column-count: 2;
+        -webkit-column-gap: 2.079002079002%;
+        -moz-column-count: 2;
+        -moz-column-gap: 2.079002079002%;
+        -ms-column-count: 2;
+        -ms-column-gap: 2.079002079002%;
+        -o-column-count: 2;
+        -o-column-gap: 2.079002079002%;
+        column-count: 2;
+        column-gap: 2.079002079002%;
+    }
+
+    .col-split p {
+        padding: 0 0 1em 0;
+        margin: 0;
+    }
 }
-
