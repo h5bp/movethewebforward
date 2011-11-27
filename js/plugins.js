@@ -11,6 +11,17 @@
 
     var options = $.extend({}, defaults, o);
 
+    Modernizr.load([
+      {
+        test: window.JSON,
+        nope: 'js/libs/json2.min.js'
+      },
+      {
+        test: Modernizr.localstorage,
+        nope: 'js/libs/storage.js'
+      }
+    ]);
+
     return this.each(function() {
       var $elem = $(this);
 
@@ -57,9 +68,9 @@
               src: this.profile_image_url,
               title: this.from_user
             }),
-			link = $('<a/>', {
-				href: 'http://twitter.com/' + this.from_user
-			});
+            link = $('<a/>', {
+            	href: 'http://twitter.com/' + this.from_user
+            });
 
             avatarsElem.append( link.append( image ) );
 
