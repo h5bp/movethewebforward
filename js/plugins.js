@@ -22,6 +22,36 @@
       }
     ]);
 
+    function cacheSet(key, value, expires) {
+      window.localStorage.setItem(key, JSON.stringify(value));
+      if (expires) {
+        window.localStorage.setItem(key + '__expires', expires);
+      }
+    }
+
+    function cacheGet(key) {
+      var value = window.localStorage.getItem(key);
+      var expires = window.localStorage.getItem(key + '__expires');
+      if (expires && (+new Date) > expires) {
+        return undefined;
+      }
+      return JSON.parse(value);
+    }
+
+    function twitterSearch(query, callback) {
+      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
+      var results = cacheGet(query);
+      if (results) {
+        callback(results);
+      }
+      else {
+        $.getJSON(searchUrl + encodeURIComponent(query), function(json) {
+          cacheSet(query, json, (+new Date) + 1000 * 60 * 60)
+          callback(json);
+        });
+      }
+    }
+
     return this.each(function() {
       var $elem = $(this);
 
@@ -49,13 +79,10 @@
       // A URL that will pre-fill a twitter status message.
       var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
 
-      // Twitter search URL.
-      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
-
       linkElem.attr('href', prefillUrl);
 
       if (hashtag) {
-        $.getJSON(searchUrl + encodeURIComponent(hashtag), function(json) {
+        twitterSearch(hashtag, function(json) {
           // De-dupe.
           var users = {};
 
@@ -67,8 +94,9 @@
             var image = $('<img>', {
               src: this.profile_image_url,
               title: this.from_user
-            }),
-            link = $('<a/>', {
+            });
+
+            var link = $('<a/>', {
             	href: 'http://twitter.com/' + this.from_user
             });
 
