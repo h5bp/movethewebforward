@@ -25,14 +25,28 @@ blockquote {
 
 a {
 	color: #4b73a6;
-	-webkit-transition: color .15s linear;
-	-moz-transition: color .15s linear;
-	-ms-transition: color .15s linear;
-	-o-transition: color .15s linear;
-	transition: color .15s linear;
+	text-decoration: none;
+	opacity: 1;
+
+	-webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-ms-transition: color .1s linear;
+	-o-transition: color .1s linear;
+	transition: color .1s linear;
+}
+a:visited {
+	color: #4b73a6;
 }
 a:hover {
-	color: #1f59a3;
+	color: #0c4c9d;
+}
+
+
+.resources ul a {
+	border-radius: 3px;
+	display: inline-block;
+	margin-left: -8px;
+	padding: 1px 5px 0 5px;
 }
 
 .col-ab p {
@@ -198,7 +212,7 @@ dl {
 	width: 100%;
 }
 dl p {
-	margin: .5em 0;
+	margin: .25em 0;
 }
 dt,
 .key {
@@ -208,13 +222,12 @@ dt,
 dd,
 .val {
 	border-bottom: 1px dotted #bfc6cf;
-	margin: 0 0 2em 0;
+	margin: 0;
 }
 dd:last-child,
 .val:last-child {
 	border-bottom: none;
 }
-
 
 .q-a,
 .key-val {
@@ -223,23 +236,47 @@ dd:last-child,
 .key-val dt,
 .key {
 	color: #3d526d;
+	padding: .5em 0 0 0;
 	margin: 0;
-	padding: 0;
-}
-.key-val dd p,
-.val p {
-	margin: .4em 0 .55em 0;
 }
 
-.key-val dd {
-	position: relative;
+.tasks {
+	font-size: .9em;
+	margin-top: .9em;
+	list-style: none;
+	padding: .1em 0 0 0;
+	margin-left: 0;
 }
-.key-val details {
+.tasks li:not(:last-child) {
 	border-bottom: 1px dotted #bfc6cf;
+	padding: 0 0 .5em 0;
+}
+.tasks p {
+	margin: .5em 0 0 0;
+}
+
+.pledges {
+	padding-top: .5em;
+}
+.pledges a {
+	display: inline-block;
+	margin: .15em;
+}
+.pledges img {
+	max-width: 25px;
+}
+
+.key-val dd,
+.val {
+	position: relative;
+	padding-bottom: 1em;
+	padding-top: .05em;
+}
+.key-val .pledges {
+	bottom: .2em;
 	clear: both;
-	position: absolute;
 	left: 0;
-	bottom: -1.8em;
+	position: absolute;
 	width: 100%;
 }
 
@@ -261,7 +298,7 @@ dd:last-child,
 .resources {
 	overflow: auto;
 	list-style: none;
-	padding: .75em 0 0 0;
+	padding: 1.18em 0 0 0;
 	font-size: .9em;
 }
 .resources li {
@@ -353,6 +390,10 @@ nav li {
 		font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif;
 	}
 	
+	.standout .hed {
+		font-size: 4.8em;
+	}
+	
 	.standout .subhed,
 	.doc-hed {
 		font: 2em/1 "ChunkFive", georgia, serif;
@@ -369,7 +410,7 @@ nav li {
 
 	.key-val dd,
 	.val {
-		padding: 0 0 0 34.924078091106%;
+		padding-left: 34.924078091106%;
 	}
 	
 	.col-split {
