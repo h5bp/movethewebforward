@@ -259,7 +259,7 @@ a, a:visited {
     transition: color .1s linear;
 }
 
-a:hover { color: #0c4c9d; }
+a:hover, a:focus, a:active { color: #0c4c9d; }
 
 
 .resources ul a {
@@ -568,10 +568,7 @@ nav ol {
 nav li {
     display: table-cell;
     padding: .5em 0 .8em 0;
-}
-
-.lt-ie8 nav li {
-    display: inline;
+    *display: inline;
 }
 
 .col-ab {
