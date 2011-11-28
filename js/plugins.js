@@ -38,11 +38,6 @@
       return JSON.parse(value);
     }
 
-    function cacheDel(key) {
-      window.localStorage.removeItem(key);
-      window.localStorage.removeItem(key + '__expires');
-    }
-
     function twitterSearch(query, callback) {
       var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
       var results = cacheGet(query);
@@ -84,9 +79,7 @@
       // A URL that will pre-fill a twitter status message.
       var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
 
-      linkElem.attr('href', prefillUrl).click(function() {
-        cacheDel(hashtag);
-      });
+      linkElem.attr('href', prefillUrl);
 
       if (hashtag) {
         twitterSearch(hashtag, function(json) {
