@@ -124,9 +124,6 @@
 			init     : "js/init.js",
 			touch    : "js/touch.js",
 			fitText  : "js/libs/fittext.js"
-		},
-		css: {
-			fonts 	 : "css/fonts.css"
 		}
 	};
 
@@ -146,7 +143,6 @@
 			
 			jsToLoad.push( md.assets.js.fitText );
 			
-			cssToLoad.push( md.assets.css.fonts );
 			// Remove no-fontface class, for fallback font styling:
 			docElem.className = docElem.className.replace(/\bno-fontface\b/,'');
 		}
