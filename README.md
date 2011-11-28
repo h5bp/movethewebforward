@@ -9,7 +9,7 @@ Do you have some ideas for ways that all developers—from the seasoned professi
 
 ## IRC channel
 
-We're in #igotmybeanie on freenode IRC. 
+We're in #igotmybeanie on freenode IRC.
 
 ## Staging server
 

@@ -2,7 +2,7 @@
 	var tweet = "This is the tweet.";
 	
 	$(".task")
-		.append('<a href="http://twitter.com/home?status=' + tweet + '" class="pledge">I can do that.</a><div class="pledges"></div>')
+		.append('<a href="http://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) + '" class="pledge">I can do that.</a><div class="pledges"></div>')
 		.hashTask({
 			message         : tweet,
 			linkSelector    : function() { return this.find('.pledge') },
