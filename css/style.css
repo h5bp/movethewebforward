@@ -1,5 +1,6 @@
-/* Font-face
------------------------------- */
+/* =============================================================================
+   Font-face
+   ========================================================================== */
 
 @font-face {
     font-family: 'Adelle';
@@ -32,8 +33,8 @@
  *
  * Detailed information about this CSS: h5bp.com/css
  *
- * ==|== normalize ==========================================================
  */
+
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -63,7 +64,6 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
  */
 
 ::-moz-selection { background: #73abf4; color: #fff; text-shadow: none; }
@@ -226,9 +226,9 @@ td { vertical-align: top; }
 
 
 
-/* =========================== */
-/* = STYLES! Wilto's in here = */
-/* =========================== */
+/* =============================================================================
+   Site styles
+   ========================================================================== */
 
 
 body {
@@ -645,9 +645,12 @@ nav li {
 
 
 
-/* ==|== non-semantic helper classes ========================================
+
+/* =============================================================================
+   Helper classes
    Please define your styles before this section.
    ========================================================================== */
+
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden; }
@@ -661,6 +664,10 @@ nav li {
 /* Hide visually and from screenreaders, but maintain layout */
 .hide { visibility: hidden; }
 
+
+/* =============================================================================
+   Print styles   
+   ========================================================================== */
 
 @media print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
