@@ -1,59 +1,14 @@
-/* =============================================================================
-   Font-face
-   ========================================================================== */
 
-@font-face {
-    font-family: 'Adelle';
-    src: url('fonts/adelle_reg-webfont.eot');
-    src: url('fonts/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/adelle_reg-webfont.woff') format('woff'),
-         url('fonts/adelle_reg-webfont.ttf') format('truetype'),
-         url('fonts/adelle_reg-webfont.svg#AdelleRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'ChunkFive';
-    src: url('fonts/chunkfive-webfont.eot');
-    src: url('fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/chunkfive-webfont.woff') format('woff'),
-         url('fonts/fonts/chunkfive-webfont.ttf') format('truetype'),
-         url('fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /*
- * HTML5 ✰ Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- *
- * Detailed information about this CSS: h5bp.com/css
- *
+ * HTML5 ✰ Boilerplate, natch.
  */
 
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
-
-
-/* =============================================================================
-   Base
-   ========================================================================== */
-
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Force vertical scrollbar in non-IE
- * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
@@ -298,20 +253,20 @@ section h2 {
     background-origin: padding;
     border: double #494f57;
     border-width: 3px 0;
-    
-    background: 
+
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    
+
     clear: both;
     margin: 3.5em 0 2em 0;
     padding: 1em 2.9296875% 0 2.9296875%;
@@ -331,16 +286,16 @@ section h2 {
     border: double #494f57;
     border-width: 3px 0;
 
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
 }
@@ -586,30 +541,30 @@ nav li {
     .col-ab {
         width: 94.1%;
     }
-    
+
     .col-a,
     .col-b { width: 48.020833333333%; }
-    
+
     .col-a { float: left; }
 
     .col-b { float: right; }
-    
+
     .col-ab p {
         max-width: 950px;
         line-height: 1.5;
     }
-    
+
     .hed-lead { font: 3.625em/1 "ChunkFive", georgia, serif; }
-    
+
     h1 { font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif; }
-    
+
     .standout h1 { font-size: 4.8em; }
-    
+
     .standout h2,
     .doc-hed { font: 2em/1 "ChunkFive", georgia, serif; }
-    
+
     .subhed-lead p { font: normal 1.6875em/1.2 "ChunkFive", georgia, serif; }
-    
+
     .key-val dt,
     .key {
         float: left;
@@ -620,7 +575,7 @@ nav li {
     .val {
         padding-left: 34.924078091106%;
     }
-    
+
     .col-split {
         padding-top: 1em;
         -webkit-column-count: 2;
@@ -680,7 +635,7 @@ nav li {
 
 
 /* =============================================================================
-   Print styles   
+   Print styles
    ========================================================================== */
 
 @media print {
@@ -697,3 +652,12 @@ nav li {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+
+/* Font-face definitions at the end. who is so damn hip, now? */
+/* ps. yes they can go here. nbd. */
+
+@font-face { font-family: 'Adelle'; src: url('fonts/adelle_reg-webfont.eot'); src: url('fonts/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/adelle_reg-webfont.woff') format('woff'), url('fonts/adelle_reg-webfont.ttf') format('truetype'), url('fonts/adelle_reg-webfont.svg#AdelleRegular') format('svg'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'ChunkFive'; src: url('fonts/chunkfive-webfont.eot'); src: url('fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/chunkfive-webfont.woff') format('woff'), url('fonts/fonts/chunkfive-webfont.ttf') format('truetype'), url('fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg'); font-weight: normal; font-style: normal; }
+
