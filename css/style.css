@@ -53,6 +53,11 @@ a:hover, a:focus, a:active { color: #0c4c9d; }
 
 p { line-height: 1.65; }
 
+section, header {  /* futzing for wide browsers */
+    max-width: 990px;
+    margin: 0 auto;
+}
+
 section h1 {
     border-bottom: 1px solid #cbd1d8;
     color: #324a69;
