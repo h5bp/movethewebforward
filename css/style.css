@@ -241,17 +241,9 @@ dd:last-child,
     border-bottom: none;
 }
 
-.q-a,
-.key-val { float: left; }
+.section > section { margin-top: 2em; }
 
-.key-val dt,
-.key {
-    color: #3d526d;
-    padding: .5em 0 0 0;
-    margin: 0;
-}
-
-.tasks {
+section ul {
     font-size: .9em;
     margin-top: .9em;
     list-style: none;
@@ -259,13 +251,12 @@ dd:last-child,
     margin-left: 0;
 }
 
-.tasks li:not(:last-child) {
+section li:not(:last-child) {
     border-bottom: 1px dotted #bfc6cf;
-    padding: 0 0 .5em 0;
+    padding: 0.5em 0;
 }
-.tasks p {
-    margin: .5em 0 0 0;
-}
+
+.getinvolved { font-size: 0.9em; }
 
 .pledges {
     padding-top: .5em;
@@ -306,6 +297,7 @@ dd:last-child,
     padding: .2em 0 0 0;
     font-size: 1.15em;
 }
+
 
 .resources {
     overflow: auto;
@@ -374,8 +366,9 @@ nav li {
         width: 94.1%;
     }
 
-    .col-a,
-    .col-b { width: 48.020833333333%; }
+    .col-a { width: 72%; }
+    
+    .col-b { width: 25%;}
 
     .col-a { float: left; }
 
@@ -453,18 +446,20 @@ nav li {
    ========================================================================== */
 
 
-/* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden; }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .a11y-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .a11y-only.focusable:active, .a11y-only.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
-/* Hide visually and from screenreaders, but maintain layout */
 .hide { visibility: hidden; }
 
+.clearfix:before, .clearfix:after,
+.section > section:before,
+.section > section:after { content: ""; display: table; }
+.clearfix:after,
+.section > section:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 
 
