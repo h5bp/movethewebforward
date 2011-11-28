@@ -609,7 +609,6 @@ nav li {
     
     .col-split {
         padding-top: 1em;
-        clear:both;
         -webkit-column-count: 2;
         -webkit-column-gap: 2.079002079002%;
         -moz-column-count: 2;
