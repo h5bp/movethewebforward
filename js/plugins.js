@@ -1,23 +1,3 @@
-
-// usage: log('inside coolFunc', this, arguments);
-// paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-window.log = function(){
-  log.history = log.history || [];   // store logs to an array for reference
-  log.history.push(arguments);
-  if(this.console) {
-    arguments.callee = arguments.callee.caller;
-    var newarr = [].slice.call(arguments);
-    (typeof console.log === 'object' ? log.apply.call(console.log, console, newarr) : console.log.apply(console, newarr));
-  }
-};
-
-// make it safe to use console.log always
-(function(b){function c(){}for(var d="assert,clear,count,debug,dir,dirxml,error,exception,firebug,group,groupCollapsed,groupEnd,info,log,memoryProfile,memoryProfileEnd,profile,profileEnd,table,time,timeEnd,timeStamp,trace,warn".split(","),a;a=d.pop();){b[a]=b[a]||c}})((function(){try
-{console.log();return window.console;}catch(err){return window.console={};}})());
-
-
-// place any jQuery/helper plugins in here, instead of separate, slower script files.
-
 (function(global, doc, $) {
 
   $.fn.hashTask = function(o) {
@@ -31,7 +11,53 @@ window.log = function(){
 
     var options = $.extend({}, defaults, o);
 
-    this.each(function() {
+    Modernizr.load([
+      {
+        test: window.JSON,
+        nope: 'js/libs/json2.min.js'
+      },
+      {
+        test: Modernizr.localstorage,
+        nope: 'js/libs/storage.js'
+      }
+    ]);
+
+    function cacheSet(key, value, expires) {
+      window.localStorage.setItem(key, JSON.stringify(value));
+      if (expires) {
+        window.localStorage.setItem(key + '__expires', expires);
+      }
+    }
+
+    function cacheGet(key) {
+      var value = window.localStorage.getItem(key);
+      var expires = window.localStorage.getItem(key + '__expires');
+      if (expires && (+new Date) > expires) {
+        return undefined;
+      }
+      return JSON.parse(value);
+    }
+
+    function cacheDel(key) {
+      window.localStorage.removeItem(key);
+      window.localStorage.removeItem(key + '__expires');
+    }
+
+    function twitterSearch(query, callback) {
+      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
+      var results = cacheGet(query);
+      if (results) {
+        callback(results);
+      }
+      else {
+        $.getJSON(searchUrl + encodeURIComponent(query), function(json) {
+          cacheSet(query, json, (+new Date) + 1000 * 60 * 60)
+          callback(json);
+        });
+      }
+    }
+
+    return this.each(function() {
       var $elem = $(this);
 
       // The element that will become a twitter pre-fill link.
@@ -58,13 +84,12 @@ window.log = function(){
       // A URL that will pre-fill a twitter status message.
       var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
 
-      // Twitter search URL.
-      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
-
-      linkElem.attr('href', prefillUrl);
+      linkElem.attr('href', prefillUrl).click(function() {
+        cacheDel(hashtag);
+      });
 
       if (hashtag) {
-        $.getJSON(searchUrl + encodeURIComponent(hashtag), function(json) {
+        twitterSearch(hashtag, function(json) {
           // De-dupe.
           var users = {};
 
@@ -73,12 +98,16 @@ window.log = function(){
               return;
             }
 
-            var image = $('<img>').attr({
+            var image = $('<img>', {
               src: this.profile_image_url,
               title: this.from_user
             });
 
-            avatarsElem.append(image);
+            var link = $('<a/>', {
+            	href: 'http://twitter.com/' + this.from_user
+            });
+
+            avatarsElem.append( link.append( image ) );
 
             users[this.from_user] = true;
           });
