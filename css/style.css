@@ -410,7 +410,11 @@ li:hover span { opacity: 1;}
 
 nav { 
   text-align: center; 
+  background: rgb(50, 74, 105, 1);
   background: -o-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));      
+  background: -webkit-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
+  background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
+  background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
   width: 100%;
 }
 
