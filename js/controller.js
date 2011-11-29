@@ -3,23 +3,16 @@
 	var doc 		 = win.document,
 		docElem 	 = doc.documentElement,
 		head		 = doc.head || doc.getElementsByTagName( "head" )[0] || docElem,
-		Modernizr	 = win.Modernizr,
-		md			 = win.md;
-	
+		Modernizr	 = win.Modernizr;
+			
 	// Supportin’ stuff.
 	md = {
-		screenWidth 	 : window.screen.width,
 		mobileBreakpoint : window.screen.width >= 480,
-		browser : {
-			ie6			 : !!~docElem.className.indexOf( "ie6" ),
-			ie7			 : !!~docElem.className.indexOf( "ie7" ),
-			ie8			 : !!~docElem.className.indexOf( "ie8" )	
-		},
 		devMode : {
 			mobileAssets : !!~location.search.indexOf("mobile"),
 			basicAssets	 : !!~location.search.indexOf("basic")
 		},
-		enhanced		 : respond.mediaQueriesSupported || md.browser.ie6 || md.browser.ie7 || md.browser.ie8
+		enhanced		 : Modernizr.mq || md.browser.ie6 || md.browser.ie7 || md.browser.ie8
 	};
 
 	// If we’re emulating non-MQ browsers for development purposes:
@@ -96,75 +89,34 @@
 			}
 	};
 
-	//define md.load.style
-	md.load.script = function( src ){
-		if( !src ){ return; }
-		var script		= doc.createElement( "script" ),
-			fc			= head.firstChild;
-			script.src 	= src;
-
-			//might need to wait until DOMReady in IE...
-			if( fc ){
-				head.insertBefore(script, fc );
-			} else {
-				head.appendChild( script );
-			}
-	};
-
 	// Non-MQ browser, or in one of the two development modes? Exit here:
 	if( !md.enhanced || md.devMode.mobileAssets || md.devMode.basicAssets ) { 
 		return;
 	}
-
-	// Define scripts and styles for conditional loading:
-	md.assets = {
-		js: {
-			jQuery   : "js/libs/jquery.min.js",
-			plugin   : "js/plugins.js",
-			init     : "js/init.js",
-			touch    : "js/touch.js",
-			fitText  : "js/libs/fittext.js"
-		}
-	};
-
-		
-	var jsToLoad = [
-		md.assets.js.jQuery,
-		md.assets.js.plugin,
-		md.assets.js.init
-	],
-	cssToLoad = [];
+	Modernizr.load([
+    {
+      test: md.enhanced,
+      yep: [
+        'js/libs/storage.js',
+        'js/libs/jquery.min.js',
+        'js/plugins.js',
+        'js/init.js'
+      ]
+    },
+    { 
+        test: md.mobileBreakpoint,
+        yep: 'js/libs/fittext.js'
+    }
+    ]);
 		
 	// Wait for body to be ready for the rest, so we can check the body class and load accordingly:
 	md.bodyready(function(){
 
 		// Load custom fonts above:
-		if( md.mobileBreakpoint && !md.devMode.mobileAssets ){
-			
-			jsToLoad.push( md.assets.js.fitText );
-			
+		if( md.mobileBreakpoint && !md.devMode.mobileAssets ){	
+			md.load.style( 'css/fonts.css' );		
 			// Remove no-fontface class, for fallback font styling:
 			docElem.className = docElem.className.replace(/\bno-fontface\b/,'');
-		}
-
-		// Load enhanced assets:
-		for ( i = 0; i <= jsToLoad.length; i++ ) {
-			md.load.script( jsToLoad[i] );
-		}
-
-		for ( i = 0; i <= cssToLoad.length; i++ ) {
-			md.load.style( cssToLoad[i] );
-		}
-		
-		// Advanced support 
-		md.support = {
-			touch		 : Modernizr.touch,
-			websockets	 : Modernizr.websockets
-		};
-		
-		// If it's a device that supports touch...
-		if( md.support.touch ) {
-			jsToLoad.push(md.assets.js.touch);
 		}
 
 	});
