@@ -319,7 +319,7 @@ section ul, section ol {
 /* Get Involved Sidebar */
 .getinvolved { font-size: 0.9em; }
 
-.pledge {
+.pledge, .pledge:visited {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
