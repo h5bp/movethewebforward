@@ -174,25 +174,25 @@ section, header {
 }
 
 .standout {
-    background: #687482 url(css/img/bg_noise.png) 0 0 repeat;
+    background: #687482 url(img/bg_noise.png) 0 0 repeat;
     background-origin: padding;
     border: double #494f57;
     border-width: 3px 0;
     
     background: 
-        url(css/img/bg_noise.png) 0 0 repeat,
+        url(img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background: 
-        url(css/img/bg_noise.png) 0 0 repeat,
+        url(img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background: 
-        url(css/img/bg_noise.png) 0 0 repeat,
+        url(img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background: 
-        url(css/img/bg_noise.png) 0 0 repeat,
+        url(img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background: 
-        url(css/img/bg_noise.png) 0 0 repeat,
+        url(img/bg_noise.png) 0 0 repeat,
         radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     
     clear: both;
