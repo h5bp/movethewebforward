@@ -12,7 +12,7 @@
 			mobileAssets : !!~location.search.indexOf("mobile"),
 			basicAssets	 : !!~location.search.indexOf("basic")
 		},
-		enhanced		 : Modernizr.mq || /shitty/.test(document.documentElement.className)
+		enhanced		 : Modernizr.mq || /oldie/.test(document.documentElement.className)
 	};
 
 	// If we’re emulating non-MQ browsers for development purposes:
