@@ -58,7 +58,8 @@ ul, ol, blockquote {
 }
 
 ul li { padding: .2em 0; }
-h1, h2 { font-weight: normal !important; }
+h1, h2 { font-weight: normal; }
+
 blockquote {
     border-left: 3px solid #5e7087;
     font-style: italic;
@@ -67,7 +68,6 @@ blockquote {
 a, a:visited {
     color: #4b73a6;
     text-decoration: none;
-
     -webkit-transition: color .1s linear;
     -moz-transition: color .1s linear;
     -ms-transition: color .1s linear;
@@ -85,9 +85,10 @@ a:hover, a:focus, a:active { color: #0c4c9d; }
     padding: 1px 5px 0 5px;
 }
 
-p { line-height: 1.65; }
+p, .col-ab p { line-height: 1.65; }
 
-section, header {  /* futzing for wide browsers */
+
+section, header { 
     max-width: 990px;
     margin: 0 auto;
 }
@@ -97,9 +98,7 @@ section, header {  /* futzing for wide browsers */
 	overflow: auto;
     padding: 0 2.9296875%;
 }
-.col-ab p {
-    line-height: 1.65;
-}
+
 
 .hed {
     border-bottom: 1px solid #cbd1d8;
@@ -113,9 +112,8 @@ section, header {  /* futzing for wide browsers */
     text-shadow: 1px 1px 0 rgba(255,255,255,.8);
     width: 100%;
 }
-.no-fontface .hed {
-    font-weight: bold;
-}
+
+.no-fontface .hed { font-weight: bold; }
 
 .subhed {
     color: #7f8c9c;
@@ -149,9 +147,6 @@ section, header {  /* futzing for wide browsers */
     clear: both;
     margin: 3.5em 0 2em 0;
     padding: 1em 2.9296875% 0 2.9296875%;
-    -webkit-box-shadow: inset 0 0 10px #5d6672;
-    -moz-box-shadow: inset 0 0 10px #5d6672;
-    -ms-box-shadow: inset 0 0 10px #5d6672;
     box-shadow: inset 0 0 10px #5d6672;
 }
 
@@ -181,9 +176,7 @@ section, header {  /* futzing for wide browsers */
     font-weight: bold;
     padding: 0 0 .25em 0;
 }
-.no-fontface .standout .subhed {
-    letter-spacing: normal;
-}
+.no-fontface .standout .subhed { letter-spacing: normal; }
 
 .doc-hed {
     display: block;
@@ -192,6 +185,7 @@ section, header {  /* futzing for wide browsers */
     text-align: left;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
+
 .doc-hed b,
 .doc-hed .hed {
 	display: block;
@@ -203,9 +197,7 @@ section, header {  /* futzing for wide browsers */
     width: 100%;
 }
 
-.doc-lead {
-    margin-top: 1.5em;
-}
+.doc-lead { margin-top: 1.5em; }
 
 .lead {
     text-align: center;
@@ -233,23 +225,7 @@ section, header {  /* futzing for wide browsers */
     padding: 0 .5em;
     text-shadow: 1px 1px 0 #fff;
 }
-.subhed-lead p b {
-    color: #5d6474;
-}
-
-
-.hed-lead {
-    color: #324a69;
-    font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
-    margin: .7em 0 .1em 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-.no-fontface .hed-lead {
-    font-weight: bold;
-    letter-spacing: -1px;
-}
+.subhed-lead p b { color: #5d6474; }
 
 .subhed-lead {
     color: #7f8c9c;
@@ -282,22 +258,33 @@ section, header {  /* futzing for wide browsers */
 .col-ab li > ul > li { padding-left: 2em; }
 
 .col-ab li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
-
+.col-ab li > ul > li:not(:last-child) { border-bottom: 0; }
 
 /* Get Involved Sidebar */
 .getinvolved { font-size: 0.9em; }
 
-/* Twitter Avatar Styles */
-.pledges {
-    padding-top: .5em;
+.pledge {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  background: #324a69;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #000;
+  margin-bottom: 1em;
 }
+
+/* Twitter Avatar Styles */
+.pledges { padding-top: .5em; }
+
 .pledges a {
     display: inline-block;
     margin: .15em;
 }
-.pledges img {
-    max-width: 25px;
-}
+.pledges img { max-width: 25px; }
 
 
 .tasks {
@@ -306,19 +293,12 @@ section, header {  /* futzing for wide browsers */
     padding: .1em 0 0 0;
     margin-left: 0;
 }
-ul.tasks {
-	list-style: none;
-}
-ol.tasks {
-	list-style-position: inside;
-}
-.tasks li.task:not(:last-child) {
-    border-bottom: 1px dotted #bfc6cf;
-    padding: 0 0 .5em 0;
-}
-.tasks p {
-    margin: .5em 0 0 0;
-}
+
+ul.tasks { list-style: none; }
+
+ol.tasks { list-style-position: inside; }
+
+.tasks p { margin: .5em 0 0 0; }
 
 .resources {
     overflow: auto;
@@ -326,6 +306,7 @@ ol.tasks {
     padding: 1.18em 0 0 0;
     font-size: .9em;
 }
+
 .task ul,
 .resources ul {
     list-style: none;
@@ -385,16 +366,17 @@ footer.doc {
 }
 
 @media screen and (min-width: 800px) {
-    .col-a {
+  .col-a {
 		float: left;
 		width: 68.607068607069%;
 	}
-    .col-b {
+  
+  .col-b {
 		width: 25.155925155925%;
 		float: right;
 	}
 
-    .col-ab p {
+  .col-ab p {
         max-width: 950px;
         line-height: 1.5;
     }
