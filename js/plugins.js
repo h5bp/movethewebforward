@@ -49,7 +49,7 @@
         query = options.searchPrefix + query;
       }
 
-      var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
+      var searchUrl = 'http://search.twitter.com/search.json?rpp=100&callback=?&q=';
       var results = cacheGet(query);
       if (results) {
         callback(results);

@@ -7,8 +7,7 @@
     <meta name="description" content="What you can do as a front-end developer">
     <meta name="viewport" content="width=device-width">
 
-    <!-- `media="only all` targets all MQ-supporting browsers. -->
-    <link rel="stylesheet" href="css/style.css" media="only all">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Should be combined: -->
     <script src="js/libs/modernizr.min.js"></script>
@@ -21,15 +20,22 @@
             <h1 class="hed-lead">Move the Web Forward</h1>
             <h2 class="subhed-lead">wear a beanie today, build the web tomorrow</h2>
             <p>You love web standards. You want to give back to the community. Curious about where to start? <b>We're here to help.</b></p>
-        </div>
+        </div>        
         <div class="col-split">
             <p>Whether you're a talented web developer,  web-slinging since the days of tables and <code>font</code> tags, or you're a hobbyist hacker, there are a number ways for you to give back. Below, we list some of the ways that anyone can contribute back to the web platform. </p>
             <p>Our goal is to make it easy for anyone to get started contributing to the platform, whether that's learning more how it works, teaching others, or writing specs. The web has grown due to people like you, and we want to make it even easier for people like you to give back.</p>
         </div>
     </header>
+    <nav id=toc>
+      <ul>
+        <li><a href=#levelup>A New Beginning</a></li>
+        <li><a href=#moadvanced>Mid-life crisis</a></li>
+        <li><a href=#virtuoso>Enlightenment</a></li>
+      </ul>
+    </nav>
 
     <article class="section">
-        <div class="standout">
+        <div class="standout" id=levelup>
             <h1 class="hed">Level up!</h1>
             <h2 class="subhed">You're damn good at what you do. Let's dive into the community!</h2>
         </div>
@@ -145,7 +151,7 @@
     </article>
 
     <article class="section">
-        <div class="standout">
+        <div class="standout" id=moadvanced>
             <h1 class="hed">Mo’ Advanced</h1>
             <h2 class="subhed">Are you a ninja? Dare to know what you can do beyond these?</h2>
         </div>
@@ -191,12 +197,13 @@
                     <li>Take an <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/">inside look at how the CSS WG works</a></li>
                     <li>Subscribe to these mailing lists to follow and contribute to the discussions that drive the web:
                         <ul class="resources">
-                            <li><a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a></li>
-                            <li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a></li>
-                            <li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a></li>
-                            <li><a href="http://lists.w3.org/Archives/Public/public-html/">public-html</a></li>
-                            <li><a href="http://lists.w3.org/Archives/Public/www-dom/">www-dom</a></li>
-                            <li><a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a></li>
+
+                            <li><a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> -  technical discussion for the Web Applications Working Group</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a> - technical discussion on Cascading Style Sheets (CSS) and its specifications</li>
+                            <li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a> - WHATWG's mailing list</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/public-html/">public-html</a> - W3C HTML Working Group</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/www-dom/">www-dom</a></li> - where the DOM is improved
+                            <li><a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a> - issues affecting the CSS and SVG Working Groups</li>
                         </ul>
                     </li>
                     <li>Read through the <a href="http://developers.whatwg.org/">HTML5 Spec for developers</a> (the implementor stuff removed, formatted beautifully for you)</li>
@@ -333,7 +340,7 @@
         </section>
     </article>
     <article class="section">
-      <div class="standout">
+      <div class="standout" id=virtuoso>
         <h1 class="hed">Virtuoso!</h1>
         <h2 class="subhed">You are the expert and you are bored with all these suggestions? May we suggest you these?</h2>
       </div>
