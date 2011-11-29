@@ -305,6 +305,10 @@ section, header {
     padding: .1em 0 0 0;
 }
 
+
+/* Nav Sticky */
+.sticky { position: fixed; top: 0; left: 0; z-index: 2; }
+
 section ul, section ol { 
     margin-left: 25px;
 }
@@ -404,7 +408,11 @@ li span { opacity: 0;
 }
 li:hover span { opacity: 1;}
 
-nav { text-align: center; }
+nav { 
+  text-align: center; 
+  background: -o-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));      
+  width: 100%;
+}
 
 nav ul,
 nav ol {
@@ -416,8 +424,15 @@ nav ol {
 nav li {
     display: table-cell;
     padding: .5em 0 .8em 0;
-    *display: inline;
+    *display: inline;    
 }
+
+nav a, nav a:visited { color: rgb(231, 235, 241); text-shadow: 0 1px #000; }
+
+nav a:active, nav a.active { color: rgb(181, 197, 215); }
+
+
+nav li:not(:last-child) { border-bottom: 0; }
 
 .col-ab {
     clear: both;
