@@ -6,7 +6,8 @@
       hashtag: undefined,
       message: 'oh yeah!',
       linkSelector: 'a',
-      avatarsSelector: 'div'
+      avatarsSelector: 'div',
+      searchPrefix: ''
     };
 
     var options = $.extend({}, defaults, o);
@@ -38,7 +39,16 @@
       return JSON.parse(value);
     }
 
+    function cacheDel(key) {
+      window.localStorage.removeItem(key);
+      window.localStorage.removeItem(key + '__expires');
+    }
+
     function twitterSearch(query, callback) {
+      if (options.searchPrefix) {
+        query = options.searchPrefix + query;
+      }
+
       var searchUrl = 'http://search.twitter.com/search.json?callback=?&q=';
       var results = cacheGet(query);
       if (results) {
@@ -65,8 +75,7 @@
             ? options.avatarsSelector.call($elem)
             : $elem.find(options.avatarsSelector);
 
-      // The hashtag used to pre-fill twitter and to search twitter
-      // for users.
+      // The hashtag used to pre-fill twitter and to search twitter for users.
       var hashtag = $.isFunction(options.hashtag)
             ? options.hashtag.call($elem)
             : $elem.data('hashtag');
@@ -79,7 +88,9 @@
       // A URL that will pre-fill a twitter status message.
       var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
 
-      linkElem.attr('href', prefillUrl);
+      linkElem.attr('href', prefillUrl).click(function() {
+        cacheDel(hashtag);
+      });
 
       if (hashtag) {
         twitterSearch(hashtag, function(json) {
@@ -103,14 +114,6 @@
             avatarsElem.append( link.append( image ) );
 
             users[this.from_user] = true;
-          });
-
-          twttr.anywhere(function(T) {
-            T('img', avatarsElem).hovercards({
-              username: function(node) {
-                return node.title
-              }
-            });
           });
         });
       }
