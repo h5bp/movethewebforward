@@ -23,7 +23,8 @@
             <p>You love web standards. You want to give back to the community. Curious about where to start? <b>We're here to help.</b></p>
         </div>
         <div class="col-split">
-            <p>Whether you're just diving into web development, or you’ve been web-slinging since the days of tables and <code>font</code> tags, there are a number ways for you to give back. Below, we list some of the ways that anyone can contribute back to the web platform. </p><p>Our goal is to make it easy for anyone to get started contributing to the platform, whether that's learning more how it works, teaching others, or writing specs. The web has grown due to people like you, and we want to make it even easier for people like you to give back.</p>
+            <p>Whether you're a talented web developer,  web-slinging since the days of tables and <code>font</code> tags, or you're a hobbyist hacker, there are a number ways for you to give back. Below, we list some of the ways that anyone can contribute back to the web platform. </p>
+            <p>Our goal is to make it easy for anyone to get started contributing to the platform, whether that's learning more how it works, teaching others, or writing specs. The web has grown due to people like you, and we want to make it even easier for people like you to give back.</p>
         </div>
     </header>
 
@@ -40,11 +41,12 @@
 
               <h2 id="how_do_i_keep_up_with_what8217s_landing_in_browsers" class="subhed">How do I keep up with what&#8217;s landing in browsers?</h2>
               <ul>
-                <li><a href="http://updates.html5rocks.com/2011/10/Keeping-up-with-HTML5-and-browser-support">Keeping up with HTML5 and browser support</a> - a great post about resources to keep up with all of these changing things.</li>
+                <li><a href="http://updates.html5rocks.com/2011/10/Keeping-up-with-HTML5-and-browser-support">Keeping up with HTML5 and browser support</a> - a list of resources that capture all of these changing things.</li>
                 <li><a href="http://peter.sh/">Peter Beverloo&#8217;s Blog</a> - weekly updates of WebKit and Chrome</li>
-                <li><a href="https://developer.mozilla.org/en/Firefox_8_for_developers">Firefox for developers</a> - articles that provide information about the new features introduced in different versions of Firefox (for a specific version just change the "X" in "https://developer.mozilla.org/en/Firefox_X_for_developers" to the version number)</li>
-                <li><a href="http://blog.whatwg.org/">The WHATWG Blog</a> - summaries of the whatwg activity</li>
+                <li><a href="http://blog.whatwg.org/">The WHATWG Blog</a> - summaries of weekly web standards activity</li>
                 <li><a href="http://www.w3.org/QA/archive/open_web/">W3C&#8217;s open web</a> - weekly updates about the Open Web Platform.</li>
+                <li><a href="http://my.opera.com/ODIN/blog/">Opera Developer News</a> - tracks changes to Opera's web platform
+
               </ul>
 
               <h3 id="follow_them_on_twitter" class="subhed">Follow them on Twitter</h3>
@@ -193,6 +195,7 @@
                             <li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a></li>
                             <li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a></li>
                             <li><a href="http://lists.w3.org/Archives/Public/public-html/">public-html</a></li>
+                            <li><a href="http://lists.w3.org/Archives/Public/www-dom/">www-dom</a></li>
                             <li><a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a></li>
                         </ul>
                     </li>
@@ -200,8 +203,8 @@
                     <li>
                         See the latest commits to the HTML and CSS specs by following their respective working groups on Twitter:
                         <ul class="resources">
-                            <li><a href="http://twitter.com/csscommits">@csscommits</a></li>
                             <li><a href="http://twitter.com/whatwg">@whatwg</a></li>
+                            <li><a href="http://twitter.com/csscommits">@csscommits</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -348,16 +351,21 @@
             <li>Join #introduction and #developers on <a href="#mozilla_irc">Mozilla's IRC server</a></li>
             <li><a href="http://dev.chromium.org/developers/contributing-to-webkit">Google&#8217;s guide on how to contribute to WebKit</a></li>
           </ul>
-          <h2 id="contribute_to_specs" class="subhed">Contribute to Specifications</h2>
+
+          <h2 id="contribute_to_testsuites" class="subhed">Contribute to Test Suites</h2>
+
+          <p>Test cases are fundamental to standards and to browsers. You can make <a href="http://www.w3.org/html/wg/wiki/Testing">The W3C test suite for HTML</a> better! </p>
+      
           <ul>
-            <li>Test cases are fundamental to standards and to browsers. You can make <a href="http://www.w3.org/html/wg/wiki/Testing">The W3C test suite for HTML</a> better!
-              <ul>
-                <li>Look into <a href="http://www.w3.org/html/wg/wiki/Testing#New_tests">upstreaming some existing tests</a> into the W3C Test suite
-                <li>Upstream <a href="http://trac.webkit.org/browser/trunk/LayoutTests">WebKit&#8217;s layouttests</a>. Also see the <a href="http://www.webkit.org/blog/1456/layout-tests-practice/">layout test practice</a>
-                <li><a href="https://developer.mozilla.org/en/Mochitest">Mozilla&#8217;s mochitests</a> - W3c suites</li>
-              </ul>
-            </li>
-            <li>Review existing bugs on <a href="http://www.w3.org/Bugs/Public/">W3C bugzilla</a>
+            <li>Look into <a href="http://www.w3.org/html/wg/wiki/Testing#New_tests">upstreaming some existing tests</a> into the W3C Test suite
+            <li>Upstream <a href="http://trac.webkit.org/browser/trunk/LayoutTests">WebKit&#8217;s LayoutTests</a>. <span>Also see the LayoutTests <a href="http://www.webkit.org/blog/1452/layout-tests-theory/">theory</a> & <a href="http://www.webkit.org/blog/1456/layout-tests-practice/">practice</a></span>
+            <li>Upstream <a href="https://developer.mozilla.org/en/Mochitest">Mozilla&#8217;s Mochitests</a></li>
+          </ul>
+
+
+          <h2 id="contribute_to_specs" class="subhed">Contribute to specifications</h2>
+          <ul>
+            <li>Review existing bugs on <a href="http://www.w3.org/Bugs/Public/">W3C bugzilla</a> <span>- and learn <a href="http://wiki.whatwg.org/wiki/Bugzilla_conventions">Bugzilla conventions</a></span>
             <li>Send email to <a href="http://www.whatwg.org/mailing-list">WHATWG</a> / <a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> / <a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a> / <a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a> email lists</li>
             <li><a href="http://wiki.whatwg.org/wiki/How_to_write_a_spec">Write Specs!</a> <span>we could certainly use more spec writers</span></li>
           </ul>
