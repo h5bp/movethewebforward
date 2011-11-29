@@ -256,7 +256,8 @@ section ul {
 
 section li { padding: 0.5em 0; }
 
-section li > ul > li { padding-left: 1em;  }
+section li > ul > li { padding-left: 2em; }
+
 section li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
 
 .q-a abbr {
@@ -358,7 +359,7 @@ footer.doc {
 }
 
 @media screen and (min-width: 800px) {
-    .col-ab { width: 100%; }
+    .col-ab { width: 96%; }
 
     .col-a { width: 72%; }
     
