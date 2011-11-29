@@ -1,5 +1,3 @@
-
-
 /*
  * the HTML5✰Boilerplate css, natch.
  */
@@ -11,6 +9,42 @@ q:before,q:after{content:"";content:none}small{font-size:85%}sub,sup{font-size:7
 /* =============================================================================
    Site styles
    ========================================================================== */
+.resources {
+    overflow: auto;
+    list-style: none;
+    padding: 1.18em 0 0 0;
+    font-size: .9em;
+}
+.task ul,
+.resources ul {
+    list-style: none;
+    padding: .25em 0 .4em 1.2em;
+}
+.task li,
+.resources li {
+    padding: .2em 0;
+}
+.task li:before,
+.resources > li:before {
+    color: #3d526d;
+    content: "■";
+    float: left;
+    font-size: .85em;
+    padding: .1em .6em 0 0;
+}
+.resources li li {
+    padding: 0;
+}
+.resources li p {
+    margin: 0;
+    line-height: 1.5;
+}
+.resources ul a {
+    border-radius: 3px;
+    display: inline-block;
+    margin-left: -8px;
+    padding: 1px 5px 0 5px;
+}
 
 body {
     background: #e7ebf1;
@@ -24,7 +58,7 @@ ul, ol, blockquote {
 }
 
 ul li { padding: .2em 0; }
-
+h1, h2 { font-weight: normal !important; }
 blockquote {
     border-left: 3px solid #5e7087;
     font-style: italic;
@@ -58,7 +92,16 @@ section, header {  /* futzing for wide browsers */
     margin: 0 auto;
 }
 
-section h1 {
+.col-ab {
+    clear: both;
+	overflow: auto;
+    padding: 0 2.9296875%;
+}
+.col-ab p {
+    line-height: 1.65;
+}
+
+.hed {
     border-bottom: 1px solid #cbd1d8;
     color: #324a69;
     clear: both;
@@ -70,69 +113,49 @@ section h1 {
     text-shadow: 1px 1px 0 rgba(255,255,255,.8);
     width: 100%;
 }
+.no-fontface .hed {
+    font-weight: bold;
+}
 
-.no-fontface section h1 { font-weight: bold; }
-
-section h2 {
+.subhed {
     color: #7f8c9c;
-    font: 1.4em/1 "ChunkFive", georgia, serif;
+    font: normal 1.4em/1 "ChunkFive", georgia, serif;
     margin: 1em 0 0 0;
     text-shadow: 1px 1px 0 rgba(255,255,255,.8);
 }
 
 .standout {
-    background: #687482 url(img/bg_noise.png) 0 0 repeat;
+    background: #687482 url(css/img/bg_noise.png) 0 0 repeat;
     background-origin: padding;
     border: double #494f57;
     border-width: 3px 0;
-
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
+    
+    background: 
+        url(css/img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
+    background: 
+        url(css/img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
+    background: 
+        url(css/img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
+    background: 
+        url(css/img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-
+    background: 
+        url(css/img/bg_noise.png) 0 0 repeat,
+        radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
+    
     clear: both;
     margin: 3.5em 0 2em 0;
     padding: 1em 2.9296875% 0 2.9296875%;
+    -webkit-box-shadow: inset 0 0 10px #5d6672;
+    -moz-box-shadow: inset 0 0 10px #5d6672;
+    -ms-box-shadow: inset 0 0 10px #5d6672;
     box-shadow: inset 0 0 10px #5d6672;
 }
 
-.subsection:not(:last-child):after {
-    content: "";
-    display: block;
-    min-height: .85em;
-    margin: 2.5em 0 .5em 0;
-    opacity: .85;
-    padding: 1em 2.9296875% 0 2.9296875%;
-    box-shadow: inset 0 0 10px #5d6672;
-    clear: both;
-    background-origin: padding;
-    border: double #494f57;
-    border-width: 3px 0;
-
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
-        -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
-        -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
-        -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background:
-        url(img/bg_noise.png) 0 0 repeat,
-        -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-}
-
-.standout h2,
+.standout .subhed,
 .doc-hed {
     color: #b5c5d7;
     font: 1.5em/1 "ChunkFive", georgia, serif;
@@ -142,8 +165,7 @@ section h2 {
     text-align: center;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
-
-.standout h1 {
+.standout .hed {
     border: none;
     color: #e0e6ed;
     float: none;
@@ -155,13 +177,13 @@ section h2 {
     text-align: center;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
-
-.no-fontface .standout h1 {
+.no-fontface .standout .hed {
     font-weight: bold;
     padding: 0 0 .25em 0;
 }
-
-.no-fontface .standout h2 { letter-spacing: normal; }
+.no-fontface .standout .subhed {
+    letter-spacing: normal;
+}
 
 .doc-hed {
     display: block;
@@ -170,19 +192,15 @@ section h2 {
     text-align: left;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
-
 .doc-hed b,
 .doc-hed .hed {
+	display: block;
     line-height: 1;
-    display: block;
-    text-align: left;
-    width: 100%;
-}
-
-.doc-hed .hed {
     margin: 0 0 .05em 0;
     padding: 0;
+    text-align: left;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px, #494f57 3px 3px;
+    width: 100%;
 }
 
 .doc-lead {
@@ -191,8 +209,34 @@ section h2 {
 
 .lead {
     text-align: center;
-    margin: 6em 0 0 0;
+    border-bottom: 3px double #cbd1d8;
+    margin-bottom: .25em;
+    padding-bottom: 1.4em;
 }
+
+.hed-lead {
+    color: #324a69;
+    font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
+    margin: .7em 0 .1em 0;
+    padding: 0;
+    text-shadow: 1px 1px 0 #fff;
+}
+.no-fontface .hed-lead {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.subhed-lead p {
+    color: #7f8c9c;
+    font: normal 1.3em/1.2 "ChunkFive", georgia, serif;
+    margin: 0;
+    padding: 0 .5em;
+    text-shadow: 1px 1px 0 #fff;
+}
+.subhed-lead p b {
+    color: #5d6474;
+}
+
 
 .hed-lead {
     color: #324a69;
@@ -207,8 +251,7 @@ section h2 {
     letter-spacing: -1px;
 }
 
-.subhed-lead
- {
+.subhed-lead {
     color: #7f8c9c;
     font: normal 1.5em/1.2 "ChunkFive", georgia, serif;
     text-transform: uppercase;
@@ -224,29 +267,9 @@ section h2 {
 }
 .lead p b { color: #5d6474; }
 
-dl { width: 100%; }
-dl p { margin: .25em 0; }
-
-dt,
-.key {
-    font: normal 1.15em/1 "ChunkFive", georgia, serif;
-    width: 100%;
-}
-
-dd,
-.val {
-    border-bottom: 1px dotted #bfc6cf;
-    margin: 0;
-}
-
-dd:last-child,
-.val:last-child {
-    border-bottom: none;
-}
-
 .section > section { margin-top: 2em; }
 
-section ul {
+.col-ab ul {
     font-size: .9em;
     margin-top: .9em;
     list-style: none;
@@ -254,26 +277,11 @@ section ul {
     margin-left: 0;
 }
 
-section li { padding: 0.5em 0; }
+.col-ab li { padding: 0.5em 0; }
 
-section li > ul > li { padding-left: 2em; }
+.col-ab li > ul > li { padding-left: 2em; }
 
-section li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
-
-.q-a abbr {
-    border: none;
-    color: #7f8c9c;
-    float: left;
-    font: normal 1em/1 "ChunkFive", georgia, serif;
-    margin: 0 .4em 0 0;
-}
-
-.q-a dt { font-size: 1.15em; }
-
-.q-a dd abbr {
-    padding: .2em 0 0 0;
-    font-size: 1.15em;
-}
+.col-ab li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
 
 
 /* Get Involved Sidebar */
@@ -292,17 +300,42 @@ section li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
 }
 
 
+.tasks {
+    font-size: .9em;
+    margin-top: .9em;
+    padding: .1em 0 0 0;
+    margin-left: 0;
+}
+ul.tasks {
+	list-style: none;
+}
+ol.tasks {
+	list-style-position: inside;
+}
+.tasks li.task:not(:last-child) {
+    border-bottom: 1px dotted #bfc6cf;
+    padding: 0 0 .5em 0;
+}
+.tasks p {
+    margin: .5em 0 0 0;
+}
+
 .resources {
     overflow: auto;
     list-style: none;
     padding: 1.18em 0 0 0;
     font-size: .9em;
 }
-
+.task ul,
+.resources ul {
+    list-style: none;
+    padding: .25em 0 .4em 1.2em;
+}
+.task li,
 .resources li {
     padding: .2em 0;
 }
-
+.task li:before,
 .resources > li:before {
     color: #3d526d;
     content: "■";
@@ -310,24 +343,21 @@ section li:not(:last-child) { border-bottom: 1px dotted #bfc6cf; }
     font-size: .85em;
     padding: .1em .6em 0 0;
 }
-
-.resources ul {
-    list-style: none;
-    padding: .25em 0 .4em 1.2em;
-}
-
 .resources li li {
     padding: 0;
 }
-
 .resources li p {
     margin: 0;
     line-height: 1.5;
 }
+.resources ul a {
+    border-radius: 3px;
+    display: inline-block;
+    margin-left: -8px;
+    padding: 1px 5px 0 5px;
+}
 
-/* Layout */
 
-/* Will this be needed? */
 nav { text-align: center; }
 
 nav ul,
@@ -354,36 +384,44 @@ footer.doc {
   padding: 3em;
 }
 
-@media screen and (min-width: 600px) {
-
-}
-
 @media screen and (min-width: 800px) {
-    .col-ab { width: 96%; }
-
-    .col-a { width: 72%; }
-    
-    .col-b { width: 25%;}
-
-    .col-a { float: left; }
-
-    .col-b { float: right; }
+    .col-a {
+		float: left;
+		width: 68.607068607069%;
+	}
+    .col-b {
+		width: 25.155925155925%;
+		float: right;
+	}
 
     .col-ab p {
         max-width: 950px;
         line-height: 1.5;
     }
 
-    .hed-lead { font: 3.625em/1 "ChunkFive", georgia, serif; }
+   .hed-lead {
+        font: 3.625em/1 "ChunkFive", georgia, serif;
+    }
 
-    h1 { font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif; }
+    .lead p {
+        max-width: 9999px;
+    }
 
-    .standout h1 { font-size: 4.8em; }
+    .hed {
+        font: normal 2.4em/1.2 "ChunkFive", arial, helvetica, sans-serif;
+    }
 
-    .standout h2,
-    .doc-hed { font: 2em/1 "ChunkFive", georgia, serif; }
+    .standout .hed {
+        font-size: 4.8em;
+    }
 
-    .subhed-lead p { font: normal 1.6875em/1.2 "ChunkFive", georgia, serif; }
+    .standout .subhed,
+    .doc-hed {
+        font: 2em/1 "ChunkFive", georgia, serif;
+    }
+    .subhed-lead p {
+        font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
+    }
 
     .col-split {
         padding-top: 1em;
@@ -403,28 +441,25 @@ footer.doc {
         -moz-break-after: column;
         break-after: column;        
     }
+
+	.col-split {
+		padding-top: 1em;		
+		-webkit-column-count: 2;
+		-webkit-column-gap: 2.079002079002%;
+		-moz-column-count: 2;
+		-moz-column-gap: 2.079002079002%;
+		-ms-column-count: 2;
+		-ms-column-gap: 2.079002079002%;
+		-o-column-count: 2;
+		-o-column-gap: 2.079002079002%;
+		column-count: 2;
+		column-gap: 2.079002079002%;
+	}
+	.col-split p {
+		padding: 0 0 1em 0;
+		margin: 0;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* =============================================================================

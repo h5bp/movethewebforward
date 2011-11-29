@@ -8,11 +8,15 @@
     <title>Giving Back to Standards</title>
     <meta name="description" content="What you can do as a front-end developer">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/style.css">
+
+	<!-- Very simple (as in `layout and background colors`) stylesheet for non-MQ browsers. -->
+    <link rel="stylesheet" href="css/basic.css">
+
+    <!-- `media="only all` targets all MQ-supporting browsers. -->
+    <link rel="stylesheet" href="css/style.css" media="only all">
 
     <!-- Should be combined: -->
     <script src="js/libs/modernizr.min.js"></script>
-    <script src="js/libs/respond.js"></script>
     <script src="js/controller.js"></script>
 </head>
 
@@ -30,16 +34,16 @@
 
     <article class="section">
         <div class="standout">
-            <h1>Just getting started?</h1>
-            <h2>OMG Welcome! Let's work together to push the web forward!</h2>
+            <h1 class="hed">Just getting started?</h1>
+            <h2 class="subhed">OMG Welcome! Let's work together to push the web forward!</h2>
         </div>
 
-        <section id="learn">
-          <div class="col-a">
-              <h1>Learn</h1>
+        <section id="learn" class="col-ab">
+            <div class="col-a">
+              <h1 class="hed">Learn</h1>
               <p>One of the most beautiful things about the web is that it's constantly changing. While these changes and improvements can be overwhelming, we're here to help you get caught up! Here are some great resources to walk you through how browsers work, and help keep you up to date on their improvements.</p>
-              <h2 id="how_do_i_keep_up_with_what8217s_landing_in_browsers">How do I keep up with what&#8217;s landing in browsers?</h2>
 
+              <h2 id="how_do_i_keep_up_with_what8217s_landing_in_browsers" class="subhed">How do I keep up with what&#8217;s landing in browsers?</h2>
               <ul>
                 <li><a href="http://updates.html5rocks.com/2011/10/Keeping-up-with-HTML5-and-browser-support">Keeping up with HTML5 and browser support</a> - a great post about resources to keep up with all of these changing things.</li>
                 <li><a href="http://peter.sh/">Peter Beverloo&#8217;s Blog</a> - weekly updates of WebKit and Chrome</li>
@@ -48,7 +52,7 @@
                 <li><a href="http://www.w3.org/QA/archive/open_web/">W3C&#8217;s open web</a> - weekly updates about the Open Web Platform.</li>
               </ul>
 
-              <h3 id="follow_them_on_twitter">Follow them on Twitter</h3>
+              <h3 id="follow_them_on_twitter" class="subhed">Follow them on Twitter</h3>
 
               <ul>
                 <li><a href="http://twitter.com/webkit">Webkit</a> - the open source web browser engine</li>
@@ -58,14 +62,14 @@
                 <li><a href="http://twitter.com/ie">IE</a> - official Windows Internet Explorer Team account bringing you the latest dev tools and IE news</li>
               </ul>
 
-              <h2 id="how_do_i_understand_how_browsers_work">How do I understand how browsers work?</h2>
+              <h2 id="how_do_i_understand_how_browsers_work" class="subhed">How do I understand how browsers work?</h2>
 
               <ul>
                 <li><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work: Behind the Scenes of Modern Web Browsers</a> - in-depth look at how a browser works</li>
                 <li><a href="http://ontwik.com/javascript/txjs-2011-a9-alex-russell-life-of-a-button-element/?utm_source=feedburner&utm_medium=twitter&utm_campaign=Feed%3A+Ontwik+%28Ontwik%29">Life of a &lt;button> element (by Alex Russell)</a> - great talk about rendering layout and CSS</li>
               </ul>
 
-              <h2 id="other_learning_resources">Other learning resources</h2>
+              <h2 id="other_learning_resources" class="subhed">Other learning resources</h2>
 
               <ul>
                 <li><a href="http://css-tricks.com">CSS-tricks</a> - provides a wealth of articles, tutorials, and downloads for the web design community.</li>
@@ -76,7 +80,7 @@
                 <li><a href="http://paulirish.com/2011/web-browser-frontend-and-standards-feeds-to-follow/">Awesome RSS feeds to follow</a> - brought to you by Paul Irish</li>
               </ul>
 
-              <h2 id="reference_docs_wikis">Reference docs/wikis</h2>
+              <h2 id="reference_docs_wikis" class="subhed">Reference docs/wikis</h2>
 
               <ul>
                 <li><a href="https://developer.mozilla.org/en-US/">Mozilla&#8217;s MDN</a> - awesome documentation regarding HTML(5), CSS(3), JavaScript, the DOM, and more!It&#8217;s also a great place to contribute! Read <a href="https://developer.mozilla.org/Project:en/How_to_Help">How to help</a> and learn how to <a href="https://developer.mozilla.org/Project:en/Getting_started">get started</a>.</li>
@@ -84,19 +88,20 @@
                 <li><a href="https://developer.mozilla.org/Writing_Forward_Compatible_Websites">Forward-compatible websites</a> - list of best practices for creating websites that won&#8217;t break when browsers are updated.</li>
                 </ul>
           </div>
-          <section class="getinvolved">
-            <div class="col-b">
+          <div class="col-b">
+	        <section class="getinvolved">
               <h2 class="subhed">Can you do this?</h2>
               <div class="task" data-hashtag="#learn">
                 <p>Of course you can! All it takes is a quick read of a few articles or tweets, and you&#8217;re all set! Trust us &ndash; once you&#8217;ve gotten started, it just keeps getting easier.</p>
               </div>
+             </section>
             </div>
-          </section>
+          </div>
         </section>
 
-          <section id="explore">
+          <section id="explore" class="col-ab">
             <div class="col-a">
-              <h1>Explore</h1>
+              <h1 class="hed">Explore</h1>
               <p>Once you've picked up the basics, it's time to dive a bit deeper into the current (and future) state of web standards! Get excited, because here, we check out advanced CSS, brand-new HTML5 features/APIs, and even what the future of these languages are expected to be. Several new capabilities are now available in browsers, and exploring these new capabilities will help us push the web forward!</p>
               <ul>
                 <li>Explore new and old features.</li>
@@ -109,43 +114,43 @@
                 <li><a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">Vendor-prefixed CSS property overview</a></li>
               </ul>
             </div>
-            <section class="getinvolved">
-              <div class="col-b">
-                <h2 class="subhed">Can you do this?</h2>
-                <div class="task" data-hashtag="#explore">
-                  <p>If you want to be counted among those brave enough to attempt to do this.</p>
-                </div>
-              </div>
-            </section>
+            <div class="col-b">   
+	            <section class="getinvolved">
+	                <h2 class="subhed">Can you do this?</h2>
+	                <div class="task" data-hashtag="#explore">
+	                  <p>If you want to be counted among those brave enough to attempt to do this.</p>
+	                </div>
+	            </section>
+	        </div>
         </section>
 
 
-        <section id="meetups">
+        <section id="meetups" class="col-ab">
           <div class="col-a">
-            <h1>Meet like-minded folks</h1>
+            <h1 class="hed">Meet like-minded folks</h1>
             <p>Attending local meetups and conferences is a great way to connect with other developers to learn, share resources, and bring new ideas and collaborations to life. Sites like <a href="http://meetup.com">Meetup.com</a> and <a href="http://lanyrd.com">Lanyrd</a> can help you find events in your neighborhood.</p>
           </div>
-          <section class="getinvolved">
-            <div class="col-b">
+          <div class="col-b">
+	        <section class="getinvolved">
               <h2 class="subhed">Can you do this?</h2>
               <div class="task" data-hashtag="#meet">
                 <p>If you want to be counted among those brave enough to attempt to do this.</p>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </section>
-        <section id="askhelp">
+        <section id="askhelp" class="col-ab">
           <div class="col-a">
-            <h1>Ask for help</h1>
-            <h2 id="answer_questions_and_participate_in_conversations_on_irc">Answer questions and participate in conversations on IRC</h2>
+            <h1 class="hed">Ask for help</h1>
+            <h2 id="answer_questions_and_participate_in_conversations_on_irc" class="subhed">Answer questions and participate in conversations on IRC</h2>
             <p><a href="http://richard.esplins.org/siwi/2011/07/08/getting-started-freenode-irc/">How to get started with freenode and irc</a></p>
             <ul>
               <li><b>Freenode irc channels:</b> #html5 / #css / #javascript / #whatwg / #jquery / #webkit</li>
               <li><b>Mozilla IRC channels (irc://irc.mozilla.org):</b> #css / #js / #introduction / #developers</li>
             </ul>
 
-            <h2 id="how_to_ask_for_help">How to ask for help</h2>
-            <ol>
+            <h2 id="how_to_ask_for_help" class="subhed">How to ask for help</h2>
+            <ol class="tasks">
               <li>You&#8217;ll probably want to <a href="http://css-tricks.com/13414-seriously-just-make-a-jsfiddle/">make a jsfiddle first</a>.</li>
               <li><a href="http://css-tricks.com/6263-reduced-test-cases/">Create a reduced test case</a></li>
               <li>Remember: be specific!</li>
@@ -164,14 +169,14 @@
 
     <article class="section">
         <div class="standout">
-            <h1>Mo’ Advanced</h1>
-            <h2>Are you a ninja? Dare to know what you can do beyond these?</h2>
+            <h1 class="hed">Mo’ Advanced</h1>
+            <h2 class="subhed">Are you a ninja? Dare to know what you can do beyond these?</h2>
         </div>
-        <section id="helpothers">
+        <section id="helpothers" class="col-ab">
           <div class="col-a">
-            <h1>Help Others</h1>
+            <h1 class="hed">Help Others</h1>
             <p>We've all got to start somewhere! Helping others reassures your knowledge, and also broadens the amount of concepts you're exposed to. Below are some great Open-Source projects that are always looking for help. Remember - no patch is too small!</p>
-            <h2 id="open_source_projects_worth_your_time">Open-Source projects worth your time</h2>
+            <h2 id="open_source_projects_worth_your_time" class="subhed">Open-Source projects worth your time</h2>
 
             <ul>
               <li><a href="http://github.com/h5bp/html5-boilerplate">HTML5 boilerplate</a></li>
@@ -186,19 +191,19 @@
 
             <p>Do what is asked in <a href="#how_to_ask_for_help">&#8216;ask for help&#8217;</a> above and check out <a href="http://addyosmani.com/blog/getting-involved-with-open-source/">Addy Osmani&#8217;s video about getting involved</a>!</p>
           </div>
-          <section class="getinvolved">
-            <div class="col-b">
-              <h2 class="subhed">Can you do this?</h2>
-              <div class="task" data-hashtag="#helpothers">
-                <p>If you want to be counted among those brave enough to attempt to do this.</p>
-              </div>
+          <div class="col-b">
+            <section class="getinvolved">
+            <h2 class="subhed">Can you do this?</h2>
+            <div class="task" data-hashtag="#helpothers">
+              <p>If you want to be counted among those brave enough to attempt to do this.</p>
             </div>
-          </section>
+            </section>
+          </div>
         </section>
 
-        <section id="specs">
+        <section id="specs" class="col-ab">
             <div class="col-a">
-                <h1>Give Feedback on Specifications</h1>
+                <h1 class="hed">Give Feedback on Specifications</h1>
 
                 <p>Specs codify the expected behavior. They are developed by Working Groups (WG) along with active discussion on mailing lists. While we can’t always be certain that all browser vendors will adhere to the rules set forth in a spec they provide us with something that we, as developers, can standardize against.</p>
 
@@ -206,7 +211,7 @@
                     <li>Learn the <a href="http://diveintohtml5.info/past.html">history of HTML</a></li>
                     <li>Take an <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/">inside look at how the CSS WG works</a></li>
                     <li>Subscribe to these mailing lists to follow and contribute to the discussions that drive the web:
-                        <ul>
+                        <ul class="resources">
                             <li><a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a></li>
                             <li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a></li>
                             <li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a></li>
@@ -215,25 +220,25 @@
                     <li>Read through the <a href="http://developers.whatwg.org/">HTML5 Spec for developers</a> with all implementor stuff removed, formatted beautifully for you.</li>
                     <li>
                         See the latest commits to the HTML and CSS specs by following their respective working groups on Twitter:
-                        <ul>
+                        <ul class="resources">
                             <li><a href="http://twitter.com/csscommits">csscommits</a></li>
                             <li><a href="http://twitter.com/whatwg">whatwg</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-            <section class="getinvolved">
-              <div class="col-b">
+            <div class="col-b">
+              <section class="getinvolved">
                 <h2 class="subhed">Can you do this?</h2>
                 <div class="task" data-hashtag="#feedback">
                   <p>If you want to be counted among those brave enough to attempt to do this.</p>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
         </section>
-        <section id="write">
+        <section id="write" class="col-ab">
           <div class="col-a">
-            <h1>Write</h1>
+            <h1 class="hed">Write</h1>
             <p>Publish what you learn and don&#8217;t be afraid to make mistakes. Publish to your personal blog and keep your posts updated. Be sure to speak with your own voice! Remember that it is okay to not be an absolute authority on a subject to author a post! Always ask questions and prompt conversations. There is seldom a wrong question or a wrong answer.</p>
 
             <p>Teaching is a great learning tool as well. So, even if you are getting started in an area, you’re helping yourself by writing about it as well. You can always consider asking a mentor or friend for a technical review. (Addy&#8217;s done that with aplomb)</p>
@@ -253,31 +258,32 @@
                 <li>Make a summary of popular ideas around the web lately</li>
                 <li>Write about your experience contributing to an open source project.</li>
                 <li>If you are a native speaker of a language other than English:
-              <ul>
-              <li>Translate some popular English web dev posts.</li>
-              <li>Elaborate on some of the features in the specs.</li>
-              </ul></li>
+                <ul class="resources">
+                  <li>Translate some popular English web dev posts.</li>
+                  <li>Elaborate on some of the features in the specs.</li>
+                </ul>
+              </li>
             </ul>
           </div>
-          <section class="getinvolved">
-            <div class="col-b">
+          <div class="col-b">
+            <section class="getinvolved">
               <h2 class="subhed">Can you do this?</h2>
               <div class="task" data-hashtag="#write">
                 <p>If you want to be counted among those brave enough to attempt to do this.</p>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </section>
-        <section id="filebugs">
+        <section id="filebugs" class="col-ab">
           <div class="col-a">
-            <h1>File bugs</h1>
+            <h1 class="hed">File bugs</h1>
             <p>Seriously, all browser vendors would much rather you file tickets with them than tweet about bugs. :)</p>
             <ul>
               <li>Lea Verou&#8217;s article <a href="http://coding.smashingmagazine.com/2011/09/07/help-the-community-report-browser-bugs/">Help the Community: Report Browser Bugs</a></li>
               <li>John Resig&#8217;s article on <a href="http://ejohn.org/blog/a-web-developers-responsibility/">A Web Developer&#8217;s Responsibility</a></li>
               <li>
                 <p>Browser trackers - search for existing bug reports or submit new ones</p>
-                <ul>
+                <ul class="resources">
                   <li><a href="https://bugzilla.mozilla.org/">Mozilla's bugzilla</a></li>
                   <li><a href="https://bugs.webkit.org/">Webkit bugs</a></li>
                   <li><a href="http://crbug.com/">Chrome bugs</a></li>
@@ -287,26 +293,26 @@
               </li>
             </ul>
           </div>
-          <section class="getinvolved">
-            <div class="col-b">
+          <div class="col-b"> 
+            <section class="getinvolved">             
               <h2 class="subhed">Can you do this?</h2>
               <div class="task" data-hashtag="#filebugs">
                 <p>If you want to be counted among those brave enough to attempt to do this.</p>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </section>
     </article>
     <article class="section">
       <div class="standout">
-        <h1>Winrar!</h1>
-        <h2>You are the expert and you are bored with all these suggestions? May we suggest you these?</h2>
+        <h1 class="hed">Winrar!</h1>
+        <h2 class="subhed">You are the expert and you are bored with all these suggestions? May we suggest you these?</h2>
       </div>
-      <section id="hack">
+      <section id="hack" class="col-ab">
         <div class="col-a">
-          <h1>Hack!</h1>
+          <h1 class="hed">Hack!</h1>
           <p>Push the web to it's limits! Hack on CSS, advanced HTML, and JavaScript. Hack on the browser's rendering engine. Fork github repos, dig through the code, and keep on learning. Let's make the web more awesome. There are so many ways…</p>
-          <h2 id="contribute_to_browsers">Contribute to browsers</h2>
+          <h2 id="contribute_to_browsers" class="subhed">Contribute to browsers</h2>
           <ul>
             <li>Help build devtools like <a href="http://trac.webkit.org/wiki/WebInspector">WebKit Inspector</a> and <a href="https://bitbucket.org/scope/dragonfly-stp-1/">Dragonfly</a>.
             They are written in HTML, CSS, and JS so you don&#8217;t need to be a C++ programmer to contribute to these.
@@ -316,7 +322,7 @@
             <li>join #introduction and #developers on <a href="#mozilla_irc">Mozilla's IRC server</a></li>
             <li><a href="http://dev.chromium.org/developers/contributing-to-webkit">Google&#8217;s guide on how to contribute to WebKit</a></li>
           </ul>
-          <h2>Contribute to Specifications</h2>
+          <h2 id="contribute_to_specs" class="subhed">Contribute to Specifications</h2>
           <ul>
             <li>Test cases are fundamental to standards and to browsers. You can make <a href="http://www.w3.org/html/wg/wiki/Testing">The W3C test suite for HTML</a> better!
               <ul>
@@ -329,26 +335,26 @@
             <li>Send email to <a href="http://www.whatwg.org/mailing-list">WHATWG</a> / <a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> / <a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a> / fx email lists</li>
             <li><a href="http://wiki.whatwg.org/wiki/How_to_write_a_spec">Write Specs!</a></li>
           </ul>
-          <h2 id="contribute_to_validators">Contribute to validators</h2>
+          <h2 id="contribute_to_validators" class="subhed">Contribute to validators</h2>
           <ul>
             <li><a href="http://validator.nu/">HTML Validator</a></li>
             <li><a href="http://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
             <li><a href="https://bitbucket.org/annevk/webvtt">WebVTT</a></li>
           </ul>
         </div>
-        <section class="getinvolved">
-          <div class="col-b">
+        <div class="col-b">
+          <section class="getinvolved">
             <h2 class="subhed">Can you do this?</h2>
             <div class="task" data-hashtag="#hack">
               <p>If you want to be counted among those brave enough to attempt to do this.</p>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </section>
     </article>
 
     <footer class="doc">
-      <p>Made with love &amp; tears by <a href="http://twitter.com/wilto">Wilto</a> / <a href=http://twitter.com/necolas>Nicolas Gallagher</a> / <a href=http://twitter.com/aaronforsander>Aaron Forsander</a> / <a href=http://twitter.com/c_t_montgomery>Connor Montgomery</a> / <a href=http://twitter.com/paul_irish>Paul Irish</a> / <a href=http://twitter.com/divya>Divya Manian</a> and <a href=https://github.com/h5bp/igotmybeanie/contributors>more</a></p>
+      <p>Made with love &amp; tears by <a href="http://twitter.com/wilto">Mat Marquis</a> / <a href=http://twitter.com/necolas>Nicolas Gallagher</a> / <a href=http://twitter.com/aaronforsander>Aaron Forsander</a> / <a href=http://twitter.com/c_t_montgomery>Connor Montgomery</a> / <a href=http://twitter.com/paul_irish>Paul Irish</a> / <a href=http://twitter.com/divya>Divya Manian</a> and <a href=https://github.com/h5bp/igotmybeanie/contributors>more</a></p>
       <p><a href=https://github.com/h5bp/igotmybeanie>Contribute to this project</a></p>
     </footer>
 
