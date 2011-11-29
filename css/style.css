@@ -341,6 +341,15 @@ ol.tasks { list-style-position: inside; }
     padding: 1px 5px 0 5px;
 }
 
+li span { opacity: 0; 
+  -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;  
+      -ms-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out;
+
+}
+li:hover span { opacity: 1;}
 
 nav { text-align: center; }
 
