@@ -250,7 +250,10 @@ section, header {
     margin-top: .9em;
     list-style: none;
     padding: .1em 0 0 0;
-    margin-left: 0;
+}
+
+section ul, section ol { 
+    margin-left: 25px;
 }
 
 .col-ab li { padding: 0.5em 0; }
