@@ -173,6 +173,8 @@ section, header {
     text-shadow: 1px 1px 0 rgba(255,255,255,.8);
 }
 
+.col-b .subhed { margin-top: 2em; }
+
 .standout {
     background: #687482 url(img/bg_noise.png) 0 0 repeat;
     background-origin: padding;
