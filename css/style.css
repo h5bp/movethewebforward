@@ -266,7 +266,9 @@ section, header {
     text-align: center;
     margin-bottom: .25em;
     padding: 0 0 1em 0;
-    border-top: 1em solid indianred;
+}
+body {
+    border-top: .2em solid indianred;
 }
 
 .hed-lead {
