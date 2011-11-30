@@ -336,13 +336,22 @@ section ul, section ol {
   width: 90%;
   box-sizing: border-box;
   padding: .6em 5% .5em 5%;
-  background: #324a69;
+  background: #435772;
   text-shadow: 1px 1px 1px #000;
-  color: white;
+  color: #fff;
   text-align: center;
   border-radius: 5px;
   box-shadow: 1px 1px 2px #000;
   margin-bottom: 1em;
+  -webkit-transition: background 0.3s ease-out;  
+     -moz-transition: background 0.3s ease-out;  
+      -ms-transition: background 0.3s ease-out;  
+       -o-transition: background 0.3s ease-out;  
+          transition: background 0.3s ease-out;
+}
+.pledge:hover {
+	background: #294160;
+	color: #fff;
 }
 
 /* Twitter Avatar Styles */
