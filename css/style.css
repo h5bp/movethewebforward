@@ -406,7 +406,7 @@ li span { opacity: 0;
           transition: all 0.3s ease-out;
 
 }
-li:hover span { opacity: 1;}
+li:hover > span { opacity: 1;}
 
 nav { 
   text-align: center; 
