@@ -485,6 +485,8 @@ footer.doc {
   padding: 3em;
 }
 
+footer.doc .others { font-size: 1.5em; }
+
 img[alt=Pugerton] { display: none; }
 
 .builders {
