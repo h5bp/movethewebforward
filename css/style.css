@@ -315,7 +315,7 @@ section, header {
 
 
 /* Nav Sticky */
-.sticky { position: fixed; top: 0; left: 0; z-index: 2; }
+.sticky { position: fixed; top: 0; left: 0; z-index: 2; margin: 0; }
 
 section ul, section ol { 
     margin-left: 2%;
@@ -424,6 +424,7 @@ nav {
   background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
   background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
   width: 100%;
+  margin: 40px 0 -30px;
 }
 
 nav ul,
