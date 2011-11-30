@@ -501,9 +501,9 @@ img[alt=Pugerton] { display: none; }
     display: inline-block;
     padding: 0.5em 0 0.5em 0.5em;
     min-height: 48px;
-    width: 150px; 
-    text-align: left;    
-    border-bottom: 1px dotted;
+    margin: 5px 0;
+    width: 150px;
+    text-align: left;
 }
 
 .builders a img { float: left; margin-right: 1em; border-radius: 5px; }
