@@ -86,6 +86,7 @@ a, a:visited {
 
 a:hover, a:focus, a:active { color: #0c4c9d; }
 
+
 .resources ul a {
     border-radius: 3px;
     display: inline-block;
@@ -429,35 +430,34 @@ nav ol {
     display: table;
     width: 100%;
     padding: 0;
+    border-bottom: 0.2em solid indianred;
 }
 
 nav li {
-    display: table-cell;
-    padding: .5em 0 .8em 0;
-    *display: inline;
+  display: table-cell;
+    *display: inline;   
 }
 
 nav a, nav a:visited { 
     color: rgb(231, 235, 241);
     text-shadow: 0 1px #000;
-    padding: .3em 1em .4em;
-    border-radius: .2em;
+    padding: .5em 0 .8em 0;   
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
     -webkit-transition: background 0.3s ease-out;
        -moz-transition: background 0.3s ease-out;
         -ms-transition: background 0.3s ease-out;
          -o-transition: background 0.3s ease-out;
             transition: background 0.3s ease-out;    
+            
 }
-nav a:hover, nav a:focus {
-    color: #fff;
-    background: rgba(255,255,255,.2);
-}
-
-nav a:active, nav a.active { 
-    color: #222;
-    color: rgba(0,0,0,.8);
-    background: rgba(255,255,255,.8);
-    text-shadow: none;
+nav a:hover, nav a:focus, nav a.active {
+    color: indianred;    
+    background-image: -o-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));
+    background-image: -webkit-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
+    background-image: -moz-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
+    background-image: -ms-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
 }
 
 
