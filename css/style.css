@@ -485,6 +485,23 @@ footer.doc {
   padding: 3em;
 }
 
+.builders {
+    text-align: center;
+}
+.builders li {
+    list-style: none;
+    display: inline;
+}
+.builders a {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+.builders span {
+    display: block;
+    opacity:1;
+}
+
+
 @media screen and (min-width: 800px) {
   .gimmick i {
     position: fixed;
