@@ -97,8 +97,9 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      if($scrollable.scrollTop() > 250) {
-        $nav.addClass('sticky');
+      if($scrollable.scrollTop() > 520) {
+        var toc_pos = $toc.position();
+        $toc.css('top', toc_pos.top).addClass('sticky').css('top', '0');
       } else {
         $nav.removeClass('sticky');
       }
