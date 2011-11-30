@@ -21,9 +21,11 @@
 
   (new Image()).src = 'css/img/beanie-webasaurs.gif'
 
-		var $toc = $('body div.col-a, body nav'),
+		var $toc = $('#toc'),
+		  $inlinelinks = $('body div.col-a'),
 			$tocLinks = $toc.find('a[href^="#"]'),
-			cache = {};
+			$bodyinlinelinks = $inlinelinks.find('a[href^="#"]'),
+			cache = {}, cacheinline = {};
 			$docEl = $( document.documentElement ),
 			$body = $( document.body ),
 			$window = $( window ),
@@ -60,6 +62,15 @@
 				cache[ this.href ] = { link: $(v), target: $target };
 			}
 		});
+		
+		//build inline cache
+		$bodyinlinelinks.each(function(i,v) {
+			var href =  $( this ).attr( 'href' ),
+				$target = $( href );
+			if ( $target.length ) {
+				cacheinline[ this.href ] = { link: $(v), target: $target };
+			}
+		});		
 
 		// handle nav links
 		$toc.delegate( 'a[href^="#"]', 'click', function(e) {
@@ -68,6 +79,14 @@
 				$scrollable.animate( { scrollTop: cache[ this.href ].target.position().top }, 600, 'swing' );
 			}
 		});
+		
+		//handle inline links
+		$inlinelinks.delegate( 'a[href^="#"]', 'click', function(e) {
+			e.preventDefault(); // if you expected return false, *sigh*
+			if ( cacheinline[ this.href ] && cacheinline[ this.href ].target ) {
+				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target.position().top }, 600, 'swing' );
+			}
+		});		
 
     // Set parallax correctly so it aligns to sidebar
 
@@ -93,6 +112,7 @@
 						return false; // get outta this $.each
 					}
 				});
+				
 
 				// all done
 				clearTimeout( timeout );
