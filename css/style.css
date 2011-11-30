@@ -86,6 +86,59 @@ a, a:visited {
 
 a:hover, a:focus, a:active { color: #0c4c9d; }
 
+.tw-bird  {
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+    -webkit-transform: scale(0.3);
+       -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+         -o-transform: scale(0.3);
+            transform: scale(0.3);
+    -webkit-transform-origin: 100% 0;
+       -moz-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+         -o-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    margin-top: 14px;
+    right: 0;
+    position:absolute;
+}
+
+.touch .tw-bird { display:none }
+
+.no-inlinesvg .tw-bird { display: none; }
+
+.inlinesvg #follow_them_on_twitter + div p {
+    padding-right: 80px;
+}
+
+.tw-bird path {
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+}
+
+#follow_them_on_twitter + div:hover .tw-bird  {
+    -webkit-transform: scale(0.3) rotateY(180deg) translateX(400px);
+       -moz-transform: scale(0.3) rotateY(180deg) translateX(400px);
+        -ms-transform: scale(0.3) rotateY(180deg) translateX(400px);
+         -o-transform: scale(0.3) rotateY(180deg) translateX(400px);
+            transform: scale(0.3) rotateY(180deg) translateX(400px);
+}
+
+#follow_them_on_twitter + div:hover .tw-bird path {
+    fill: #33ccff;
+}
+
 .resources ul a {
     border-radius: 3px;
     display: inline-block;
