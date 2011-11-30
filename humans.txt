@@ -25,7 +25,7 @@
 
   Mathias Bynens
   Twitter: @mathias
-  Location: United Kingdom
+  Location: Belgium
 
   Nicolas Gallagher
   Twitter: @necolas
