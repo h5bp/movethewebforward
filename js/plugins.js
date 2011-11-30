@@ -87,7 +87,7 @@
       var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(message + ' ' + hashtag + ' ' + editTweetText);
 
       linkElem.attr('href', prefillUrl).click(function() {
-        cacheDel(hashtag);
+        cacheDel(options.searchPrefix + hashtag);
       });
 
       if (hashtag) {
