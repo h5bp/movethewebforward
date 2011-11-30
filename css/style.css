@@ -277,6 +277,9 @@ section, header {
     padding: 25% 0 .25em 0;
     text-shadow: 1px 1px 0 #fff;
 }
+.lead:hover .hed-lead {
+	background: url(img/beanie-webasaurs.gif) center 0 no-repeat;
+}
 .no-fontface .hed-lead {
     font-weight: bold;
     letter-spacing: -1px;
