@@ -20,7 +20,7 @@
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i + i');
-			
+
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
 		if ( $docEl.scrollTop() ) {
@@ -34,7 +34,7 @@
 				// we actually scrolled, so, er, undo it
 				$body.scrollTop( bodyST - 1 );
 			}
-		}		
+		}
 
 		// build cache
 		$tocLinks.each(function(i,v) {
@@ -78,24 +78,24 @@
 				clearTimeout( timeout );
 				deferred = false;
 			};
-       
+
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
       if($scrollable.scrollTop() > 250) {
         $toc.addClass('sticky');
       } else {
         $toc.removeClass('sticky');
-      }    
-      
-      
+      }
+
+
 			// timeout hasn't been created yet
 			if ( !deferred ) {
 				timeout = setTimeout( check , 250 ); // defer this stuff
 				deferred = true;
 			}
-			
+
 			$oldscrolltop = $scrollable.scrollTop();
-			
+
 		});
 
 		// fix any possible failed scroll events and fix the nav automatically
@@ -104,7 +104,7 @@
 			setTimeout( arguments.callee, 1500 );
 		})();
 
-      $parallax1.scrollingParallax({staticSpeed: 3});			
-      $parallax2.scrollingParallax({staticSpeed: 5});			      		      
-    
+    $parallax1.scrollingParallax({staticSpeed: .2, reverseDirection: true});
+    $parallax2.scrollingParallax({staticSpeed: .3, reverseDirection: true});
+
 })( jQuery );
