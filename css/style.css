@@ -440,6 +440,7 @@ nav ol {
 }
 
 nav li {
+  padding: 0;
   display: table-cell;
     *display: inline;   
 }
@@ -450,20 +451,20 @@ nav a, nav a:visited {
     padding: .5em 0 .8em 0;   
     display: block;
     font-weight: bold;
-    text-transform: uppercase;
     -webkit-transition: background 0.3s ease-out;
        -moz-transition: background 0.3s ease-out;
         -ms-transition: background 0.3s ease-out;
          -o-transition: background 0.3s ease-out;
-            transition: background 0.3s ease-out;    
+            transition: background 0.3s ease-out;
             
 }
 nav a:hover, nav a:focus, nav a.active {
-    color: indianred;    
-    background-image: -o-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));
-    background-image: -webkit-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
-    background-image: -moz-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
-    background-image: -ms-radial-gradient(50% 100%, circle, hsla(213, 35%, 15%, 1), hsla(213, 35%, 15%, 0));    
+    color: #fff;
+    background: -moz-radial-gradient(center bottom, ellipse cover,  rgba(255,255,255,.4) 0%, rgba(50, 74, 105,0) 40%);
+    background: -webkit-radial-gradient(center bottom, ellipse cover,  rgba(255,255,255,.4) 0%,rgba(50, 74, 105,0) 40%);
+    background: -o-radial-gradient(center bottom, ellipse cover,  rgba(255,255,255,.4) 0%,rgba(50, 74, 105,0) 40%);
+    background: -ms-radial-gradient(center bottom, ellipse cover,  rgba(255,255,255,.4) 0%,rgba(50, 74, 105,0) 40%);
+    background: radial-gradient(center bottom, ellipse cover,  rgba(255,255,255,.4) 0%,rgba(50, 74, 105,0) 40%);
 }
 
 
@@ -500,9 +501,9 @@ img[alt=Pugerton] { display: none; }
     display: inline-block;
     padding: 0.5em 0 0.5em 0.5em;
     min-height: 48px;
-    width: 150px; 
-    text-align: left;    
-    border-bottom: 1px dotted;
+    margin: 5px 0;
+    width: 150px;
+    text-align: left;
 }
 
 .builders a img { float: left; margin-right: 1em; border-radius: 5px; }
