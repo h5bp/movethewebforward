@@ -227,9 +227,31 @@ body {
     margin: 5% 0 0 0;
     padding: 25% 0 .25em 0;
     text-shadow: 1px 1px 0 #fff;
+  position:relative;
 }
-.lead:hover .hed-lead {
-	background: url(img/beanie-webasaurs.gif) center 0 no-repeat;
+
+.lead .hed-lead span {
+  background: url(img/beanie-webasaurs.gif) center 0 no-repeat;
+  opacity: 0;
+  display:block; 
+  background-size: 100% auto;
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  width: 100%;
+
+
+  -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;  
+      -ms-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out;
+
+
+}
+
+.lead .hed-lead:hover span {
+	opacity: 1;
 }
 .no-fontface .hed-lead {
     font-weight: bold;

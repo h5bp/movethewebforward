@@ -19,6 +19,8 @@
       }
   }]);
 
+  (new Image()).src = 'css/img/beanie-webasaurs.gif'
+
 		var $toc = $('body div.col-a, body nav'),
 			$tocLinks = $toc.find('a[href^="#"]'),
 			cache = {};
