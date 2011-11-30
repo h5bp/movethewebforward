@@ -434,6 +434,7 @@ nav {
   background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   width: 100%;
   margin: 40px 0 -30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
 nav ul,
@@ -449,9 +450,23 @@ nav li {
     *display: inline;
 }
 
-nav a, nav a:visited { color: rgb(231, 235, 241); text-shadow: 0 1px #000; }
+nav a, nav a:visited { 
+    color: rgb(231, 235, 241);
+    text-shadow: 0 1px #000;
+    padding: .3em 1em .4em;
+    border-radius: .2em;
+}
+nav a:hover, nav a:focus {
+    color: #fff;
+    background: rgba(255,255,255,.2);
+}
 
-nav a:active, nav a.active { color: rgb(181, 197, 215); }
+nav a:active, nav a.active { 
+    color: #222;
+    color: rgba(0,0,0,.8);
+    background: rgba(255,255,255,.8);
+    text-shadow: none;
+}
 
 
 nav li:not(:last-child) { border-bottom: 0; }
