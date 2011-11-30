@@ -86,7 +86,7 @@
             : options.message;
 
       // A URL that will pre-fill a twitter status message.
-      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(hashtag + ' ' + message);
+      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(message + ' ' + hashtag);
 
       linkElem.attr('href', prefillUrl).click(function() {
         cacheDel(hashtag);
