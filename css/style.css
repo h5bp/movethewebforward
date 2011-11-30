@@ -264,9 +264,9 @@ body {
     padding: 0 .5em;
     text-shadow: 1px 1px 0 #fff;
 }
-.lead .subhed {
+.lead .subhed, p.summary {
 	line-height: 1.3em;
-	margin: .85em 0 0 0;
+	margin: .85em auto 0;
 	padding: .8em 10%;
 }
 .lead .subhed b {
@@ -274,12 +274,18 @@ body {
 	display: block;
 }
 
-.lead p {
+.lead p, p.summary {
   padding: 1em 0;
   margin-top: 2em;
   border: 2px double #7f8c9c;
   border-width: 4px 0;
 }
+
+p.summary {
+  max-width: 840px;
+  margin-bottom: 70px;
+}
+
 .lead p b { color: #5d6474; }
 
 .section > section { margin-top: 2em; }
