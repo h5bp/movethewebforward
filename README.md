@@ -8,11 +8,11 @@ Do you have some ideas for ways that all developers—from the seasoned professi
 
 ## IRC channel
 
-We're in #igotmybeanie on freenode IRC. For those without an IRC client see <http://webchat.freenode.net/?channels=igotmybeanie>
+We're in #movethewebforward on freenode IRC. For those without an IRC client see <http://webchat.freenode.net/?channels=movethewebforward>
 
 ## Staging server
 
-View the current site at <http://h5bp.github.com/igotmybeanie/>
+View the current site at <http://h5bp.github.com/movethewebforward/>
 
 ## Dev Notes
 
