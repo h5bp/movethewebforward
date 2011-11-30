@@ -448,7 +448,7 @@ nav li {
 nav a, nav a:visited { 
     color: rgb(231, 235, 241);
     text-shadow: 0 1px #000;
-    padding: .5em 0 .8em 0;   
+    padding: .6em 0 .5em 0;   
     display: block;
     font-weight: bold;
     -webkit-transition: background 0.3s ease-out;
