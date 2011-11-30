@@ -1,18 +1,28 @@
 (function( $ ){
-	var tweet = "http://movethewebforward.org";
 
-	$(".task")
-		.hashTask({
-			message         : tweet,
-			editTweetText   : "(edit this tweet as you wish. ♡)",
-			linkSelector    : function() { return this.find('.pledge') },
-			avatarsSelector : function() { return this.find('.pledges') },
-			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
-			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
-		});
+  Modernizr.load([{
+      test: window.JSON,
+      nope: 'js/libs/json2.min.js'
+    }, {
+      test: Modernizr.localstorage,
+      nope: 'js/libs/storage.js',
+      complete: function() {
+      	$(".task")
+      		.hashTask({
+      			message         : "http://movethewebforward.org",
+      			editTweetText   : "(edit this tweet as you wish. ♡)",
+      			linkSelector    : function() { return this.find('.pledge') },
+      			avatarsSelector : function() { return this.find('.pledges') },
+      			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
+      			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
+      		});
+      }
+  }]);
 
-		var $toc = $('#toc'),
-			$tocLinks = $toc.find('a'),
+  (new Image()).src = 'css/img/beanie-webasaurs.gif'
+
+		var $toc = $('body div.col-a, body nav'),
+			$tocLinks = $toc.find('a[href^="#"]'),
 			cache = {};
 			$docEl = $( document.documentElement ),
 			$body = $( document.body ),
@@ -20,7 +30,12 @@
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i + i'),
-			$bodyheight = $body.height();
+			$bodyheight = $body.height(),
+      $bodywidth = $body.width(),
+      $headerwidth = $('.lead').width(),
+      $nav = $('#toc'),
+      $originalnavtop = $nav.position().top;
+      
 
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -47,13 +62,17 @@
 		});
 
 		// handle nav links
-		$toc.delegate( 'a', 'click', function(e) {
-		//	alert( $scrollable.scrollTop() );
+		$toc.delegate( 'a[href^="#"]', 'click', function(e) {
 			e.preventDefault(); // if you expected return false, *sigh*
 			if ( cache[ this.href ] && cache[ this.href ].target ) {
 				$scrollable.animate( { scrollTop: cache[ this.href ].target.position().top }, 600, 'swing' );
 			}
 		});
+
+    // Set parallax correctly so it aligns to sidebar
+
+    $parallax1.css("right", ($bodywidth - $headerwidth)/2);
+    $parallax2.css("right", ($bodywidth - $headerwidth)/2);
 
 		// auto highlight nav links depending on doc position
 		var deferred = false,
@@ -82,14 +101,15 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      if($scrollable.scrollTop() > 250) {
-        $toc.addClass('sticky');
+      if($scrollable.scrollTop() > ($originalnavtop)) {
+        var toc_pos = $nav.position();
+        $nav.addClass('sticky').css('top', '0');
       } else {
-        $toc.removeClass('sticky');
+        $nav.removeClass('sticky');
       }
 
-      $parallax1.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.5));
-      $parallax2.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.6));      
+      $parallax1.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.6));
+      $parallax2.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.7));
 
 			// timeout hasn't been created yet
 			if ( !deferred ) {
