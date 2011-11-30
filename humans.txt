@@ -4,39 +4,44 @@
 
 /* TEAM */
   Aaron Forsander
-  Twitter: http://twitter.com/aaronforsander
+  Twitter: @aaronforsander
   Location: United States of America
 
   Addy Osmani
-  Twitter: http://twitter.com/addyosmani
+  Twitter: @addyosmani
   Location: United Kingdom
 
   Connor Montgomery
-  Twitter: http://twitter.com/c_t_montgomery
+  Twitter: @c_t_montgomery
   Location: United States of Americana
 
   Divya Manian
-  Twitter: http://twitter.com/divya
+  Twitter: @divya
   Location: United States of America
 
   Mat Marquis
-  Twitter: http://twitter.com/wilto
+  Twitter: @wilto
   Location: United States of America
 
-  Nicholas Gallagher
-  Twitter: http://twitter.com/necolas
+  Mathias Bynens
+  Twitter: @mathias
+  Location: United Kingdom
+
+  Nicolas Gallagher
+  Twitter: @necolas
   Location: United Kingdom
 
   Paul Irish
-  Twitter: http://twitter.com/paul_irish
+  Twitter: @paul_irish
   Location: United States of America
 
 
 /* THANKS */
-  Alexis Deveria: http://a.deveria.com/
-  Daniel Filho: http://danielfilho.info/
-  Lea Verou: http://leaverou.me/
-  Mathias Bynens: http://mathiasbynens.be/
+  Alexis Deveria
+  Daniel Filho
+  Dain Kennison
+  Ryan Olson
+
   More here: https://github.com/h5bp/movethewebforward/contributors
 
 
