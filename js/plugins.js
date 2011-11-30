@@ -13,17 +13,6 @@
 
     var options = $.extend({}, defaults, o);
 
-    Modernizr.load([
-      {
-        test: window.JSON,
-        nope: 'js/libs/json2.min.js'
-      },
-      {
-        test: Modernizr.localstorage,
-        nope: 'js/libs/storage.js'
-      }
-    ]);
-
     function cacheSet(key, value, expires) {
       window.localStorage.setItem(key, JSON.stringify(value));
       if (expires) {

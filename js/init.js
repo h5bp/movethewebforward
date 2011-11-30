@@ -1,15 +1,23 @@
 (function( $ ){
-	var tweet = "http://movethewebforward.org";
 
-	$(".task")
-		.hashTask({
-			message         : tweet,
-			editTweetText   : "(edit this tweet as you wish. ♡)",
-			linkSelector    : function() { return this.find('.pledge') },
-			avatarsSelector : function() { return this.find('.pledges') },
-			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
-			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
-		});
+  Modernizr.load([{
+      test: window.JSON,
+      nope: 'js/libs/json2.min.js'
+    }, {
+      test: Modernizr.localstorage,
+      nope: 'js/libs/storage.js',
+      callback: function() {
+      	$(".task")
+      		.hashTask({
+      			message         : "http://movethewebforward.org",
+      			editTweetText   : "(edit this tweet as you wish. ♡)",
+      			linkSelector    : function() { return this.find('.pledge') },
+      			avatarsSelector : function() { return this.find('.pledges') },
+      			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
+      			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
+      		});
+      }
+  }]);
 
 		var $toc = $('#toc'),
 			$tocLinks = $toc.find('a'),
@@ -89,7 +97,7 @@
       }
 
       $parallax1.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.5));
-      $parallax2.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.6));      
+      $parallax2.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.6));
 
 			// timeout hasn't been created yet
 			if ( !deferred ) {
