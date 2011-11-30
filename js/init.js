@@ -32,7 +32,7 @@
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i:nth-child(2)'),
-			$parallax3 = $('.gimmick i:last-child'),			
+			$parallax3 = $('.gimmick i:last-child'),
 			$bodyheight = $body.height(),
       $bodywidth = $body.width(),
       $headerwidth = $('.lead').width(),
@@ -64,7 +64,7 @@
 				cache[ this.href ] = { link: $(v), target: $target };
 			}
 		});
-		
+
 		//build inline cache
 		$bodyinlinelinks.each(function(i,v) {
 			var href =  $( this ).attr( 'href' ),
@@ -72,7 +72,7 @@
 			if ( $target.length ) {
 				cacheinline[ this.href ] = { link: $(v), target: $target };
 			}
-		});		
+		});
 
 		// handle nav links
 		$toc.delegate( 'a[href^="#"]', 'click', function(e) {
@@ -81,20 +81,20 @@
 				$scrollable.animate( { scrollTop: cache[ this.href ].target.position().top }, 600, 'swing' );
 			}
 		});
-		
+
 		//handle inline links
 		$inlinelinks.delegate( 'a[href^="#"]', 'click', function(e) {
 			e.preventDefault(); // if you expected return false, *sigh*
 			if ( cacheinline[ this.href ] && cacheinline[ this.href ].target ) {
 				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target.position().top }, 600, 'swing' );
 			}
-		});		
+		});
 
     // Set parallax correctly so it aligns to sidebar
 
     $parallax1.css("right", ($bodywidth - $headerwidth)/2);
     $parallax2.css("right", ($bodywidth - $headerwidth)/2);
-    $parallax3.css("right", ($bodywidth - $headerwidth)/2);    
+    $parallax3.css("right", ($bodywidth - $headerwidth)/2);
 
 		// auto highlight nav links depending on doc position
 		var deferred = false,
@@ -115,7 +115,7 @@
 						return false; // get outta this $.each
 					}
 				});
-				
+
 
 				// all done
 				clearTimeout( timeout );
@@ -124,7 +124,7 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      
+
       if($scrollable.scrollTop() > ($originalnavtop - 20)) {
         $nav.addClass('sticky').css('top', '0');
       } else {
@@ -152,6 +152,50 @@
 
     $parallax1.scrollingParallax({staticSpeed: 0.12, reverseDirection: true});
     $parallax2.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});
-    $parallax3.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});    
+    $parallax3.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});
+
+    (function() {
+      if (window.__twitterIntentHandler) return;
+      var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
+          windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+          width = 550,
+          height = 420,
+          winHeight = screen.height,
+          winWidth = screen.width;
+
+      function handleIntent(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement,
+            m, left, top;
+
+        while (target && target.nodeName.toLowerCase() !== 'a') {
+          target = target.parentNode;
+        }
+
+        if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
+          m = target.href.match(intentRegex);
+          if (m) {
+            left = Math.round((winWidth / 2) - (width / 2));
+            top = 0;
+
+            if (winHeight > height) {
+              top = Math.round((winHeight / 2) - (height / 2));
+            }
+
+            window.open(target.href, 'intent', windowOptions + ',width=' + width +
+                                               ',height=' + height + ',left=' + left + ',top=' + top);
+            e.returnValue = false;
+            e.preventDefault && e.preventDefault();
+          }
+        }
+      }
+
+      if (document.addEventListener) {
+        document.addEventListener('click', handleIntent, false);
+      } else if (document.attachEvent) {
+        document.attachEvent('onclick', handleIntent);
+      }
+      window.__twitterIntentHandler = true;
+    }());
 
 })( jQuery );
