@@ -15,6 +15,9 @@ h2::selection,      h3::selection     { color:#333;}
 /* =============================================================================
    Site styles
    ========================================================================== */
+img {
+	max-width: 100%;
+}
 .resources {
     overflow: auto;
     list-style: none;
@@ -315,7 +318,7 @@ section, header {
 .sticky { position: fixed; top: 0; left: 0; z-index: 2; }
 
 section ul, section ol { 
-    margin-left: 25px;
+    margin-left: 2%;
 }
 
 .col-ab li { padding: 0.5em 0; }
@@ -330,9 +333,9 @@ section ul, section ol {
 
 .pledge, .pledge:visited {
   display: inline-block;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
-  padding: 0.5em 1em;
+  padding: .6em 5% .5em 5%;
   background: #324a69;
   text-shadow: 1px 1px 1px #000;
   color: white;
