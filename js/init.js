@@ -8,7 +8,7 @@
 			linkSelector    : function() { return this.find('.pledge') },
 			avatarsSelector : function() { return this.find('.pledges') },
 			hashtag         : function() { return this.data('hashtag') || '#igotmybeanie' },
-			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com) AND '
+			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
 		});
 
 		var $toc = $('#toc'),
