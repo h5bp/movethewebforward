@@ -19,8 +19,8 @@
       }
   }]);
 
-		var $toc = $('#toc'),
-			$tocLinks = $toc.find('a'),
+		var $toc = $('body div.col-a, body nav'),
+			$tocLinks = $toc.find('a[href^="#"]'),
 			cache = {};
 			$docEl = $( document.documentElement ),
 			$body = $( document.body ),
@@ -30,7 +30,8 @@
 			$parallax2 = $('.gimmick i + i'),
 			$bodyheight = $body.height(),
       $bodywidth = $body.width(), 
-      $headerwidth = $('.lead').width();
+      $headerwidth = $('.lead').width(),
+      $nav = $('#toc');
       
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -57,8 +58,7 @@
 		});
 
 		// handle nav links
-		$toc.delegate( 'a', 'click', function(e) {
-		//	alert( $scrollable.scrollTop() );
+		$toc.delegate( 'a[href^="#"]', 'click', function(e) {
 			e.preventDefault(); // if you expected return false, *sigh*
 			if ( cache[ this.href ] && cache[ this.href ].target ) {
 				$scrollable.animate( { scrollTop: cache[ this.href ].target.position().top }, 600, 'swing' );
@@ -98,13 +98,13 @@
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
       if($scrollable.scrollTop() > 250) {
-        $toc.addClass('sticky');
+        $nav.addClass('sticky');
       } else {
-        $toc.removeClass('sticky');
+        $nav.removeClass('sticky');
       }
 
-      $parallax1.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.5));
-      $parallax2.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.6));
+      $parallax1.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.6));
+      $parallax2.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.7));
 
 			// timeout hasn't been created yet
 			if ( !deferred ) {
