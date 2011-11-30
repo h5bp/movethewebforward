@@ -502,6 +502,8 @@ footer.doc {
   padding: 3em;
 }
 
+img[alt=Pugerton] { display: none; }
+
 .builders {
     text-align: center;
     margin: 2em 0;
@@ -513,13 +515,14 @@ footer.doc {
 
 .builders a {
     display: inline-block;
-    margin: 0 0.5em 0.5em;
+    padding: 0.5em 0 0.5em 0.5em;
     min-height: 48px;
     width: 150px; 
     text-align: left;    
+    border-bottom: 1px dotted;
 }
 
-.builders a img { float: left; margin-right: 1em; margin-top: -0.25em; }
+.builders a img { float: left; margin-right: 1em; border-radius: 5px; }
 
 .builders a b { display: block; font-weight: normal; }
 
