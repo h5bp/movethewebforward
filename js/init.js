@@ -19,7 +19,8 @@
 			$window = $( window ),
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
-			$parallax2 = $('.gimmick i + i');
+			$parallax2 = $('.gimmick i + i'),
+			$bodyheight = $body.height();
 
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -87,6 +88,8 @@
         $toc.removeClass('sticky');
       }
 
+      $parallax1.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.5));
+      $parallax2.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.6));      
 
 			// timeout hasn't been created yet
 			if ( !deferred ) {
@@ -104,7 +107,7 @@
 			setTimeout( arguments.callee, 1500 );
 		})();
 
-    $parallax1.scrollingParallax({staticSpeed: .2, reverseDirection: true});
-    $parallax2.scrollingParallax({staticSpeed: .3, reverseDirection: true});
+    $parallax1.scrollingParallax({reverseDirection: true});
+    $parallax2.scrollingParallax({reverseDirection: true});
 
 })( jQuery );

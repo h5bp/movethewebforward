@@ -475,14 +475,15 @@ footer.doc {
   .gimmick i {
     position: fixed;
     top: 0;
-    left: 50%;
+    right: 5%;
     display: block;
 		width:0px; 
 		height:0px; 
 		z-index: -1;
-		border-left:300px solid transparent;
-		border-right:300px solid transparent; 
-		border-top:300px solid rgba(181, 197, 215, 0.5); 
+		opacity: 0;
+		border-left: 200px solid transparent;
+		border-right: 200px solid transparent; 
+		border-top: 200px solid rgba(181, 197, 215, 0.5); 
   }
   
   .gimmick i + i {
@@ -490,9 +491,9 @@ footer.doc {
     top: 100px;
 		width:0px; 
 		height:0px; 
-		border-left:300px solid transparent;
-		border-right:300px solid transparent; 
-		border-top:300px solid rgba(181, 197, 215, 0.5); 		
+		border-left:200px solid transparent;
+		border-right:200px solid transparent; 
+		border-top:200px solid rgba(181, 197, 215, 0.5); 		
   }
     
   .col-a {
