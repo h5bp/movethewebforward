@@ -46,7 +46,10 @@
       }
       else {
         $.getJSON(searchUrl + encodeURIComponent(query), function(json) {
-          cacheSet(query, json, (+new Date) + 1000 * 60 * 60)
+          if (json.results.length) {
+            cacheSet(query, json, (+new Date) + 1000 * 60 * 60);
+          }
+
           callback(json);
         });
       }
