@@ -9,11 +9,11 @@ Do you have some ideas for ways that all developers—from the seasoned professi
 
 ## IRC channel
 
-We're in #igotmybeanie on freenode IRC. For those without an IRC client see http://webchat.freenode.com
+We're in #igotmybeanie on freenode IRC. For those without an IRC client see http://webchat.freenode.net
 
 ## Staging server
 
-View the current site at [h5bp.github.com/igotmybeanie/](http://h5bp.github.com/igotmybeanie/)
+View the current site at [http://h5bp.github.com/igotmybeanie/](http://h5bp.github.com/igotmybeanie/)
 
 ## Dev Notes
 
