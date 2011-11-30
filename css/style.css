@@ -439,9 +439,11 @@ nav ol {
 }
 
 nav li {
-  padding: 0;
-  display: table-cell;
-    *display: inline;   
+    padding: 0;
+    display: table-cell;
+    *display: inline;
+    *zoom: 1;
+    *padding: 0 40px;
 }
 
 nav a, nav a:visited { 
