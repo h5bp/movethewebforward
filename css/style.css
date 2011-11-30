@@ -217,11 +217,10 @@ section, header {
     color: #b5c5d7;
     font: 1.5em/1 "ChunkFive", georgia, serif;
     letter-spacing: .05em;
-    margin: 0 auto;
+    margin: 0;
     padding: .2em 0 .8em 0;
     text-align: center;
     text-shadow: #494f57 1px 1px, #494f57 2px 2px;
-    max-width: 990px;
 }
 .standout .hed {
     border: none;
@@ -434,7 +433,7 @@ nav {
   background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   width: 100%;
-  margin: 2em 0 0;
+  margin: 40px 0 -30px;
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
@@ -443,35 +442,30 @@ nav ol {
     display: table;
     width: 100%;
     padding: 0;
-    border-bottom: 0.2em solid indianred;
 }
 
 nav li {
-  display: table-cell;
-    *display: inline;   
+    display: table-cell;
+    padding: .5em 0 .8em 0;
+    *display: inline;
 }
 
 nav a, nav a:visited { 
     color: rgb(231, 235, 241);
     text-shadow: 0 1px #000;
-    padding: .5em 0 .8em 0;   
-    display: block;
-    font-weight: bold;
-    text-transform: uppercase;
-    -webkit-transition: background 0.3s ease-out;
-       -moz-transition: background 0.3s ease-out;
-        -ms-transition: background 0.3s ease-out;
-         -o-transition: background 0.3s ease-out;
-            transition: background 0.3s ease-out;    
-            
+    padding: .3em 1em .4em;
+    border-radius: .2em;
 }
-nav a:hover, nav a:focus, nav a.active {
-    color: indianred;        
-    background: -moz-radial-gradient(center top, ellipse cover,  rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 15%); /* FF3.6+ */
-    background: -webkit-radial-gradient(center top, ellipse cover,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 15%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center top, ellipse cover,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 15%); /* Opera 12+ */
-    background: -ms-radial-gradient(center top, ellipse cover,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 15%); /* IE10+ */
-    background: radial-gradient(center top, ellipse cover,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 15%); /* W3C */
+nav a:hover, nav a:focus {
+    color: #fff;
+    background: rgba(255,255,255,.2);
+}
+
+nav a:active, nav a.active { 
+    color: #222;
+    color: rgba(0,0,0,.8);
+    background: rgba(255,255,255,.8);
+    text-shadow: none;
 }
 
 
