@@ -152,6 +152,6 @@
 
     $parallax1.scrollingParallax({staticSpeed: 0.12, reverseDirection: true});
     $parallax2.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});
-    $parallax3.scrollingParallax({staticSpeed: 0.13, reverseDirection: true});    
+    $parallax3.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});    
 
 })( jQuery );
