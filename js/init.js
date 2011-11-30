@@ -28,7 +28,11 @@
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i + i'),
-			$bodyheight = $body.height();
+			$bodyheight = $body.height(),
+			$nav = $('#toc'),
+			$originalnavtop = $nav.position().top,
+			$navheight = $nav.outerHeight(true);
+			$('#nav_container').height($navheight);
 
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -90,11 +94,10 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      if($scrollable.scrollTop() > 520) {
-        var toc_pos = $toc.position();
-        $toc.css('top', toc_pos.top).addClass('sticky').css('top', '0');
+      if($scrollable.scrollTop() > ($originalnavtop - 20)) {
+        $nav.addClass('sticky').css('top', '0');
       } else {
-        $toc.removeClass('sticky');
+        $nav.removeClass('sticky');
       }
 
       $parallax1.css("opacity", 0.3 + ($scrollable.scrollTop() / $bodyheight * 0.5));
