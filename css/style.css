@@ -266,6 +266,7 @@ section, header {
     text-align: center;
     margin-bottom: .25em;
     padding: 0 0 1em 0;
+    border-top: 1em solid indianred;
 }
 
 .hed-lead {
@@ -491,6 +492,11 @@ footer.doc {
 }
 
 @media screen and (min-width: 800px) {
+  .gimmick {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+  }  
   .gimmick i {
     position: fixed;
     top: 0;
@@ -504,8 +510,9 @@ footer.doc {
 		border-right: 200px solid transparent;
 		border-top: 200px solid #d7dde8;
 		border-top: 200px solid rgba(181, 197, 215, 0.5);
+		margin-right: -55px;
   }
-
+  
   .gimmick i + i {
     display: block;
     top: 100px;

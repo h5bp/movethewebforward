@@ -28,8 +28,10 @@
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i + i'),
-			$bodyheight = $body.height();
-
+			$bodyheight = $body.height(),
+      $bodywidth = $body.width(), 
+      $headerwidth = $('.lead').width();
+      
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
 		if ( $docEl.scrollTop() ) {
@@ -63,6 +65,11 @@
 			}
 		});
 
+    // Set parallax correctly so it aligns to sidebar
+
+    $parallax1.css("right", ($bodywidth - $headerwidth)/2);
+    $parallax2.css("right", ($bodywidth - $headerwidth)/2);    
+    
 		// auto highlight nav links depending on doc position
 		var deferred = false,
 			timeout = false, // so gonna clear this later, you have NO idea
