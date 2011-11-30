@@ -6,7 +6,7 @@
     }, {
       test: Modernizr.localstorage,
       nope: 'js/libs/storage.js',
-      callback: function() {
+      complete: function() {
       	$(".task")
       		.hashTask({
       			message         : "http://movethewebforward.org",
@@ -29,10 +29,10 @@
 			$parallax1 = $('.gimmick i:first-child'),
 			$parallax2 = $('.gimmick i + i'),
 			$bodyheight = $body.height(),
-      $bodywidth = $body.width(), 
+      $bodywidth = $body.width(),
       $headerwidth = $('.lead').width(),
       $nav = $('#toc');
-      
+
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
 		if ( $docEl.scrollTop() ) {
@@ -68,8 +68,8 @@
     // Set parallax correctly so it aligns to sidebar
 
     $parallax1.css("right", ($bodywidth - $headerwidth)/2);
-    $parallax2.css("right", ($bodywidth - $headerwidth)/2);    
-    
+    $parallax2.css("right", ($bodywidth - $headerwidth)/2);
+
 		// auto highlight nav links depending on doc position
 		var deferred = false,
 			timeout = false, // so gonna clear this later, you have NO idea
