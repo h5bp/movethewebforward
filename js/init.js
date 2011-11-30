@@ -31,7 +31,8 @@
 			$window = $( window ),
 			$scrollable = $body, // default scrollable thingy, which'll be body or docEl (html)
 			$parallax1 = $('.gimmick i:first-child'),
-			$parallax2 = $('.gimmick i + i'),
+			$parallax2 = $('.gimmick i:nth-child(2)'),
+			$parallax3 = $('.gimmick i:last-child'),			
 			$bodyheight = $body.height(),
       $bodywidth = $body.width(),
       $headerwidth = $('.lead').width(),
@@ -93,6 +94,7 @@
 
     $parallax1.css("right", ($bodywidth - $headerwidth)/2);
     $parallax2.css("right", ($bodywidth - $headerwidth)/2);
+    $parallax3.css("right", ($bodywidth - $headerwidth)/2);    
 
 		// auto highlight nav links depending on doc position
 		var deferred = false,
@@ -131,7 +133,7 @@
 
       $parallax1.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.6));
       $parallax2.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.7));
-
+      $parallax3.css("opacity", 0.2 + ($scrollable.scrollTop() / $bodyheight * 0.4));
 			// timeout hasn't been created yet
 			if ( !deferred ) {
 				timeout = setTimeout( check , 250 ); // defer this stuff
@@ -148,7 +150,8 @@
 			setTimeout( arguments.callee, 1500 );
 		})();
 
-    $parallax1.scrollingParallax({reverseDirection: true});
-    $parallax2.scrollingParallax({reverseDirection: true});
+    $parallax1.scrollingParallax({staticSpeed: 0.12, reverseDirection: true});
+    $parallax2.scrollingParallax({staticSpeed: 0.1, reverseDirection: true});
+    $parallax3.scrollingParallax({staticSpeed: 0.13, reverseDirection: true});    
 
 })( jQuery );
