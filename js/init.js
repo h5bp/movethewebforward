@@ -1,10 +1,11 @@
 (function( $ ){
-	var tweet = "http://movethewebforward.org (edit this tweet as you wish. ♡)";
+	var tweet = "http://movethewebforward.org";
 
 	$(".task")
 		.append('<a href="http://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) + '" class="pledge">Yes, I want to do this!</a><p>Here are some developers who want to do this too:</p><div class="pledges"></div>')
 		.hashTask({
 			message         : tweet,
+			editTweetText   : "(edit this tweet as you wish. ♡)",
 			linkSelector    : function() { return this.find('.pledge') },
 			avatarsSelector : function() { return this.find('.pledges') },
 			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },

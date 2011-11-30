@@ -7,7 +7,8 @@
       message: 'oh yeah!',
       linkSelector: 'a',
       avatarsSelector: 'div',
-      searchPrefix: ''
+      searchPrefix: '',
+      editTweetText: "(edit this tweet as you wish. ♡)"
     };
 
     var options = $.extend({}, defaults, o);
@@ -85,8 +86,13 @@
             ? options.message.call($elem)
             : options.message;
 
+      // A message to edit the tweet.
+       var editTweetText = $.isFunction(options.editTweetText)
+            ? options.editTweetText.call($elem)
+            : options.editTweetText;
+
       // A URL that will pre-fill a twitter status message.
-      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(message + ' ' + hashtag);
+      var prefillUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(message + ' ' + hashtag + ' ' + editTweetText);
 
       linkElem.attr('href', prefillUrl).click(function() {
         cacheDel(hashtag);
