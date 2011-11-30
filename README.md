@@ -4,12 +4,12 @@ You ♡ Web Standards. You maybe even feel compelled to “give back” to the c
 
 ## Contributing
 
-Do you have some ideas for ways that all developers—from the seasoned professionals to those donning their first blue beanie—can get involved, learn more, and help move web standards forward? [Chime in here](https://etherpad.mozilla.org/igotmybeanie) or look at the github issues!
+Do you have some ideas for ways that all developers—from the seasoned professionals to those donning their first blue beanie—can get involved, learn more, and help move web standards forward? [Chime in here](https://etherpad.mozilla.org/igotmybeanie) or look at the github issues!. We'll be adding new ideas, resources and tasks regularly so feel free to check back often.
 
 
 ## IRC channel
 
-We're in #igotmybeanie on freenode IRC.
+We're in #igotmybeanie on freenode IRC. For those without an IRC client see http://webchat.freenode.com
 
 ## Staging server
 
