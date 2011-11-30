@@ -584,6 +584,7 @@ img[alt=Pugerton] { display: none; }
 	.lead .subhed b {
 		display: inline;
 		padding: 0;
+    font-weight: normal;
 	}
     .lead p {
         max-width: 9999px;
