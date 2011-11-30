@@ -35,7 +35,8 @@
       $headerwidth = $('.lead').width(),
       $nav = $('#toc'),
       $originalnavtop = $nav.position().top;
-      
+			$navheight = $nav.outerHeight(true);
+			$('#nav_container').height($navheight);
 
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -101,8 +102,8 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      if($scrollable.scrollTop() > ($originalnavtop)) {
-        var toc_pos = $nav.position();
+      
+      if($scrollable.scrollTop() > ($originalnavtop - 20)) {
         $nav.addClass('sticky').css('top', '0');
       } else {
         $nav.removeClass('sticky');
