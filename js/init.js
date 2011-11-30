@@ -31,7 +31,9 @@
 			$bodyheight = $body.height(),
       $bodywidth = $body.width(),
       $headerwidth = $('.lead').width(),
-      $nav = $('#toc');
+      $nav = $('#toc'),
+      $originalnavtop = $nav.position().top;
+      
 
 		// find out what the hell to scroll ( html or body )
 		// its like we can already tell - spooky
@@ -97,9 +99,9 @@
 
 		// work on scroll, but debounced
 		var $document = $(document).scroll( function() {
-      if($scrollable.scrollTop() > 520) {
-        var toc_pos = $toc.position();
-        $toc.css('top', toc_pos.top).addClass('sticky').css('top', '0');
+      if($scrollable.scrollTop() > ($originalnavtop)) {
+        var toc_pos = $nav.position();
+        $nav.addClass('sticky').css('top', '0');
       } else {
         $nav.removeClass('sticky');
       }

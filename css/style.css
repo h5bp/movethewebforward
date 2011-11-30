@@ -328,11 +328,6 @@ body {
   left: 0; 
   z-index: 2; 
   margin: 0; 
-  -webkit-transition:all 0.5s ease-in-out;
-     -moz-transition:all 0.5s ease-in-out;
-      -ms-transition:all 0.5s ease-in-out;
-       -o-transition:all 0.5s ease-in-out;
-          transition:all 0.5s ease-in-out;
 }
 
 section ul, section ol {
@@ -433,12 +428,11 @@ ol.tasks { list-style-position: inside; }
 }
 
 li span { opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-
+  -webkit-transition: opacity 0.3s ease-out;
+     -moz-transition: opacity 0.3s ease-out;
+      -ms-transition: opacity 0.3s ease-out;
+       -o-transition: opacity 0.3s ease-out;
+          transition: opacity 0.3s ease-out;
 }
 li:hover > span, .touch li > span { opacity: 1;}
 
@@ -450,7 +444,7 @@ nav {
   background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   width: 100%;
-  margin: 40px 0 -30px;
+  margin: 2em 0 0;
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
@@ -472,6 +466,11 @@ nav a, nav a:visited {
     text-shadow: 0 1px #000;
     padding: .3em 1em .4em;
     border-radius: .2em;
+    -webkit-transition: background 0.3s ease-out;
+       -moz-transition: background 0.3s ease-out;
+        -ms-transition: background 0.3s ease-out;
+         -o-transition: background 0.3s ease-out;
+            transition: background 0.3s ease-out;    
 }
 nav a:hover, nav a:focus {
     color: #fff;
@@ -511,40 +510,21 @@ footer.doc {
     list-style: none;
     display: inline;
 }
+
 .builders a {
     display: inline-block;
-    margin: 0 0.5em;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    margin: 0 0.5em 0.5em;
+    min-height: 48px;
+    width: 150px; 
+    text-align: left;    
 }
-.builders span {
-    display: block;
-}
-.builders img {
-    border: 1px solid #4B73A6;
-}
-.builders li:hover a {
 
-}
-.builders li:hover span, .touch .builders li span {
-    opacity: 1;
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
-    transform: translateY(5px);
-}
+.builders a img { float: left; margin-right: 1em; margin-top: -0.25em; }
+
+.builders a b { display: block; font-weight: normal; }
 
 
 @media screen and (min-width: 800px) {
-  .gimmick {
-    width: 990px;
-    margin: 0 auto;
-    position: relative;
-  }  
   .gimmick i {
     position: fixed;
     top: 0;
