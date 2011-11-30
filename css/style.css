@@ -509,31 +509,17 @@ footer.doc {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    -webkit-transform: rotate(9deg);
-    -moz-transform: rotate(9deg);
-    -ms-transform: rotate(9deg);
-    -o-transform: rotate(9deg);
-    transform: rotate(9deg);
 }
 .builders span {
     display: block;
-    -webkit-transform: rotate(320deg);
-    -moz-transform: rotate(320deg);
-    -ms-transform: rotate(320deg);
-    -o-transform: rotate(320deg);
-    transform: rotate(320deg);
 }
 .builders img {
     border: 1px solid #4B73A6;
 }
 .builders li:hover a {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+
 }
-.builders li:hover span {
+.builders li:hover span, .touch .builders li span {
     opacity: 1;
     -webkit-transform: translateY(5px);
     -moz-transform: translateY(5px);
