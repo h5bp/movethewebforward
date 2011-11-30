@@ -40,5 +40,6 @@
 })(window, document, jQuery);
 
 (function( $ ){
-	$('.standout .hed').fitText( 1.05, { minFontSize: '30px', maxFontSize: '600px' });
+	$('.standout .hed').fitText( 1.05, { minFontSize: '30px', maxFontSize: '80px' });
+	$('.hed-lead').fitText( 1.25, { minFontSize: '50px', maxFontSize: '150px' });	
 })( jQuery );

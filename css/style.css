@@ -250,42 +250,41 @@ section, header {
     width: 100%;
 }
 
-.doc-lead { margin-top: 1.5em; }
 
 .lead {
     text-align: center;
-    border-bottom: 3px double #cbd1d8;
     margin-bottom: .25em;
-    padding-bottom: 1.4em;
+    padding: 0 0 1em 0;
 }
 
 .hed-lead {
+	background-size: 100% auto;
+	background: url(img/webasaurs.gif) center 0 no-repeat;	
     color: #324a69;
     font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
-    margin: .7em 0 .1em 0;
-    padding: 0;
+    margin: 5% 0 0 0;
+    padding: 25% 0 .25em 0;
     text-shadow: 1px 1px 0 #fff;
 }
 .no-fontface .hed-lead {
     font-weight: bold;
     letter-spacing: -1px;
 }
-
-.subhed-lead p {
-    color: #7f8c9c;
-    font: normal 1.3em/1.2 "ChunkFive", georgia, serif;
-    margin: 0;
+.subhed-lead {
+    color: #5d6474;
+    font: normal 1.6em/1 "ChunkFive", georgia, serif;
+	margin: 0 0 1.25em 0;
     padding: 0 .5em;
     text-shadow: 1px 1px 0 #fff;
 }
-.subhed-lead p b { color: #5d6474; }
-
-.subhed-lead {
-    color: #7f8c9c;
-    font: normal 1.5em/1.2 "ChunkFive", georgia, serif;
-    text-transform: uppercase;
-    padding: 0 .5em;
-    text-shadow: 1px 1px 0 #fff;
+.lead .subhed {
+	line-height: 1.3em;
+	margin: .85em 0 0 0;
+	padding: .8em 10%;
+}
+.lead .subhed b {
+	padding-top: .5em;
+	display: block;
 }
 
 .lead p {
@@ -410,7 +409,7 @@ li:hover > span { opacity: 1;}
 
 nav { 
   text-align: center; 
-  background: rgb(50, 74, 105, 1);
+  background: rgb(50, 74, 105);
   background: -o-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));      
   background: -webkit-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
   background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
@@ -471,8 +470,16 @@ footer.doc {
 
    .hed-lead {
         font: 3.625em/1 "ChunkFive", georgia, serif;
+	    margin: 2% 0 .1em 0;
+	    padding: 22% 0 0 0;
     }
-
+	.subhed-lead {
+        font-size: 2.2em;
+	}
+	.lead .subhed b {
+		display: inline;
+		padding: 0;
+	}
     .lead p {
         max-width: 9999px;
     }
@@ -488,9 +495,6 @@ footer.doc {
     .standout .subhed,
     .doc-hed {
         font: 2em/1 "ChunkFive", georgia, serif;
-    }
-    .subhed-lead p {
-        font: normal 1.6875em/1.2 "ChunkFive", georgia, serif;
     }
 
     .col-split {
