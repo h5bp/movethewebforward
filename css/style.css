@@ -221,34 +221,33 @@ body {
 }
 
 .hed-lead {
-	background-size: 100% auto;
-	background: url(img/webasaurs.gif) center 0 no-repeat;
+    background-size: 100% auto;
+    background: url(img/webasaurs.gif) center 0 no-repeat;
     color: #324a69;
     font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
     margin: 5% 0 0 0;
     padding: 25% 0 .25em 0;
     text-shadow: 1px 1px 0 #fff;
-  position:relative;
+    position:relative;
 }
 
 .lead .hed-lead span {
-  background: url(img/beanie-webasaurs.gif) center 0 no-repeat;
-  opacity: 0;
-  display:block; 
-  background-size: 100% auto;
-  position: absolute;
-  left: 0; top: 0;
-  height: 100%;
-  width: 100%;
+    background: url(img/beanie-webasaurs.gif) center 0 no-repeat;
+    opacity: 0;
+    display:block; 
+    background-size: 100% auto;
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    width: 100%;
 
-
-  -webkit-transition: all 0.3s ease-out;  
-     -moz-transition: all 0.3s ease-out;  
-      -ms-transition: all 0.3s ease-out;  
-       -o-transition: all 0.3s ease-out;  
-          transition: all 0.3s ease-out;
-
-
+    -webkit-transition: all 0.3s ease-out;  
+       -moz-transition: all 0.3s ease-out;  
+        -ms-transition: all 0.3s ease-out;  
+         -o-transition: all 0.3s ease-out;  
+            transition: all 0.3s ease-out;
+    *display: none; /* hide from IE6/7, looking a bit broken */
+    
 }
 
 .lead .hed-lead:hover span {
