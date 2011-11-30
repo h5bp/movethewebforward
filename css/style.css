@@ -459,6 +459,29 @@ footer.doc {
 }
 
 @media screen and (min-width: 800px) {
+  .gimmick i {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    display: block;
+		width:0px; 
+		height:0px; 
+		z-index: -1;
+		border-left:300px solid transparent;
+		border-right:300px solid transparent; 
+		border-top:300px solid rgba(181, 197, 215, 0.5); 
+  }
+  
+  .gimmick i + i {
+    display: block;
+    top: 100px;
+		width:0px; 
+		height:0px; 
+		border-left:300px solid transparent;
+		border-right:300px solid transparent; 
+		border-top:300px solid rgba(181, 197, 215, 0.5); 		
+  }
+    
   .col-a {
 		float: left;
 		width: 68.607068607069%;
