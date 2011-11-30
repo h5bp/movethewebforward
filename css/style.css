@@ -89,10 +89,10 @@ a:hover, a:focus, a:active { color: #0c4c9d; }
 
 .tw-bird  {
 
-  -webkit-transition: all 0.3s ease-out;  
-     -moz-transition: all 0.3s ease-out;  
-      -ms-transition: all 0.3s ease-out;  
-       -o-transition: all 0.3s ease-out;  
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 
     -webkit-transform: scale(0.3);
@@ -112,16 +112,16 @@ a:hover, a:focus, a:active { color: #0c4c9d; }
 
 .no-inlinesvg .tw-bird { display: none; }
 
-.inlinesvg #follow_them_on_twitter + div p { 
+.inlinesvg #follow_them_on_twitter + div p {
     padding-right: 80px;
 }
 
 .tw-bird path {
-    
-  -webkit-transition: all 0.3s ease-out;  
-     -moz-transition: all 0.3s ease-out;  
-      -ms-transition: all 0.3s ease-out;  
-       -o-transition: all 0.3s ease-out;  
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 
 }
@@ -148,7 +148,7 @@ a:hover, a:focus, a:active { color: #0c4c9d; }
 p, .col-ab p { line-height: 1.65; }
 
 
-section, header { 
+section, header {
     max-width: 990px;
     margin: 0 auto;
 }
@@ -189,23 +189,23 @@ section, header {
     background-origin: padding;
     border: double #494f57;
     border-width: 3px 0;
-    
-    background: 
+
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    background: 
+    background:
         url(img/bg_noise.png) 0 0 repeat,
         radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
-    
+
     clear: both;
     margin: 3.5em 0 2em 0;
     padding: 1em 2.9296875% 0 2.9296875%;
@@ -268,7 +268,7 @@ section, header {
 
 .hed-lead {
 	background-size: 100% auto;
-	background: url(img/webasaurs.gif) center 0 no-repeat;	
+	background: url(img/webasaurs.gif) center 0 no-repeat;
     color: #324a69;
     font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
     margin: 5% 0 0 0;
@@ -317,7 +317,7 @@ section, header {
 /* Nav Sticky */
 .sticky { position: fixed; top: 0; left: 0; z-index: 2; margin: 0; }
 
-section ul, section ol { 
+section ul, section ol {
     margin-left: 2%;
 }
 
@@ -343,10 +343,10 @@ section ul, section ol {
   border-radius: 5px;
   box-shadow: 1px 1px 2px #000;
   margin-bottom: 1em;
-  -webkit-transition: background 0.3s ease-out;  
-     -moz-transition: background 0.3s ease-out;  
-      -ms-transition: background 0.3s ease-out;  
-       -o-transition: background 0.3s ease-out;  
+  -webkit-transition: background 0.3s ease-out;
+     -moz-transition: background 0.3s ease-out;
+      -ms-transition: background 0.3s ease-out;
+       -o-transition: background 0.3s ease-out;
           transition: background 0.3s ease-out;
 }
 .pledge:hover {
@@ -362,7 +362,7 @@ section ul, section ol {
     margin: .15em;
 }
 .pledges img { max-width: 25px; }
-
+.pledges p { display: none; }
 
 .tasks {
     font-size: .9em;
@@ -415,23 +415,23 @@ ol.tasks { list-style-position: inside; }
     padding: 1px 5px 0 5px;
 }
 
-li span { opacity: 0; 
-  -webkit-transition: all 0.3s ease-out;  
-     -moz-transition: all 0.3s ease-out;  
-      -ms-transition: all 0.3s ease-out;  
-       -o-transition: all 0.3s ease-out;  
+li span { opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 
 }
 li:hover > span, .touch li > span { opacity: 1;}
 
-nav { 
-  text-align: center; 
+nav {
+  text-align: center;
   background: rgb(50, 74, 105);
-  background: -o-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));      
-  background: -webkit-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
-  background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
-  background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));        
+  background: -o-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
+  background: -webkit-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
+  background: -moz-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
+  background: -ms-linear-gradient(rgba(50, 74, 105, 0.8), rgba(50, 74, 105, 1));
   width: 100%;
   margin: 40px 0 -30px;
 }
@@ -446,7 +446,7 @@ nav ol {
 nav li {
     display: table-cell;
     padding: .5em 0 .8em 0;
-    *display: inline;    
+    *display: inline;
 }
 
 nav a, nav a:visited { color: rgb(231, 235, 241); text-shadow: 0 1px #000; }
@@ -477,30 +477,30 @@ footer.doc {
     top: 0;
     right: 5%;
     display: block;
-		width:0px; 
-		height:0px; 
+		width:0px;
+		height:0px;
 		z-index: -1;
 		opacity: 0;
 		border-left: 200px solid transparent;
-		border-right: 200px solid transparent; 
-		border-top: 200px solid rgba(181, 197, 215, 0.5); 
+		border-right: 200px solid transparent;
+		border-top: 200px solid rgba(181, 197, 215, 0.5);
   }
-  
+
   .gimmick i + i {
     display: block;
     top: 100px;
-		width:0px; 
-		height:0px; 
+		width:0px;
+		height:0px;
 		border-left:200px solid transparent;
-		border-right:200px solid transparent; 
-		border-top:200px solid rgba(181, 197, 215, 0.5); 		
+		border-right:200px solid transparent;
+		border-top:200px solid rgba(181, 197, 215, 0.5);
   }
-    
+
   .col-a {
 		float: left;
 		width: 68.607068607069%;
 	}
-  
+
   .col-b {
 		width: 25.155925155925%;
 		float: right;
@@ -556,11 +556,11 @@ footer.doc {
         margin: 0;
         -webkit-break-after: column;
         -moz-break-after: column;
-        break-after: column;        
+        break-after: column;
     }
 
 	.col-split {
-		padding-top: 1em;		
+		padding-top: 1em;
 		-webkit-column-count: 2;
 		-webkit-column-gap: 2.079002079002%;
 		-moz-column-count: 2;
