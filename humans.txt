@@ -3,13 +3,47 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Aaron Forsander
+  Twitter: @aaronforsander
+  Location: United States of America
+
+  Addy Osmani
+  Twitter: @addyosmani
+  Location: United Kingdom
+
+  Connor Montgomery
+  Twitter: @c_t_montgomery
+  Location: United States of Americana
+
+  Divya Manian
+  Twitter: @divya
+  Location: United States of America
+
+  Mat Marquis
+  Twitter: @wilto
+  Location: United States of America
+
+  Mathias Bynens
+  Twitter: @mathias
+  Location: Belgium
+
+  Nicolas Gallagher
+  Twitter: @necolas
+  Location: United Kingdom
+
+  Paul Irish
+  Twitter: @paul_irish
+  Location: United States of America
+
 
 /* THANKS */
-  Names (& URL):
+  Alexis Deveria
+  Daniel Filho
+  Dain Kennison
+  Ryan Olson
+
+  More here: https://github.com/h5bp/movethewebforward/contributors
+
 
 /* SITE */
   Standards: HTML5, CSS3
