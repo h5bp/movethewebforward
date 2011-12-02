@@ -105,7 +105,7 @@
 
 				$.each( cache, function( i, v ) {
 					// if we're past the link's section, activate it
-					if ( scroll >  v.target.position().top  ) {
+					if ( scroll + $navheight >  v.target.position().top  ) {
 						last && last.removeClass('active');
 						last = v.link.addClass('active');
 					} else {
