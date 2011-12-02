@@ -143,13 +143,11 @@
 			timeout = false, // so gonna clear this later, you have NO idea
 			last = false, // makes sure the previous link gets un-activated
 			check = function() {
-				var scroll = $scrollable.scrollTop(),
-					height = $body.height(),
-					tolerance = $window.height() * ( scroll / height );
+				var scroll = $scrollable.scrollTop();
 
 				$.each( cache, function( i, v ) {
 					// if we're past the link's section, activate it
-					if ( scroll + tolerance >  v.target.position().top  ) {
+					if ( scroll + $navheight >  v.target.position().top  ) {
 						last && last.removeClass('active');
 						last = v.link.addClass('active');
 					} else {
