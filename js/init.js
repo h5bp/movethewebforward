@@ -128,7 +128,7 @@
 		$inlinelinks.delegate( 'a[href^="#"]', 'click', function(e) {
 			e.preventDefault(); // if you expected return false, *sigh*
 			if ( cacheinline[ this.href ] && cacheinline[ this.href ].target ) {
-				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target[0].offsetParent.offsetTop - ( $navheight ) }, 600, 'swing' );
+				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target.offset().top - $navheight }, 600, 'swing' );
 			}
 		});
 
