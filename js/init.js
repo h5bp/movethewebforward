@@ -16,7 +16,7 @@
       			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
       			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
       		});
-      		
+
         if (window.__twitterIntentHandler) return;
         var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
             windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
@@ -128,7 +128,7 @@
 		$inlinelinks.delegate( 'a[href^="#"]', 'click', function(e) {
 			e.preventDefault(); // if you expected return false, *sigh*
 			if ( cacheinline[ this.href ] && cacheinline[ this.href ].target ) {
-				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target.position().top }, 600, 'swing' );
+				$scrollable.animate( { scrollTop: cacheinline[ this.href ].target[0].offsetParent.offsetTop - ( $navheight ) }, 600, 'swing' );
 			}
 		});
 
