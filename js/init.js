@@ -1,20 +1,27 @@
 (function( $ ){
 
+  $.getJSON('avatars.json')
+    .success(function(avatars) {
+      $.each(avatars, function(hashtag) {
+        var avatarsElem = $(".task[data-hashtag=" + hashtag + "] .pledges");
+        for (var user in this) {
+          var image = $('<img>', { src: this[user], title: user });
+          var link = $('<a/>', { href: 'http://twitter.com/' + user });
+          avatarsElem.append(link.append(image));
+        }
+      });
+    });
+
   Modernizr.load([{
       test: window.JSON,
-      nope: 'js/libs/json2.min.js'
-    }, {
-      test: Modernizr.localstorage,
-      nope: 'js/libs/storage.js',
+      nope: 'js/libs/json2.min.js',
       complete: function() {
       	$(".task")
       		.hashTask({
       			message         : "http://movethewebforward.org",
       			editTweetText   : "(edit this tweet as you wish. ♡)",
       			linkSelector    : function() { return this.find('.pledge') },
-      			avatarsSelector : function() { return this.find('.pledges') },
       			hashtag         : function() { return this.data('hashtag') || '#movethewebforward' },
-      			searchPrefix    : '(ivegotmybluebeanieonnowwhat.com OR movethewebforward.com OR movethewebforward.org) AND '
       		});
 
         if (window.__twitterIntentHandler) return;
