@@ -2,7 +2,7 @@
 	
 	var doc 		 = win.document,
 		docElem 	 = doc.documentElement,
-		head		 = doc.head || doc.getElementsByTagName( "head" )[0] || docElem,
+		head		 = doc.getElementsByTagName( "head" )[0] || docElem,
 		Modernizr	 = win.Modernizr;
 			
 	// Supportin’ stuff.
@@ -81,12 +81,8 @@
 				lk.onload = respond.update;
 			}
 
-			//might need to wait until DOMReady in IE...
-			if( lastlink.nextSibling ){
-				head.insertBefore(lk, lastlink.nextSibling );
-			} else {
-				head.appendChild( lk );
-			}
+			head.insertBefore(lk, lastlink.nextSibling );
+			
 	};
 
 	// Non-MQ browser, or in one of the two development modes? Exit here:
