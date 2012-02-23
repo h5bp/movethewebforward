@@ -1,0 +1,41 @@
+body {
+        text-align: right;
+        direction: rtl;
+}
+.hed-lead {
+    background: url(img/rtl-webasaurs.gif) center 0 no-repeat;
+}
+.hed {
+        float: right;
+}
+/* inverse the direction of some block */
+.inverse_dir{
+        direction:ltr;
+}
+.inverse_align{
+        text-align:left;
+}
+.task li:before,
+.resources > li:before {
+    float: right;
+    padding: .1em 0 0 .6em;
+}
+nav li {
+        padding: 0 10px 0 0;
+        width: 285px;
+}
+nav a:hover, nav a:focus, nav a.active {
+        outline:none;
+}
+  .col-a {
+                float: right;
+        }
+  .col-b {
+                float: left;
+        }
+
+@media screen and (min-width: 800px) {
+        .col-split p {
+                padding: 0 2px 1em 0;
+        }
+}
