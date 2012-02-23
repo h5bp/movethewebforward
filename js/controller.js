@@ -93,15 +93,15 @@
     {
       test: md.enhanced,
       yep: [
-        'js/libs/storage.js',
-        'js/libs/jquery.min.js',
-        'js/plugins.js',
-        'js/init.js'
+        '/js/libs/storage.js',
+        '/js/libs/jquery.min.js',
+        '/js/plugins.js',
+        '/js/init.js'
       ]
     },
     { 
         test: md.mobileBreakpoint,
-        yep: 'js/libs/fittext.js'
+        yep: '/js/libs/fittext.js'
     }
     ]);
 		
@@ -110,7 +110,7 @@
 
 		// Load custom fonts above:
 		if( md.mobileBreakpoint && !md.devMode.mobileAssets ){	
-			md.load.style( 'css/fonts.css' );		
+                        md.load.style( '/css/fonts.css' );
 			// Remove no-fontface class, for fallback font styling:
 			docElem.className = docElem.className.replace(/\bno-fontface\b/,'');
 		}
