@@ -1,6 +1,6 @@
 (function( $ ){
 
-  $.getJSON('avatars.json')
+  $.getJSON('/avatars.json')
     .success(function(avatars) {
       $.each(avatars, function(hashtag) {
         var avatarsElem = $(".task[data-hashtag=" + hashtag + "] .pledges");
@@ -14,7 +14,7 @@
 
   Modernizr.load([{
       test: window.JSON,
-      nope: 'js/libs/json2.min.js',
+      nope: '/js/libs/json2.min.js',
       complete: function() {
       	$(".task")
       		.hashTask({
@@ -68,7 +68,7 @@
       }
   }]);
 
-  (new Image()).src = 'css/img/beanie-webasaurs.gif'
+  (new Image()).src = '/css/img/beanie-webasaurs.gif'
 
 		var $toc = $('#toc'),
 		  $inlinelinks = $('body div.col-a'),

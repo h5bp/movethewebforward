@@ -3,7 +3,7 @@ body {
         direction: rtl;
 }
 .hed-lead {
-    background: url(img/rtl-webasaurs.gif) center 0 no-repeat;
+    background: url(rtl-webasaurs.gif) center 0 no-repeat;
 }
 .hed {
         float: right;
