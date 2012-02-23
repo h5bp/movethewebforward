@@ -133,25 +133,25 @@ section, header {
 .col-b .subhed { margin-top: 2em; }
 
 .standout {
-    background: #687482 url(/img/bg_noise.png) 0 0 repeat;
+    background: #687482 url(/css/img/bg_noise.png) 0 0 repeat;
     background-origin: padding;
     border: double #494f57;
     border-width: 3px 0;
 
     background:
-        url(/img/bg_noise.png) 0 0 repeat,
+        url(/css/img/bg_noise.png) 0 0 repeat,
         -moz-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background:
-        url(/img/bg_noise.png) 0 0 repeat,
+        url(/css/img/bg_noise.png) 0 0 repeat,
         -webkit-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background:
-        url(/img/bg_noise.png) 0 0 repeat,
+        url(/css/img/bg_noise.png) 0 0 repeat,
         -o-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background:
-        url(/img/bg_noise.png) 0 0 repeat,
+        url(/css/img/bg_noise.png) 0 0 repeat,
         -ms-radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
     background:
-        url(/img/bg_noise.png) 0 0 repeat,
+        url(/css/img/bg_noise.png) 0 0 repeat,
         radial-gradient(center top, ellipse farthest-corner, #7f8c96, #687482 38%);
 
     clear: both;
@@ -222,7 +222,7 @@ body {
 
 .hed-lead {
     background-size: 100% auto;
-    background: url(/img/webasaurs.gif) center 0 no-repeat;
+    background: url(/css/img/webasaurs.gif) center 0 no-repeat;
     color: #324a69;
     font: 2.4em/1 "ChunkFive", arial, helvetica, sans-serif;
     margin: 5% 0 0 0;
@@ -232,7 +232,7 @@ body {
 }
 
 .lead .hed-lead span {
-    background: url(/img/beanie-webasaurs.gif) center 0 no-repeat;
+    background: url(/css/img/beanie-webasaurs.gif) center 0 no-repeat;
     opacity: 0;
     display:block; 
     background-size: 100% auto;
