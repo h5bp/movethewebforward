@@ -2,5 +2,5 @@
 
 git push origin master
 
-git push -f origin master:gh-pages
+git push -f origin origin/master:gh-pages
 
