@@ -27,10 +27,6 @@
   Twitter: @mathias
   Location: Belgium
 
-  Nicolas Gallagher
-  Twitter: @necolas
-  Location: United Kingdom
-
   Paul Irish
   Twitter: @paul_irish
   Location: United States of America
@@ -41,6 +37,7 @@
   Daniel Filho
   Dain Kennison
   Ryan Olson
+  Nicolas Gallagher
 
   More here: https://github.com/h5bp/movethewebforward/contributors
 
