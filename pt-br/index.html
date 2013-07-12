@@ -1,0 +1,484 @@
+<!DOCTYPE html public "i ♥ the web">
+<!--[if lt IE 9]>      <html class="no-js oldie no-fontface" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-fontface" lang="en">   <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Move The Web Forward | Guia de como se envolver com os padrões e melhoras dos navegadores</title>
+    <meta name="description" content="What you can do as a front-end developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <!-- For first-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Should be combined: -->
+    <script src="../js/libs/modernizr.min.js"></script>
+    <script src="../js/controller.js"></script>
+</head>
+
+<body>
+  <b class="gimmick"><i></i><i></i><i></i></b>
+    <header class="col-ab">
+        <div class="lead">
+            <h1 class="hed-lead">Leve a web adiante<span></span></h1>
+            <h2 class="subhed-lead">Você pode fazer a web ser tão incrível quanto você quiser!</h2>
+            <p class="subhed">Você é fã dos padrões web. Você quer retribuir isso à comunidadeo. Quer saber por onde começar? <b>Nós estamos aqui para ajudar.</b></p>
+        </div>
+        <div class="col-split">
+            <p>Seja você um desenvolvedor web talentoso, alguém que se vira desde os tempos de tabelas e tags <code>font</code>, ou apenas um hacker em tempo livre, há várias maneiras de contribuir. Abaixo há uma lista de algumas formas para qualquer um retribuir à plataforma web.
+            <p>Nossa meta é facilitar para que qualquer um possa contribuir para a plataforma, seja aprendendo mais sobre como funciona, ensinando outros ou redigindo especificações. A web cresceu por causa de gente como você, e nós queremos viabilizar para que todos possam retribuir.
+            <p style="font-size:90%">Também disponível em <a href="/">English</a>, <a href="/ar">عربى</a> e <a href="/cn">中文</a>.
+            </p>
+        </div>
+    </header>
+
+    <div id="nav_container">
+      <nav id="toc">
+        <ul>
+          <li><a href=#levelup>Primeiros passos</a></li>
+          <li><a href=#digdeep>Se aprofundando</a></li>
+          <li><a href=#virtuoso>Garoto pródigo</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <article class="section">
+        <div class="standout" id=levelup>
+            <h1 class="hed">Primeiros passos</h1>
+            <h2 class="subhed">Vcoê é bom no que faz. Vamos adentrar a comunidade!</h2>
+        </div>
+
+        <section id="learn" class="col-ab">
+            <div class="col-a">
+              <h1 class="hed">Aprenda</h1>
+              <p>Uma das coisas mais bonitas da web é sua metamorfose constante. Essas mudanças e melhoras podem ser difíceis de acompanhar, nós estamos aqui para ajudar você a não ficar pra trás! Vamos listar alguns recursos que vão lhe mostrar como os navegadores funcionam, e como ficar a par de suas modificações. Nota: os sites, por hora, estão disponíveis apenas em inglês.</p>
+
+              <h2 id="how_do_i_keep_up_with_what8217s_landing_in_browsers" class="subhed">Como eu me mantenho atualizado com o que acontece nos navegadores?</h2>
+              <ul>
+                <li><a href="http://updates.html5rocks.com/2011/10/Keeping-up-with-HTML5-and-browser-support">Keeping up with HTML5 and browser support</a> - uma lista de recursos que agrupam todas as mudanças</li>
+                <li><a href="http://peter.sh/">Blog de Peter Beverloo</a> - atualizações semanais do Webkit e Chrome</li>
+                <li><a href="http://blog.whatwg.org/">The WHATWG Blog</a> - sumário das atividades semanais de web standard</li>
+                <li><a href="http://www.w3.org/QA/archive/open_web/">W3C&#8217;s open web</a> - atualizações semanais da plataforma Open Web</li>
+                <li><a href="http://my.opera.com/ODIN/blog/">Opera Developer News</a> - lista as mudanças da plataforma web Opera
+                <li><a href="http://updates.html5rocks.com">HTML5 Rocks updates</a> - Novidades de HTML5 e Chrome
+
+                <li><a href="http://hacks.mozilla.org/">Mozilla Hacks</a> - aplicativos legais e funcionalidades HTML5
+                <li><a href="http://blogs.msdn.com/b/ie/">Blog IE</a> - atualizações para o IE
+              </ul>
+
+              <h3 id="follow_them_on_twitter" class="subhed">Siga-os no Twitter</h3>
+                <p>
+                  Recomendamos seguir: <a href="http://twitter.com/oDevRel">@oDevRel</a> (Relacionamento com desenvolvedores Opera), <a href="http://twitter.com/ChromiumDev">@ChromiumDev</a> (Relacionamento com desenvolvedores Chrome), <a href="http://twitter.com/mozhacks">@mozhacks</a> (Ponto de desenvolvedores Mozilla) & <a href="http://twitter.com/ie">@IE</a> (Equipe do Internet Explorer).
+                </p>
+
+              <h2 id="how_do_i_understand_how_browsers_work" class="subhed">Como entender o funcionamento dos navegadores?</h2>
+
+              <ul>
+                <li><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work: Behind the Scenes of Modern Web Browsers</a> - Explicação aprofundada de como os navegadores funcionam</li>
+                <li><a href="http://ontwik.com/javascript/txjs-2011-a9-alex-russell-life-of-a-button-element/?utm_source=feedburner&utm_medium=twitter&utm_campaign=Feed%3A+Ontwik+%28Ontwik%29">Life of a &lt;button> element (por Alex Russell)</a> - excelente palestra sobre renderização e CSS</li>
+              </ul>
+
+              <h2 id="other_learning_resources" class="subhed">Outras fontes de aprendizado</h2>
+
+              <ul>
+                <li><a href="http://css-tricks.com">CSS-tricks</a> - fornece uma gama de artigos, tutoriais, e downloads para a comunicade de web design.</li>
+                <li><a href="http://html5doctor.com">HTML5doctor</a> - excelente fonte para pessoas que querem aprender sobre HTML5, sua semântica e como implementá-lo hoje!</li>
+                <li><a href="http://diveintohtml5.info/">Dive into HTML5</a> - dá uma visão aprofundada de algumas funcionalidades de HTML5.</li>
+                <li><a href="http://addyosmani.com/blog/">Blog de Addy Osmani&#8217;s</a> - muitos artigos excelentes para pessoas que querem saber mais sobre jQuery, JavaScript, HTML5, e CSS3.</li>
+                <li><a href="http://paulirish.com">Blog de Paul Irish&#8217;s</a> - tudo para fazer websites legais e mantê-lo atualizado com as novidades mais recentes.</li>
+                <li><a href="http://dev.opera.com">Dev.Opera</a> - artigos para aprender sobre funcionalidades HTML5.</li>
+                <li><a href="http://paulirish.com/2011/web-browser-frontend-and-standards-feeds-to-follow/">Feeds de navegadores, front-ends e padrões para seguir</a> </li>
+                <li><a href="http://yuilibrary.com/theater/">YUI Theater</a> - vídeos de palestras de engenheiros front-end sobre as tecnologias web ministrados no Yahoo! ao longo dos anos (muitos não ligados ao YUI).</li>
+                <li><a href="http://www.adobe.com/devnet/html5.html">Adobe Developer Connection</a> - artigos e vídeos para apbrender sobre HTML5, CSS3 e desenvolvimento móvel.</li>
+              </ul>
+
+              <h2 id="reference_docs_wikis" class="subhed">Guias de referência/wikis</h2>
+
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/">Mozilla&#8217;s MDN</a> - excelemte documentação relacionada a HTML, CSS, JavaScript, o DOM, e mais. É também um ótimo lugar para contribuir! Leia <a href="https://developer.mozilla.org/Project:en/How_to_Help">Como ajudar</a> e aprenda como  <a href="https://developer.mozilla.org/Project:en/Getting_started">começar</a>.</li>
+                <li><a href="http://dochub.io/">dochub.io</a> - atalho para as documentações MDN, inclui HTML, CSS, JavaScript, e DOM.</li>
+                <li><a href="https://developer.mozilla.org/Writing_Forward_Compatible_Websites">Forward-compatible websites</a> - list das melhores práticas para criar sites que não vão quebrar quando os navegadores forem atualizados.</li>
+                <li><a href="http://html5please.us/">HTML5 Please - Use new and shiny responsibly</a> - Enciclopédia para ferramentas HTML5 nos navegadores, veja funcionalidades específicas e quando/se você pode usar.</li>
+              </ul>
+          </div>
+          <div class="col-b">
+            <section class="getinvolved">
+              <h2 class="subhed">Se coçando pra aprender?</h2>
+              <div class="task" data-hashtag="#learn">
+                  <p>Tudo que você precisa fazer é dar uma lida rápida em alguns artigos ou tweets e você já estará encaminhado! Acredite em nós &ndash; depois do primeiro passo tudo fica mais fácil.</p>
+                  <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                  <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+              </div>
+            </section>
+          </div>
+          </section>
+
+        <section id="meetups" class="col-ab">
+          <div class="col-a">
+            <h1 class="hed">Conheça pessoas que pensam como você</h1>
+            <p>Participar de reuniões e conferências na sua região é um ótimo jeito de entrar em contato com outros desenvolvedores para aprender, trocar conhecimento, e trazer novas idéias e colaborações à vida. Sites como <a href="http://meetup.com">Meetup</a> e <a href="http://lanyrd.com">Lanyrd</a> podem lhe ajudar a encontrar eventos na sua região.</p>
+          </div>
+        </section>
+        <section id="askhelp" class="col-ab">
+          <div class="col-a">
+            <h1 class="hed">Peça ajuda</h1>
+            <h2 id="answer_questions_and_participate_in_conversations_on_irc" class="subhed">Responda perguntas e participe de conversas no IRC</h2>
+            <p><a href="http://richard.esplins.org/siwi/2011/07/08/getting-started-freenode-irc/">Iniciando o uso de freenode e irc</a></p>
+            <ul>
+              <li><b>Canais Freenode IRC:</b> #html5 / #css / #javascript / #whatwg / #jquery / #yui / #dojo / #web / <span title="browser based game development">#bbg</span> (on <a href="http://webchat.freenode.net">irc.freenode.net</a>) </li>
+              <li id="mozilla_irc"><b>Canal IRC Mozilla:</b> #js (on <a href="http://irc.mozilla.org">irc.mozilla.org</a>)</li>
+            </ul>
+
+            <h2 id="how_to_ask_for_help" class="subhed">Como pedir ajuda</h2>
+            <ol class="tasks">
+              <li>Você provavelmente deve <a href="http://css-tricks.com/13414-seriously-just-make-a-jsfiddle/">criar um jsfiddle</a>.</li>
+              <li><a href="http://css-tricks.com/6263-reduced-test-cases/">Crie um caso de teste reduzido</a>.</li>
+              <li>Lembre-se: seja específico!</li>
+              <li>Pergunte no IRC, <a href="http://stackoverflow.com">StackOverflow</a> (mesmo no <a href="http://chat.stackoverflow.com/rooms/17/javascript">bate-papo javascript</a>), ou para um grupo de amigos.
+            </ol>
+          </div>
+
+          <div class="col-b">
+	        <section class="getinvolved">
+              <h2 class="subhed">Uma mãozinha</h2>
+              <div class="task" data-hashtag="#ask4help">
+                <p>Todos chegamos onde estamos pois contamos com a ajuda de outros vez ou outra. Não tenha vergonha, apenas pergunte! Só por favor faça um jsfiddle primeiro. =D</p>
+                <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+              </div>
+             </section>
+          </div>
+        </section>
+    </article>
+
+    <article class="section">
+        <div class="standout" id=digdeep>
+            <h1 class="hed">Vá fundo</h1>
+            <h2 class="subhed">Você certamente já sabe se virar. Agora é hora de mostrar.</h2>
+        </div>
+        <section id="helpothers" class="col-ab">
+          <div class="col-a">
+            <h1 class="hed">Ajude outros</h1>
+            <p>Todos tivemos q começar em algum lugar! Prestar auxílio ajuda a reforçar seu conhecimento, e contribui para expandir os conceitos aos quais você se expôs. Listamos abaixo alguns grandes exemplos de projetos open-source que estão sempre precisando de ajuda. Lembre-se - tudo vale a pena quando a alma não é pequena!</p>
+            <h2 id="open_source_projects_worth_your_time" class="subhed">Projetos Open-Source que valem a pena dar uma olhada</h2>
+
+            <ul>
+              <li><a href="http://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a> <span>- um ponto de partida para desenvolvedores frontend levando em consideração as boas práticas</span>
+              <li><a href="https://github.com/jquery/learn.jquery.com">jQuery Learning Site</a> <span>- site educacional para a popular biblioteca jQuery</span>
+              <li><a href="https://github.com/jquery/jquery-mobile">jQuery Mobile</a> <span>- melhores práticas para aprimoramento progressivo de plataforma móvel</span>
+              <li><a href="https://github.com/Modernizr/Modernizr">Modernizr</a> <span>- a cereja do bolo em detecção de funcionalidades</span>
+              <li><a href="https://github.com/twitter/bootstrap">Twitter&#8217;s bootstrap</a> <span>- um conjunto de ferramentas de css e js que serve como pontapé inicial para webapps</span>
+              <li><a href="http://necolas.github.com/normalize.css/">Normalize.css</a> <span>- faça todos os navegadores renderizar o conteúdo da mesma forma</span>
+              <li><a href="http://dojotoolkit.org/get-involved">Dojo</a> <span>- conjunto de ferramentas para frontend de fácil compreensão</span>
+              <li><a href="https://github.com/paulirish/lazyweb-requests/issues?state=open">Lazyweb requests</a> <span>- Ferramentas web e soluções que seria gostaríamos de ter como desenvolvedores web.</span>
+              <li><a href="https://github.com/jquery/standards">jQuery standards project</a> <span>- defeitos e discussões relacionados a web standards</span>
+              <li><a href="http://yuilibrary.com/">YUI</a> <span>- biblioteca de interface do Yahoo!</span></li>
+            </ul>
+            <p>Faça o que pedimos em <a href="#how_to_ask_for_help">&#8216;peça ajuda&#8217;</a> ali em cima e assista ao <a href="http://addyosmani.com/blog/getting-involved-with-open-source/">podcast de Addy Osmani&#8217;s sobre como fazer parte</a>!</p>
+
+          </div>
+
+          <div class="col-b">
+            <section class="getinvolved">
+              <h2 class="subhed">Passe adiante!</h2>
+              <div class="task" data-hashtag="#helpothers">
+                <p>Ler código bem feito leva a escrever código bem feito. Dê uma olhada nos ótimos projetos que listamos abaixo, e ajude-os a se tornarem ainda melhores do que já são.</p>
+                <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+              </div>
+             </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="specs" class="col-ab">
+            <div class="col-a">
+                <h1 class="hed">Dê feedback das especificações</h1>
+
+                <p>Especificações ditam o comportamento esperado. Elas são criadas por Working Groups (WG) em conjunto com discussões ativas em listas de e-mail. Mesmo não tendo certeza se todos os navegadores irão aderir às regras ditadas nas especificações, elas nos fornecem algo que nós, desenvolvedores, podemos padronizar em cima.</p>
+
+                <ul>
+                    <li>Aprenda a <a href="http://diveintohtml5.info/past.html">história do HTML</a>.</li>
+                    <li>Dê uma olhada em <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/">como os WG de CSS funcionam</a>.</li>
+                    <li>Inscreva-se a estas listas para seguir e contribuir às discussões que guiam a web:
+                        <ul class="resources">
+                            <li><a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> -  discussões técnicas do Web Applications Working Group</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a> - discussões técnias do Cascading Style Sheets (CSS) e suas especificações</li>
+                            <li><a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg</a> - lista de e-mails do WHATWG</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/public-html/">public-html</a> - WG do W3C HTML</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/www-dom/">www-dom</a> - onde o DOM é melhorado</li>
+                            <li><a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a> - questões relacionadas ao WGs de CSS e SVG</li>
+                        </ul>
+                    </li>
+                    <li>Leia toda a <a href="http://developers.whatwg.org/">especificação HTML5 para desenvolvedores</a> (sem questões de implementação, formatada lindamente para você).</li>
+                    <li>A melhor forma de comentar ou dar feedback nos conteúdos das <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/">especificações do HTML</a> é escolher o texto em que você deseja enviar seu comentário e deixar uma mensagem no formulário localizado no rodapé da página.</li>
+                    <li>
+                        Veja os últimos commits nas especificações do HTML e CSS seguindo seus respectivos WGs no Twitter:
+                        <ul class="resources">
+                            <li><a href="http://twitter.com/whatwg">@whatwg</a></li>
+                            <li><a href="http://twitter.com/csscommits">@csscommits</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-b">
+              <section class="getinvolved">
+                <h2 class="subhed">Está sacando das especificações?</h2>
+                <div class="task" data-hashtag="#feedback">
+                  <p>Nós somos os caras usando as especificações, então por que não ajudar a criar as especificações que amamos? Vamos defender os padrões, e torná-los ainda melhores!</p>
+                  <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                  <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+                </div>
+              </section>
+            </div>
+        </section>
+
+        <section id="explore" class="col-ab">
+            <div class="col-a">
+              <h1 class="hed">Explore funcionalidades frontend</h1>
+              <p>Depois de ter passado pelo básico, é hora de ir um pouco mais fundo nos web standards atuais e futuros! Comemore, pois aqui, nós vemos CSS avançado, funções/APIs HTML5 novinhas em folha  e também o futuro do que estas linguagens se tornarão. Muitos novos caminhos estão agora disponíveis nos navegadores, e explorar estes caminhos nos ajudará a levar a web adiante!</p>
+
+            <h2 id="examples_of_how_to_explore_features_well" class="subhed">Exemplos de como explorar bem as funcionalidades</h2>
+            <ul>
+              <li><a href="http://perfectionkills.com/global-eval-what-are-the-options/">Global <code>eval</code>: what are the options?</a> <span> - kangax</span>
+              <li><a href="http://nicolasgallagher.com/multiple-backgrounds-and-borders-with-css2/">Multiple Backgrounds and Borders with CSS 2.1</a> <span> - Nicolas Gallagher</span>
+              <li><a href="http://nicolasgallagher.com/css-background-image-hacks/">CSS background-image hacks</a> <span> - Nicolas Gallagher</span>
+              <li><a href="http://www.webdirections.org/blog/let-the-web-move-you-css3-animations-and-transitions/">Let the Web move you — CSS3 Animations and Transitions</a> <span> - John Allsopp</span>
+              <li><a href="http://addyosmani.com/largescalejavascript/">Patterns For Large-Scale JavaScript Application Architecture</a> <span> - Addy Osmani</span>
+              <li><a href="http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/">The Cicada Principle and why it matters to web designers</a> <span> - Alex Walker</span>
+              <li><a href="http://css-tricks.com/snippets/css/webkit-keyframe-animation-syntax/">Keyframe animation syntax</a> <span> - Chris Coyier</span>
+              <li><a href="http://www.blog.highub.com/css/whats-new-in-css-selectors-level-4/">What's new in CSS Selectors (Level 4)</a> <span> - Shi Chuan</span>
+              <li><a href="http://mathiasbynens.be/notes/touch-icons">Everything you always wanted to know about touch icons</a> <span> - Mathias Bynens</span>
+              <li><a href="http://coding.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/">The z-index CSS Property: A Comprehensive Look</a> <span> - Louis Lazaris</span>
+            </ul>
+
+            <h2 id="cool_ideas_to_explore_more" class="subhed">Coisas legais para explorar mais (e escrever a respeito)</h2>
+
+            <p>Os navegadores estão lançando novas funcionalidades toda hora. Os prefixos que nós amamos odiar estão lá para que os desenvolvedores possam prestar feedback de como a funcionalidade atende suas necessidades. Tome coragem de ver se elas atendem! A visão geral de <a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">vendor-prefixed CSS</a>, por Peter Beverloo, tem um monte de CSS experimental; muitos deles ainda não totalmente compreendidos. Pense em escrever sobre todos os ítens abaixo:
+
+              <ul>
+                <li><a href="https://developer.mozilla.org/En/CSS/%3Achecked">The :checked selector</a> / <a href="http://dev.w3.org/csswg/css3-images/#object-fit">object-fit</a>  / <a href="https://developer.mozilla.org/en/CSS/background-clip">background-clip</a> / <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">fx blur css filter</a> / <a href="http://dropshado.ws/post/1015351370/webkit-line-clamp">-webkit-line-clamp</a> / <a href="https://developer.mozilla.org/en/CSS/text-overflow">text-overflow</a> / <a href="https://developer.mozilla.org/En/CSS/Box-sizing">box-sizing</a> / <a href="https://developer.mozilla.org/en/CSS3_Columns">CSS columns</a></li>
+                <li><code>history.pushState()</code>, HTML5 input <code>checkValidity()</code>, <code>getClientRects</code> / <code>getBoundingClientRect</code>, WebKit's <a href="http://developer.apple.com/library/safari/#documentation/DataManagement/Reference/DOMWindowAdditionsReference/DOMWindowAdditions/DOMWindowAdditions.html">ConvertPointFromPageToNode</a>
+                <li><a href="http://www.w3.org/TR/css3-gcpm/">CSS Generated Content for Paged Media Module (GCPM)</a>
+                <li>Differences between <code>word-wrap</code>, <code>word-break</code>, and <code>white-space</code>
+                <li>Harmony features like <a href="http://wiki.ecmascript.org/doku.php?id=harmony:let">let</a> / <a href="http://wiki.ecmascript.org/doku.php?id=harmony:block_scoped_bindings">block-scoped bindings</a> / block functions /  <a href="http://wiki.ecmascript.org/doku.php?id=harmony:destructuring">destructuring</a> / <a href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">rest parameters</a> / <a href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">default param values</a>.
+                <li><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">Web Components Explained (very early draft)</a>
+
+                <li><strong>Qualquer funcionalidade destas apresentações:</strong>
+                  <ul>
+                    <li><a href="http://vimeo.com/32135328">The Future of CSS</a> <span>- Tab Atkins sobre o que esperar do CSS no futuro.</span>
+                    <li><a href="http://infrequently.org/11/fronteers/fronteers.html">Data, Semantics, and the Process of Progress </a> <span>- evolução dos navegadores, Component Model, MDV</span>
+                    <li><a href="http://infrequently.org/11/ldnjs/ldnjs.html">[JS|DOM].next()</a> <span>- Alex Russell sobre a próxima versão do ECMAScript.</span>
+                    <li><a href="http://lea.verou.me/css3-secrets/">CSS3 Secrets</a> <span>- uma apresentação interativa sobre o futuro das funcionalidades avançadas do CSS3.</span>
+                    <li><a href="http://nimbu.in/w3conf/">The Future of Layouts in CSS</a> <span>- como especificações emergentes irão adicionar controle de layout apropriado ao CSS</span>
+                    <li><a href="http://mezzoblue.com/presentations/2011/fowd/FOWD.pdf">The Future of CSS</a> <span>- uma visão geral de algumas funcionalidades CSS que estão surgindo.</span>
+
+                </ul>
+              </ul>
+
+            </div>
+            <div class="col-b">
+	          <section class="getinvolved">
+                <h2 class="subhed">Explore o desconhecido!</h2>
+                <div class="task" data-hashtag="#explore">
+                  <p>Vá em frente! A única forma de levar a web adiante é ir fundo e usar as funcionalidades e APIs avançadas. Divirta-se - nós sabemos que você irá!</p>
+                  <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                  <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+                </div>
+             </section>
+          </div>
+        </section>
+
+
+        <section id="write" class="col-ab">
+          <div class="col-a">
+            <h1 class="hed">Escreva</h1>
+            <p>Publique sobre o que você aprender e não tenha medo de cometer enganos. Escreva em seu blog pessoal e mantenha seus posts atualizados. Certifique-se de escrever do seu jeito! Tenha em mente que você não precisa ser uma autoridade absoluta sobre um assunto para escrever a respeito de algo! Sempre faça perguntas e estimule discussões. Raramente há uma pergunta errada ou resposta errada.</p>
+
+            <p>Ensinar é uma ótima forma de aprender também. Então, mesmo que você esteja dando seus primeiros passos em uma área, você estará se ajudando escrevendo a respeito. Você sempre pode perguntar a um mentor ou amigo por uma opinião técnica. (Addy fez isso com aplomb.)</p>
+
+            <h2 id="what_should_you_start_to_learn_about" class="subhed">O que seria legal escrever a respeito?</h2>
+
+            <p>Algo que você pode ensinar aos outros! Veja algumas idéias:</p>
+
+            <ul>
+                <li>Por que os elementos <code>&lt;br&gt;</code> e <code>&lt;hr&gt;</code> (ou qualquer elemento) existem?</li>
+                <li>Como criar uma apresentação com o mínimo de código?</li>
+                <li>O que é o DOM? Por que ele existe?</li>
+                <li>Verifique como os navegadores implementam uma propriedade específica e compare com a especificação.</li>
+                <li>Como um website popular implementou sua página inicial (e sugestões de melhoras).</li>
+                <li>Como você corrigiria as falhas de um website popular (tempo  de carregamento grande, JS inválido, etc.).</li>
+                <li>Pegue uma demonstração prática e torne-a em algo diferente (ou utilize na prática).</li>
+                <li>Faça um sumário das idéias que circundam a web ultimamente.</li>
+                <li>Sua experiência contribuindo a um projeto open-source.</li>
+                <li>Como pré-processadores CSS podem levar a códigos cumpridos ou ruins se não forem gerenciados corretamente.</li>
+                <li>Se sua língua nativa não é o Inglês:
+                <ul class="resources">
+                  <li>Traduza alguns sites populares de escritores em Inglês.</li>
+                  <li>Elabore sobre algumas funcionalidades das especificações.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-b">
+            <section class="getinvolved">
+              <h2 class="subhed">Redija!</h2>
+              <div class="task" data-hashtag="#write">
+                <p>Não importa quantos seguidores no twitter ou watchers no github você tem - escreva sobre o que você aprendeu!</p>
+                <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section id="filebugs" class="col-ab">
+          <div class="col-a">
+            <h1 class="hed">Reporte bugs</h1>
+            <p>De verdade, todos os criadores de navegadores ficariam muito mais felizes se você reportasse os bugs que encontrou do que xingar muito no twitter. =D  Pra você ter idéia, o site <a href="http://msdn.microsoft.com/library/hh673549.aspx">IE10's platform previews</a> oferece uma ótima oportunidade para reportar bugs afim de ter tudo corrigido quando o navegador for lançado.</p>
+            <ul>
+              <li><a href="http://coding.smashingmagazine.com/2011/09/07/help-the-community-report-browser-bugs/">Help the Community: Report Browser Bugs</a> por Lea Verou</li>
+              <li><a href="http://ejohn.org/blog/a-web-developers-responsibility/">A Web Developer&#8217;s Responsibility</a> por John Resig</li>
+              <li><a href="http://a11ybugs.org/">Help prioritize browser accessibility bugs</a> por Vlad Alexander</li>
+              <li>
+                <p>Rastreador de problemas de navegadores - procure bugs existentes ou reporte novos:</p>
+                <ul class="resources">
+                  <li><a href="https://bugzilla.mozilla.org/">Mozilla's bugzilla</a></li>
+                  <li><a href="https://bugs.webkit.org/">WebKit bugs</a></li>
+                  <li><a href="http://crbug.com/">Chrome bugs</a></li>
+                  <li><a href="http://www.opera.com/support/bugs/">Opera bugs</a></li>
+                  <li><a href="https://connect.microsoft.com/site/sitehome.aspx?SiteID=136">Help IE</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-b">
+            <section class="getinvolved">
+              <h2 class="subhed">Zunindo!</h2>
+              <div class="task" data-hashtag="#filebugs">
+                <p>Esta é a forma mais rápida de melhorar os navegadores - reportando e corrigindo bugs. Leva apenas alguns momentos, e qualquer um pode fazer.</p>
+                <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+                <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+              </div>
+            </section>
+          </div>
+        </section>
+    </article>
+    <article class="section">
+      <div class="standout" id=virtuoso>
+        <h1 class="hed">Garoto pródigo!</h1>
+        <h2 class="subhed">Você já chegou longe; é evidente que você sabe das coisas! Podemos sugerir algumas coisas?</h2>
+      </div>
+      <section id="hack" class="col-ab">
+        <div class="col-a">
+          <h1 class="hed">Hackeie!</h1>
+          <p>Leve a web aos limites! Hackeie do CSS, HTMl avançado e Javascript. Hackeie do sistema de renderização dos navegadores. Faça Fork em repositórios do github, escave pelo código, e mantenha-se aprendendo. Vamos fazer a web ainda mais incrível. Há tantos caminhos:</p>
+          <h2 id="contribute_to_browsers" class="subhed">Contribua para os navegadores</h2>
+          <ul>
+            <li>Ajude a construir ferramentas de desenvolvedor como <a href="http://trac.webkit.org/wiki/WebInspector">WebKit Inspector</a> e <a href="https://bitbucket.org/scope/dragonfly-stp-1/">Dragonfly</a>.
+            Eles são escritos em HTML, CSS e JS, e você não precisa ser um programador C++ para contribuir.
+            Escreva patches!</li>
+            <li><a href="https://developer.mozilla.org/en/Gecko_BugAThon">Reduza os casos de teste da Mozilla</a></li>
+            <li><i>Hackeie</i> no Gecko
+              <ul>
+                <li>Leia o guia do desenvolvedor de <a href="https://developer.mozilla.org/En/Developer_Guide">iniciando desenvolvimento com Gecko</a>.
+                <li>Uma <a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%22[mentor%3D%22&list_id=1800469">lista de &#8220;bons primeiros bugs&#8221; para Firefox/Gecko</a>
+                <li>Faça parte dos canais #introduction e #developers no <a href="#mozilla_irc">servidor IRC da Mozilla</a>
+              </ul>
+            <li>Hackeie no Webkit
+              <ul>
+                <li><a href="http://dev.chromium.org/developers/contributing-to-webkit">Guia do Google sobre como contribuir com o WebKit</a>
+              </ul>
+          </ul>
+
+          <h2 id="contribute_to_testsuites" class="subhed">Ajude nas Test Suites</h2>
+
+          <p>Testes são fundamentais para padrões e navegadores. Eles garantem que tudo funcione de forma consistente entre navegadores. Agora mesmo, a test suite da W3C está longe dos testes que deveriam ter. Testes são escritos na linguagem dos desenvolvedores: HTML, CSS, e JavaScript. </p>
+
+          <ul>
+            <li>Dê uma olhada em
+              <a href="http://www.w3.org/2008/webapps/wiki/Testing">test suite de webapps da w3c</a>, a
+              <a href="http://www.w3.org/html/wg/wiki/Testing">test suite para HTML da w3c</a>,
+              and the <a href="http://wiki.csswg.org/test">test suite do CSSWG</a>.
+            </li>
+<!-- missing -->            <li>Look into <a href="http://www.w3.org/html/wg/wiki/Testing#New_tests">upstreaming some existing tests</a> into the W3C Test suite.</li>
+            <li>Upstream <a href="http://trac.webkit.org/browser/trunk/LayoutTests">WebKit&#8217;s LayoutTests</a>. <span>Also see the LayoutTests <a href="http://www.webkit.org/blog/1452/layout-tests-theory/">theory</a> & <a href="http://www.webkit.org/blog/1456/layout-tests-practice/">practice</a>.</span></li>
+            <li>Upstream <a href="https://developer.mozilla.org/en/Mochitest">Mozilla&#8217;s Mochitests</a>.</li>
+            <li>Entre pra conversa em  <a href="http://lists.w3.org/Archives/Public/public-webapps-testsuite/">public-webapps-testsuite</a>, <a href="http://lists.w3.org/Archives/Public/public-html-testsuite/">public-html-testsuite</a>, e <a href="http://lists.w3.org/Archives/Public/public-css-testsuite/">public-css-testsuite</a>.</li>
+            <li>Contribua para o áudio no HTML5 em <a href="http://areweplayingyet.org">the AreWePlayingYet? test suite</a>.</li>
+          </ul>
+
+
+          <h2 id="contribute_to_specs" class="subhed">Contribua com as especificações</h2>
+          <ul>
+            <li>Opine sobre bugs existentes no <a href="http://www.w3.org/Bugs/Public/">W3C bugzilla</a> <span>- e aprenda as <a href="http://wiki.whatwg.org/wiki/Bugzilla_conventions">Bugzilla conventions</a>.</span>
+            <li>Participe das discussões do <a href="http://www.whatwg.org/mailing-list">WHATWG</a> / <a href="http://lists.w3.org/Archives/Public/public-webapps/">public-webapps</a> / <a href="http://lists.w3.org/Archives/Public/www-style/">www-style</a> / <a href="http://lists.w3.org/Archives/Public/public-fx/">public-fx</a>.</li>
+            <li><a href="http://dev.chromium.org/developers/how-tos/make-a-web-standards-proposal">Faça uma proposta web-standards</a>. <span>(este guia ensina como!)</span>
+            <li><a href="http://wiki.whatwg.org/wiki/How_to_write_a_spec">Escreva especificações!</a> <span>certamente precisamos de mais escritores.</span></li>
+          </ul>
+          <h2 id="contribute_to_validators" class="subhed">Contribua para os validadores</h2>
+          <ul>
+            <li>
+              <a href="http://validator.nu/">HTML Validator</a> <span>anda precisando de amor, dê uma olhada em <a href="https://github.com/paulirish/lazyweb-requests/issues/18">lazyweb-reqs/18</a></span>
+            <li>
+              <a href="http://lists.w3.org/Archives/Public/www-validator-css/">CSS Validator</a> <span>sempre exige carinho. Dê uma olhada nas listas de discussão!</span>
+            <li>
+              <a href="https://bitbucket.org/annevk/webvtt">WebVTT</a> <span>um formato de legendas para vídeos, uma área ativa de interesse para padronização</span>
+            </ul>
+
+        <h2 id="contribute_to_projects" class="subhed">Ajude em projetos</h2>
+        <ul>
+          <li>
+          <a href="https://github.com/h5bp/lazyweb-requests/issues/">Lazyweb Requests</a> <span>tem algumas idéis de projetos incríveis propostas por pessoas que adorariam ver suas idéias indo adiante.</span>
+          </li>
+        </ul>
+        </div>
+        <div class="col-b">
+          <section class="getinvolved">
+            <h2 class="subhed">Só nas mutretas!</h2>
+            <div class="task" data-hashtag="#hack">
+              <p>Faça algo!. Experimente, faça fork em repositórios, cavuque código. Contribua para os navegadores, especificações, validadores, ou excelentes <a href="#open_source_projects_worth_your_time">projetos open-source</a>!</p>
+              <a href="#" class="pledge">Sim, eu quero fazer parte!</a>
+              <div class="pledges"><p>Veja outras pessoas que também estão interessadas:</p></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </article>
+
+
+
+    <footer class="doc">
+
+      <p class="subhed summary">
+        Você tem o poder de fazer a web ser incrível, do jeitinho que você quer! Criadores de navegadores, padronizadores e criadores de bibliotecas estão frequentemente procurando pela sua voz e sua contribuição. <br>Juntos conseguimos levar a web adiante.
+      </p>
+
+      <img src="../img/pugerton.png" alt="Pugerton">
+
+      <p class="subhed">Feito com amor e lágrimas por</p>
+
+      <ul class="builders">
+          <li><a href=http://twitter.com/wilto><img src="http://api.twitter.com/1/users/profile_image/wilto?size=normal"> <b>Mat</b> Marquis</a>
+          <li><a href=http://twitter.com/aaronforsander><img src="http://api.twitter.com/1/users/profile_image/aaronforsander?size=normal"> <b>Aaron</b> Forsander</a>
+          <li><a href=http://twitter.com/connor><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal"> <b>Connor Montgomery</b></a>
+          <li><a href=http://twitter.com/paul_irish><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"> <b>Paul</b> Irish</a>
+          <li><a href=http://twitter.com/divya><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"> <b>Divya</b> Manian</a>
+          <li><a href=http://twitter.com/necolas><img src="http://api.twitter.com/1/users/profile_image/necolas?size=normal"> <b>Nicolas</b> Gallagher</a>
+          <li><a href=http://twitter.com/addyosmani><img src="http://api.twitter.com/1/users/profile_image/addyosmani?size=normal"> <b>Addy</b> Osmani</a>
+      </ul>
+      <p class="others">& <a href=https://github.com/h5bp/movethewebforward/contributors><span>todas essas pessoas incríveis</span>.</a></p>
+      <p>Dinos por <a href="http://dribbble.com/deathbearbrown">Sue Lockwood</a> • <a href=https://github.com/h5bp/movethewebforward>Contribua neste projeto!</a></p>
+    </footer>
+    <script>
+        window._gaq=[['_setAccount','UA-17904194-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>
