@@ -1,38 +1,60 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found :(</title>
-  <style>
-    body { text-align: center;}
-    h1 { font-size: 50px; text-align: center }
-    span[data-frown] { -webkit-transform: rotate(90deg);  -moz-transform: rotate(90deg); -o-transform: rotate(90deg);	-ms-transform: rotate(90deg); transform: rotate(90deg); display:inline-block; color: #bbb; }
-    body { font: 20px Constantia, 'Hoefler Text',  "Adobe Caslon Pro", Baskerville, Georgia, Times, serif; color: #999; text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.5); }
-    ::-moz-selection{ background:#FF5E99; color:#fff; }
-    ::selection { background:#FF5E99; color:#fff; }
-    article {display:block; text-align: left; width: 500px; margin: 0 auto; }
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-    a { color: rgb(36, 109, 56); text-decoration:none; }
-    a:hover { color: rgb(96, 73, 141) ; text-shadow: 2px 2px 2px rgba(36, 109, 56, 0.5); }
-  </style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body, p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+    </style>
 </head>
 <body>
-  <article>
-    <h1>Not found <span data-frown>:(</span></h1>
-    <div>
-      <p>Sorry, but the page you were trying to view does not exist.</p>
-      <p>It looks like this was the result of either:</p>
-      <ul>
-        <li>a mistyped address</li>
-        <li>an out-of-date link</li>
-      </ul>
-    </div>
-
-    <script>
-      var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),
-      GOOG_FIXURL_SITE = location.host;
-    </script>
-    <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-  </article>
+    <h1>Page Not Found</h1>
+    <p>Sorry, but the page you were trying to view does not exist.</p>
 </body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
