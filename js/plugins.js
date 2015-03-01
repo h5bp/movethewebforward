@@ -1,4 +1,6 @@
-(function(global, doc, $) {
+(function(global) {
+  
+  var $ = global.jQuery || global.$;
 
   $.fn.hashTask = function(o) {
 
@@ -41,7 +43,7 @@
     });
   };
 
-})(window, document, jQuery);
+})(window);
 
 /**
  * jQuery Scrolling Parallax v0.1
