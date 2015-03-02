@@ -1,6 +1,6 @@
 (function(global) {
   
-  var $ = global.jQuery || global.$;
+  var $ = global.jQuery;
 
   $.fn.hashTask = function(o) {
 
