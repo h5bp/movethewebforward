@@ -1,16 +1,16 @@
 (function( $ ){
 
-  $.getJSON('/avatars.json')
-    .success(function(avatars) {
-      $.each(avatars, function(hashtag) {
-        var avatarsElem = $(".task[data-hashtag=" + hashtag + "] .pledges");
-        for (var user in this) {
-          var image = $('<img>', { src: this[user], title: user });
-          var link = $('<a/>', { href: 'http://twitter.com/' + user });
-          avatarsElem.append(link.append(image));
-        }
-      });
-    });
+  //$.getJSON('/avatars.json')
+  //  .success(function(avatars) {
+  //    $.each(avatars, function(hashtag) {
+  //      var avatarsElem = $(".task[data-hashtag=" + hashtag + "] .pledges");
+  //      for (var user in this) {
+  //        var image = $('<img>', { src: this[user], title: user });
+  //        var link = $('<a/>', { href: 'http://twitter.com/' + user });
+  //        avatarsElem.append(link.append(image));
+  //      }
+  //    });
+  //  });
 
   Modernizr.load([{
       test: window.JSON,
