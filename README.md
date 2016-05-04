@@ -1,3 +1,9 @@
+
+This site is mostly kaput. It hasn't been touched in a while. 
+
+------------------------------------------------
+
+
 # movethewebforward.org
 
 You ♡ Web Standards. You maybe even feel compelled to “give back” to the community. Curious about where to start? We’re here to help.
